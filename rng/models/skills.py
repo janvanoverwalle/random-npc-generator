@@ -8,40 +8,41 @@ class Skills(object):
     """Class docstring."""
 
     # Strength
-    ATHLETICS = 'athletics'
+    ATHLETICS = 'Athletics'
 
     # Dexterity
-    ACROBATICS = 'acrobatics'
-    SLEIGHT_OF_HAND = 'sleight of hand'
-    STEALTH = 'stealth'
+    ACROBATICS = 'Acrobatics'
+    SLEIGHT_OF_HAND = 'Sleight of Hand'
+    STEALTH = 'Stealth'
 
     # Intelligence
-    ARCANA = 'arcana'
-    HISTORY = 'history'
-    INVESTIGATION = 'investigation'
-    NATURE = 'nature'
-    RELIGION = 'religion'
+    ARCANA = 'Arcana'
+    HISTORY = 'History'
+    INVESTIGATION = 'Investigation'
+    NATURE = 'Nature'
+    RELIGION = 'Religion'
 
     # Wisdom
-    ANIMAL_HANDLING = 'animal handling'
-    INSIGHT = 'insight'
-    MEDICINE = 'medicine'
-    PERCEPTION = 'perception'
-    SURVIVAL = 'survival'
+    ANIMAL_HANDLING = 'Animal Handling'
+    INSIGHT = 'Insight'
+    MEDICINE = 'Medicine'
+    PERCEPTION = 'Perception'
+    SURVIVAL = 'Survival'
 
     # Charisma
-    DECEPTION = 'deception'
-    INTIMIDATION = 'intimidation'
-    PERFORMANCE = 'performance'
-    PERSUASION = 'persuasion'
+    DECEPTION = 'Deception'
+    INTIMIDATION = 'Intimidation'
+    PERFORMANCE = 'Performance'
+    PERSUASION = 'Persuasion'
 
     @classmethod
     def as_list(cls, abilities=None):
         """Method docstring."""
-        if not isinstance(abilities, (list, tuple)):
-            abilities = [abilities]
-        abilities = [str(a).strip().lower() for a in abilities]
-        if not abilities:
+        if abilities:
+            if not isinstance(abilities, (list, tuple)):
+                abilities = [abilities]
+            abilities = [str(a).strip().lower() for a in abilities]
+        else:
             abilities = Abilities.as_list()
         ret = []
         if Abilities.STRENGTH in abilities:
@@ -78,3 +79,9 @@ class Skills(object):
                 cls.PERSUASION
             ]
         return ret
+
+    @classmethod
+    def iterate(cls, abilities=None):
+        """Method docstring."""
+        for skill in cls.as_list(abilities):
+            yield skill

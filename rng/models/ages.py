@@ -5,7 +5,7 @@ from rng.models.races import Races
 from rng.helpers.dice_roller import Dice
 
 
-class CreatureAge(object):
+class Age(object):
     """Class docstring"""
 
     def __init__(self, lifespan, physical, mental, current=None):

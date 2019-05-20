@@ -6,12 +6,12 @@ Module docstring.
 class Abilities(object):
     """Class docstring."""
 
-    STRENGTH = 'strength'
-    DEXTERITY = 'dexterity'
-    CONSTITUTION = 'constitution'
-    INTELLIGENCE = 'intelligence'
-    WISDOM = 'wisdom'
-    CHARISMA = 'charisma'
+    STRENGTH = 'Strength'
+    DEXTERITY = 'Dexterity'
+    CONSTITUTION = 'Constitution'
+    INTELLIGENCE = 'Intelligence'
+    WISDOM = 'Wisdom'
+    CHARISMA = 'Charisma'
 
     @classmethod
     def as_list(cls):
@@ -24,3 +24,9 @@ class Abilities(object):
             cls.WISDOM,
             cls.CHARISMA
         ]
+
+    @classmethod
+    def iterate(cls):
+        """Method docstring."""
+        for skill in cls.as_list():
+            yield skill

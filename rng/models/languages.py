@@ -7,30 +7,30 @@ class Languages(object):
     """Class docstring."""
 
     # Standard
-    COMMON = 'common'
-    DWARVISH = 'dwarvish'
-    ELVISH = 'elvish'
-    GIANT = 'giant'
-    GNOMISH = 'gnomish'
-    GOBLIN = 'goblin'
-    HALFLING = 'halfling'
-    ORC = 'orc'
+    COMMON = 'Common'
+    DWARVISH = 'Dwarvish'
+    ELVISH = 'Elvish'
+    GIANT = 'Giant'
+    GNOMISH = 'Gnomish'
+    GOBLIN = 'Goblin'
+    HALFLING = 'Halfling'
+    ORC = 'Orc'
 
     # Exotic
-    ABYSSAL = 'abyssal'
-    CELESTIAL = 'celestial'
-    DRACONIC = 'draconic'
-    DEEP_SPEECH = 'deep speech'
-    INFERNAL = 'infernal'
-    PRIMORDIAL = 'primordial'
-    SYLVAN = 'sylvan'
-    UNDERCOMMON = 'undercommon'
-    DRUIDIC = 'druidic'
+    ABYSSAL = 'Abyssal'
+    CELESTIAL = 'Celestial'
+    DRACONIC = 'Draconic'
+    DEEP_SPEECH = 'Deep Speech'
+    INFERNAL = 'Infernal'
+    PRIMORDIAL = 'Primordial'
+    SYLVAN = 'Sylvan'
+    UNDERCOMMON = 'Undercommon'
+    DRUIDIC = 'Druidic'
 
     @classmethod
     def as_list(cls, subset=None):
         """Method docstring."""
-        subset = subset.strip().lower()
+        subset = subset.strip().lower() if subset else subset
         ret = []
         if not subset or subset == 'standard':
             ret += [
@@ -66,3 +66,9 @@ class Languages(object):
     def exotic_as_list(cls):
         """Method docstring."""
         return cls.as_list(subset='exotic')
+
+    @classmethod
+    def iterate(cls, subset=None):
+        """Method docstring."""
+        for language in cls.as_list(subset):
+            yield language

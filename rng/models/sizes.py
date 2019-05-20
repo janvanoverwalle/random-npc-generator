@@ -2,16 +2,16 @@
 Module docstring.
 """
 
-class CreatureSize(object):
+class Size(object):
     """Class docstring."""
 
     NONE = 'none'
-    TINY = 'tiny'
-    SMALL = 'small'
-    MEDIUM = 'medium'
-    LARGE = 'large'
-    HUGE = 'huge'
-    GARGANTUAN = 'gargantuan'
+    TINY = 'Tiny'
+    SMALL = 'Small'
+    MEDIUM = 'Medium'
+    LARGE = 'Large'
+    HUGE = 'Huge'
+    GARGANTUAN = 'Gargantuan'
 
     @classmethod
     def as_list(cls):
@@ -24,3 +24,9 @@ class CreatureSize(object):
             cls.HUGE,
             cls.GARGANTUAN
         ]
+
+    @classmethod
+    def iterate(cls):
+        """Method docstring."""
+        for size in cls.as_list():
+            yield size

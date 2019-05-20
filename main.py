@@ -1,14 +1,26 @@
 """
 Module docstring.
 """
+import random
 from rng.helpers.dice_roller import Dice
-from rng.models.races import *
+from rng.models.creature_races import *
 
 
 def main():
     """Function docstring."""
-    result = Dragonborn()
-    print(f'{result}')
+    available_races = [
+        Dragonborn,
+        HillDwarf, MountainDwarf,
+        HighElf, WoodElf, DarkElf,
+        RockGnome, ForestGnome,
+        HalfElf,
+        HalfOrc,
+        LightfootHalfling, StoutHalfling,
+        Human,
+        Tiefling
+    ]
+    chosen_race = random.choice(available_races)()
+    print(f'{chosen_race}')
 
 
 if __name__ == '__main__':
