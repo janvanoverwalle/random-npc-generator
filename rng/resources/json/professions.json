@@ -1,0 +1,2101 @@
+{
+    "CATEGORIES": {
+        "AGRICULTURE": "Agriculture, Animal Husbandry, & Forestry",
+        "ARCHITECTURE": "Architecture & Construction",
+        "ARTS": "Arts",
+        "TRADE": "Business & Trade",
+        "COMMUNICATIONS": "Communications",
+        "CRAFTSMANSHIP": "Craftsmanship",
+        "CRIME": "Crime",
+        "GOVERNMENT": "Government & Law",
+        "HOSPITALITY": "Hospitality & Common Labor",
+        "MAGIC": "Magical Arts",
+        "MILITARY": "Military & Security",
+        "RELIGION": "Religion",
+        "SCIENCE": "Science, Math, & Education",
+        "TRANSPORTATION": "Transportation",
+        "MISC": "Unemployed, Self-Employed, & Outcast"
+    },
+    "PROFESSIONS": {
+        "AGRICULTURE": {
+            "LOCALES": [{
+                    "LOCALE": "City",
+                    "WEIGHT": 3
+                },
+                {
+                    "LOCALE": "Village",
+                    "WEIGHT": 16
+                },
+                {
+                    "LOCALE": "Outskirts",
+                    "WEIGHT": 8
+                }
+            ],
+            "PROFESSIONS": [{
+                    "PROFESSION": "Animal/Monster Handler",
+                    "DESCRIPTION": "responsible for the safe keeping, dietary care, and exercise of animals or monsters."
+                },
+                {
+                    "PROFESSION": "Animal/Monster Handler",
+                    "DESCRIPTION": "responsible for the safe keeping, dietary care, and exercise of animals or monsters."
+                },
+                {
+                    "PROFESSION": "Arborist",
+                    "DESCRIPTION": "maintains and cares for trees, often by surgically removing dying limbs."
+                },
+                {
+                    "PROFESSION": "Baler",
+                    "DESCRIPTION": "bales hay, or in the mills, wool and cotton goods."
+                },
+                {
+                    "PROFESSION": "Beekeeper",
+                    "DESCRIPTION": "owns and breeds bees, especially for their honey."
+                },
+                {
+                    "PROFESSION": "Breeder",
+                    "DESCRIPTION": "breeds livestock, animals, or monsters."
+                },
+                {
+                    "PROFESSION": "Cowherd",
+                    "DESCRIPTION": "supervises grazing cattle."
+                },
+                {
+                    "PROFESSION": "Dairyboy/Dairymaid",
+                    "DESCRIPTION": "milks cows and makes cheese and butter."
+                },
+                {
+                    "PROFESSION": "Falconer",
+                    "DESCRIPTION": "keeps, trains, and hunts with falcons, hawks, or other birds of prey."
+                },
+                {
+                    "PROFESSION": "Farmer",
+                    "DESCRIPTION": "operates a farm or cultivates land."
+                },
+                {
+                    "PROFESSION": "Fisher",
+                    "DESCRIPTION": "catches fish."
+                },
+                {
+                    "PROFESSION": "Florist",
+                    "DESCRIPTION": "grows and arranges plants and cut flowers."
+                },
+                {
+                    "PROFESSION": "Forager",
+                    "DESCRIPTION": "searches for food in the wild."
+                },
+                {
+                    "PROFESSION": "Forester",
+                    "DESCRIPTION": "supervises the wellbeing of a forest."
+                },
+                {
+                    "PROFESSION": "Fowler",
+                    "DESCRIPTION": "catches or ensnares birds."
+                },
+                {
+                    "PROFESSION": "Gamekeeper",
+                    "DESCRIPTION": "breeds and protects game, typically for a large estate."
+                },
+                {
+                    "PROFESSION": "Groom",
+                    "DESCRIPTION": "cleans and brushes the coats horses, dogs, or other animals."
+                },
+                {
+                    "PROFESSION": "Herder",
+                    "DESCRIPTION": "supervises a herd of livestock or makes a living from keeping livestock, especially in open country."
+                },
+                {
+                    "PROFESSION": "Horse Trainer",
+                    "DESCRIPTION": "tends to horses and teaches them different disciplines."
+                },
+                {
+                    "PROFESSION": "Hunter",
+                    "DESCRIPTION": "hunts game or other wild animals."
+                },
+                {
+                    "PROFESSION": "Lumberjack",
+                    "DESCRIPTION": "fells trees, cuts them into logs, and transports them to a sawmill."
+                },
+                {
+                    "PROFESSION": "Master-of-Horses",
+                    "DESCRIPTION": "supervises and commands all horses under a jurisdiction."
+                },
+                {
+                    "PROFESSION": "Master-of-Hounds",
+                    "DESCRIPTION": "maintains a pack of hounds and their associated staff, equipment, and hunting arrangements."
+                },
+                {
+                    "PROFESSION": "Miller",
+                    "DESCRIPTION": "owns or works in a grain mill."
+                },
+                {
+                    "PROFESSION": "Miner",
+                    "DESCRIPTION": "works underground in mines in order to obtain minerals such as coal, diamonds, or gold."
+                },
+                {
+                    "PROFESSION": "Pathfinder",
+                    "DESCRIPTION": "scouts ahead and discovers a path or way for others."
+                },
+                {
+                    "PROFESSION": "Plumer",
+                    "DESCRIPTION": "hunts birds for their plumes."
+                },
+                {
+                    "PROFESSION": "Prospector",
+                    "DESCRIPTION": "searches for mineral deposits, especially by drilling and excavation."
+                },
+                {
+                    "PROFESSION": "Ranger",
+                    "DESCRIPTION": "wanders or ranges over a particular area or domain."
+                },
+                {
+                    "PROFESSION": "Renderer",
+                    "DESCRIPTION": "converts waste animal tissue into usable materials."
+                },
+                {
+                    "PROFESSION": "Shepherd",
+                    "DESCRIPTION": "herds, tends, and guards sheep."
+                },
+                {
+                    "PROFESSION": "Stablehand",
+                    "DESCRIPTION": "works in a stable."
+                },
+                {
+                    "PROFESSION": "Thresher",
+                    "DESCRIPTION": "separates grain from the plants by beating."
+                },
+                {
+                    "PROFESSION": "Trapper",
+                    "DESCRIPTION": "traps wild animals, especially for their fur."
+                },
+                {
+                    "PROFESSION": "Vintner",
+                    "DESCRIPTION": "engages in winemaking, especially with monitoring and harvesting the grapes."
+                },
+                {
+                    "PROFESSION": "Zookeeper",
+                    "DESCRIPTION": "maintains and cares for animals or monsters in a zoo."
+                }
+            ]
+        },
+        "ARCHITECTURE": {
+            "LOCALES": [{
+                    "LOCALE": "City",
+                    "WEIGHT": 10
+                },
+                {
+                    "LOCALE": "Village",
+                    "WEIGHT": 0
+                },
+                {
+                    "LOCALE": "Outskirts",
+                    "WEIGHT": 0
+                }
+            ],
+            "PROFESSIONS": [{
+                    "PROFESSION": "Architect",
+                    "DESCRIPTION": "designs buildings or landscapes and in many cases supervises their construction."
+                },
+                {
+                    "PROFESSION": "Brickmaker",
+                    "DESCRIPTION": "crafts bricks from clay, stone, or other materials."
+                },
+                {
+                    "PROFESSION": "Brickmason",
+                    "DESCRIPTION": "builds with mineral products such as stones, bricks, cinder blocks, or tiles, usually with the use of mortar as a bonding agent."
+                },
+                {
+                    "PROFESSION": "Carpenter",
+                    "DESCRIPTION": "makes and repairs wooden objects and structures."
+                },
+                {
+                    "PROFESSION": "Construction Worker",
+                    "DESCRIPTION": "a laborer in the physical construction of a built environment and its infrastructure."
+                },
+                {
+                    "PROFESSION": "General Contractor",
+                    "DESCRIPTION": "supervises a construction site, manages its vendors and trades, and communicates information to all involved parties."
+                },
+                {
+                    "PROFESSION": "Glazier",
+                    "DESCRIPTION": "fits glass into windows and doors."
+                },
+                {
+                    "PROFESSION": "Plasterer",
+                    "DESCRIPTION": "applies plaster to walls, ceilings, or other surfaces."
+                },
+                {
+                    "PROFESSION": "Roadlayer/Streetlayer",
+                    "DESCRIPTION": "paves roads or streets."
+                },
+                {
+                    "PROFESSION": "Roofer/Thatcher",
+                    "DESCRIPTION": "builds and repairs roofs."
+                },
+                {
+                    "PROFESSION": "Stonemason",
+                    "DESCRIPTION": "cuts and prepares stone for use in construction."
+                }
+            ]
+        },
+        "ARTS": {
+            "LOCALES": [{
+                    "LOCALE": "City",
+                    "WEIGHT": 5
+                },
+                {
+                    "LOCALE": "Village",
+                    "WEIGHT": 1
+                },
+                {
+                    "LOCALE": "Outskirts",
+                    "WEIGHT": 0
+                }
+            ],
+            "PROFESSIONS": [{
+                    "PROFESSION": "Acrobat",
+                    "DESCRIPTION": "performs spectacular gymnastic feats."
+                },
+                {
+                    "PROFESSION": "Actor",
+                    "DESCRIPTION": "impersonates characters, typically on stage in a theatrical production."
+                },
+                {
+                    "PROFESSION": "Aerialist/Trapezist",
+                    "DESCRIPTION": "performs acrobatics high above the ground on a tightrope or trapeze."
+                },
+                {
+                    "PROFESSION": "Arranger",
+                    "DESCRIPTION": "adapts a musical composition for performance."
+                },
+                {
+                    "PROFESSION": "Athlete",
+                    "DESCRIPTION": "proficient in sports and other forms of physical exercise."
+                },
+                {
+                    "PROFESSION": "Busker/Street Musician",
+                    "DESCRIPTION": "performs in a public place, often for money."
+                },
+                {
+                    "PROFESSION": "Celebrity",
+                    "DESCRIPTION": "a famous person."
+                },
+                {
+                    "PROFESSION": "Chef",
+                    "DESCRIPTION": "a professional cook trained in the culinary arts."
+                },
+                {
+                    "PROFESSION": "Choirmaster",
+                    "DESCRIPTION": "trains a choir and orchestrates their singing when they perform."
+                },
+                {
+                    "PROFESSION": "Clown",
+                    "DESCRIPTION": "comic entertainer who wears a traditional costume and exaggerated makeup."
+                },
+                {
+                    "PROFESSION": "Comedian",
+                    "DESCRIPTION": "entertainer whose act is designed to make an audience laugh."
+                },
+                {
+                    "PROFESSION": "Conductor",
+                    "DESCRIPTION": "directs the performance of an orchestra."
+                },
+                {
+                    "PROFESSION": "Contortionist",
+                    "DESCRIPTION": "twists and bends their body into strange and unnatural positions."
+                },
+                {
+                    "PROFESSION": "Curator",
+                    "DESCRIPTION": "keeper and custodian of a museum or other collections of precious items."
+                },
+                {
+                    "PROFESSION": "Costumer",
+                    "DESCRIPTION": "makes theatrical costumes."
+                },
+                {
+                    "PROFESSION": "Dancer",
+                    "DESCRIPTION": "moves their body rhythmically with or without musical accompaniment."
+                },
+                {
+                    "PROFESSION": "Equilibrist",
+                    "DESCRIPTION": "performs balancing feats."
+                },
+                {
+                    "PROFESSION": "Fashion Designer",
+                    "DESCRIPTION": "applies design, aesthetics and natural beauty to garments and their accessories."
+                },
+                {
+                    "PROFESSION": "Gladiator",
+                    "DESCRIPTION": "fights against other people, wild animals, or monsters in an arena."
+                },
+                {
+                    "PROFESSION": "Glasspainter",
+                    "DESCRIPTION": "produces colorful designs on or in glass."
+                },
+                {
+                    "PROFESSION": "Jester",
+                    "DESCRIPTION": "professional joker or \"fool\" at court, typically wearing a cap with bells on it and carrying a mock scepter."
+                },
+                {
+                    "PROFESSION": "Juggler",
+                    "DESCRIPTION": "keeps several objects in motion in the air at the same time by alternately tossing and catching them."
+                },
+                {
+                    "PROFESSION": "Illuminator",
+                    "DESCRIPTION": "paints and calligraphs to adorn or enlighten scrolls and manuscripts."
+                },
+                {
+                    "PROFESSION": "Limner",
+                    "DESCRIPTION": "paints portraits or miniatures."
+                },
+                {
+                    "PROFESSION": "Makeup Artist",
+                    "DESCRIPTION": "applies cosmetics to models, actors, nobles, etc."
+                },
+                {
+                    "PROFESSION": "Minstrel",
+                    "DESCRIPTION": "recites lyric or heroic poetry for nobility."
+                },
+                {
+                    "PROFESSION": "Model",
+                    "DESCRIPTION": "poses as a subject for an artist, fashion designer, or sculptor."
+                },
+                {
+                    "PROFESSION": "Musician",
+                    "DESCRIPTION": "plays a musical instrument."
+                },
+                {
+                    "PROFESSION": "Painter",
+                    "DESCRIPTION": "paints pictures."
+                },
+                {
+                    "PROFESSION": "Playwright",
+                    "DESCRIPTION": "writes plays or musicals."
+                },
+                {
+                    "PROFESSION": "Poet",
+                    "DESCRIPTION": "writes ballads, epics, sonnets, or other forms of poetry."
+                },
+                {
+                    "PROFESSION": "Ringmaster/Ringmistress",
+                    "DESCRIPTION": "master of ceremony who introduces the circus acts to the audience."
+                },
+                {
+                    "PROFESSION": "Ropewalker",
+                    "DESCRIPTION": "walks along a tightrope to entertain others."
+                },
+                {
+                    "PROFESSION": "Sculptor",
+                    "DESCRIPTION": "crafts art by carving or casting blocks of marble, stones, or other hardened minerals."
+                },
+                {
+                    "PROFESSION": "Singer/Soprano",
+                    "DESCRIPTION": "sings with or without instrumental accompaniment."
+                },
+                {
+                    "PROFESSION": "Skald",
+                    "DESCRIPTION": "composes and recites poems honoring heroes and their deeds."
+                },
+                {
+                    "PROFESSION": "Stage Magician",
+                    "DESCRIPTION": "deceives their audience with seemingly impossible feats while using only natural means."
+                },
+                {
+                    "PROFESSION": "Stuntman/Stuntwoman",
+                    "DESCRIPTION": "performs dangerous stunts for their audience."
+                },
+                {
+                    "PROFESSION": "Tattooist",
+                    "DESCRIPTION": "illustrates the skin with indelible patterns, pictures, legends, etc."
+                },
+                {
+                    "PROFESSION": "Theater Director",
+                    "DESCRIPTION": "supervises and orchestrates the mounting of a theatre production by unifying various endeavors and aspects of production."
+                },
+                {
+                    "PROFESSION": "Wrestler",
+                    "DESCRIPTION": "performs in matches involving grappling and grappling-type techniques."
+                },
+                {
+                    "PROFESSION": "Writer",
+                    "DESCRIPTION": "commits his or her thoughts, ideas, etc., into written language."
+                }
+            ]
+        },
+        "TRADE": {
+            "LOCALES": [{
+                    "LOCALE": "City",
+                    "WEIGHT": 5
+                },
+                {
+                    "LOCALE": "Village",
+                    "WEIGHT": 0
+                },
+                {
+                    "LOCALE": "Outskirts",
+                    "WEIGHT": 0
+                }
+            ],
+            "PROFESSIONS": [{
+                    "PROFESSION": "Accountant",
+                    "DESCRIPTION": "keeps and inspects financial accounts."
+                },
+                {
+                    "PROFESSION": "Actuary",
+                    "DESCRIPTION": "compiles and analyzes statistics and uses them to calculate risk."
+                },
+                {
+                    "PROFESSION": "Animal Collector/Monster Collector",
+                    "DESCRIPTION": "collects and deals in rare and exotic animals and monsters."
+                },
+                {
+                    "PROFESSION": "Business Owner",
+                    "DESCRIPTION": "owns a business entity in an attempt to profit from its successful operations."
+                },
+                {
+                    "PROFESSION": "Debt Collector",
+                    "DESCRIPTION": "recovers money owed on delinquent accounts."
+                },
+                {
+                    "PROFESSION": "Draper",
+                    "DESCRIPTION": "an alcohol merchant."
+                },
+                {
+                    "PROFESSION": "Appraiser",
+                    "DESCRIPTION": "assesses the monetary value of something."
+                },
+                {
+                    "PROFESSION": "Auctioneer",
+                    "DESCRIPTION": "conducts auctions by accepting bids and declaring goods sold."
+                },
+                {
+                    "PROFESSION": "Banker",
+                    "DESCRIPTION": "an officer or owner of a bank or group of banks."
+                },
+                {
+                    "PROFESSION": "Bagniokeeper",
+                    "DESCRIPTION": "owner of a bath house or brothel."
+                },
+                {
+                    "PROFESSION": "Bookkeeper",
+                    "DESCRIPTION": "keeps records of financial affairs."
+                },
+                {
+                    "PROFESSION": "Chandler",
+                    "DESCRIPTION": "deals in provisions and supplies."
+                },
+                {
+                    "PROFESSION": "Collector",
+                    "DESCRIPTION": "collects things of a specified type, professionally or as a hobby."
+                },
+                {
+                    "PROFESSION": "Entrepreneur",
+                    "DESCRIPTION": "organizes and operates a business or businesses, taking on greater than normal financial risks in order to do so."
+                },
+                {
+                    "PROFESSION": "Grocer",
+                    "DESCRIPTION": "a food merchant."
+                },
+                {
+                    "PROFESSION": "Guild Master",
+                    "DESCRIPTION": "leads an economically independent producer (a \"guild\", an association of craftsmen or merchants that often holds considerable bureaucratic power)."
+                },
+                {
+                    "PROFESSION": "Innkeeper",
+                    "DESCRIPTION": "owns and runs an inn."
+                },
+                {
+                    "PROFESSION": "Land Surveyor",
+                    "DESCRIPTION": "establishes maps and boundaries for ownership or other purposes required by government or civil law."
+                },
+                {
+                    "PROFESSION": "Merchant",
+                    "DESCRIPTION": "sells and trades goods."
+                },
+                {
+                    "PROFESSION": "Moneychanger",
+                    "DESCRIPTION": "exchanges one currency for another."
+                },
+                {
+                    "PROFESSION": "Moneylender",
+                    "DESCRIPTION": "lends money to others who pay interest."
+                },
+                {
+                    "PROFESSION": "Peddler",
+                    "DESCRIPTION": "travels from place to place selling assorted items."
+                },
+                {
+                    "PROFESSION": "Pimp/Madame",
+                    "DESCRIPTION": "controls prostitutes and arranges clients for them, taking part of their earnings in return."
+                },
+                {
+                    "PROFESSION": "Plantation Owner",
+                    "DESCRIPTION": "an owner of an estate on which crops are cultivated by resident labor, typically slave labor."
+                },
+                {
+                    "PROFESSION": "Speculator",
+                    "DESCRIPTION": "invests in stocks, property, or other ventures in the hope of making a profit."
+                },
+                {
+                    "PROFESSION": "Thriftdealer",
+                    "DESCRIPTION": "deals in secondhand items."
+                },
+                {
+                    "PROFESSION": "Tradesman",
+                    "DESCRIPTION": "deals exclusively in bartering."
+                },
+                {
+                    "PROFESSION": "Vendor",
+                    "DESCRIPTION": "deals items in the street."
+                }
+            ]
+        },
+        "COMMUNICATIONS": {
+            "LOCALES": [{
+                    "LOCALE": "City",
+                    "WEIGHT": 10
+                },
+                {
+                    "LOCALE": "Village",
+                    "WEIGHT": 1
+                },
+                {
+                    "LOCALE": "Outskirts",
+                    "WEIGHT": 0
+                }
+            ],
+            "PROFESSIONS": [{
+                    "PROFESSION": "Billboardposter",
+                    "DESCRIPTION": "a person who puts up notices, signs and advertisements."
+                },
+                {
+                    "PROFESSION": "Courier",
+                    "DESCRIPTION": "transports packages and documents."
+                },
+                {
+                    "DESCRIPTION": "Herald",
+                    "PROFESSION": "a messenger who carries important news."
+                },
+                {
+                    "PROFESSION": "Interpreter",
+                    "DESCRIPTION": "interprets language and its meaning, especially within ancient manuscripts."
+                },
+                {
+                    "PROFESSION": "Linguist",
+                    "DESCRIPTION": "studies the essence of communication, including the units, nature, structure, and modification of language."
+                },
+                {
+                    "PROFESSION": "Messenger",
+                    "DESCRIPTION": "carries messages between recipients."
+                },
+                {
+                    "PROFESSION": "Town Crier",
+                    "DESCRIPTION": "makes public announcements in the streets or marketplace."
+                },
+                {
+                    "PROFESSION": "Translator",
+                    "DESCRIPTION": "translates between languages."
+                }
+            ]
+        },
+        "CRAFTSMANSHIP": {
+            "LOCALES": [{
+                    "LOCALE": "City",
+                    "WEIGHT": 10
+                },
+                {
+                    "LOCALE": "Village",
+                    "WEIGHT": 8
+                },
+                {
+                    "LOCALE": "Outskirts",
+                    "WEIGHT": 0
+                }
+            ],
+            "PROFESSIONS": [{
+                    "PROFESSION": "Accoutrementer/Coinsmith",
+                    "DESCRIPTION": "makes currency for the government."
+                },
+                {
+                    "PROFESSION": "Armorer",
+                    "DESCRIPTION": "specializes in making and repairing armor."
+                },
+                {
+                    "PROFESSION": "Blacksmith",
+                    "DESCRIPTION": "forges and repairs things in metal, including weapons, armor, utensils, etc."
+                },
+                {
+                    "PROFESSION": "Bladesmith",
+                    "DESCRIPTION": "specializes in making and repairing bladed weapons, especially swords and daggers."
+                },
+                {
+                    "PROFESSION": "Bookbinder",
+                    "DESCRIPTION": "binds books and wraps scrolls."
+                },
+                {
+                    "PROFESSION": "Bottler",
+                    "DESCRIPTION": "bottles drinks and other liquids."
+                },
+                {
+                    "PROFESSION": "Bowyer",
+                    "DESCRIPTION": "makes bows and crossbows."
+                },
+                {
+                    "PROFESSION": "Brewer",
+                    "DESCRIPTION": "brews ale."
+                },
+                {
+                    "PROFESSION": "Broom Maker",
+                    "DESCRIPTION": "makes brooms and brushes."
+                },
+                {
+                    "PROFESSION": "Candlemaker",
+                    "DESCRIPTION": "makes candles and wax from honey and tallow."
+                },
+                {
+                    "PROFESSION": "Cartwright",
+                    "DESCRIPTION": "makes and repairs carts and wagons."
+                },
+                {
+                    "PROFESSION": "Cobbler",
+                    "DESCRIPTION": "makes and repairs footwear."
+                },
+                {
+                    "PROFESSION": "Cooper/Hooper",
+                    "DESCRIPTION": "makes and repairs casks and barrels."
+                },
+                {
+                    "PROFESSION": "Cutler",
+                    "DESCRIPTION": "makes cutlery."
+                },
+                {
+                    "PROFESSION": "Dyer",
+                    "DESCRIPTION": "dyes cloth and other materials."
+                },
+                {
+                    "PROFESSION": "Embroiderer",
+                    "DESCRIPTION": "ornaments with needlework."
+                },
+                {
+                    "PROFESSION": "Engraver",
+                    "DESCRIPTION": "incises a design onto a hard surface by cutting grooves into it."
+                },
+                {
+                    "PROFESSION": "Farrier",
+                    "DESCRIPTION": "trims and shoes horses' hooves."
+                },
+                {
+                    "PROFESSION": "Fletcher",
+                    "DESCRIPTION": "makes and repairs arrows."
+                },
+                {
+                    "PROFESSION": "Furniture Artisan",
+                    "DESCRIPTION": "makes and repairs furniture."
+                },
+                {
+                    "PROFESSION": "Furrier",
+                    "DESCRIPTION": "prepares furs for adornment."
+                },
+                {
+                    "PROFESSION": "Glassworker",
+                    "DESCRIPTION": "blows glass planes and items."
+                },
+                {
+                    "PROFESSION": "Glovemaker",
+                    "DESCRIPTION": "makes and repairs gloves."
+                },
+                {
+                    "PROFESSION": "Goldsmith/Silversmith",
+                    "DESCRIPTION": "a smith who specializes in precious metals."
+                },
+                {
+                    "PROFESSION": "Hatter/Milliner",
+                    "DESCRIPTION": "makes and repairs headwear."
+                },
+                {
+                    "PROFESSION": "Instrument Maker",
+                    "DESCRIPTION": "makes and repairs musical instruments."
+                },
+                {
+                    "PROFESSION": "Lapidary",
+                    "DESCRIPTION": "turns stone, minerals, or gemstones into decorative items such as cabochons, engraved gems, and faceted designs."
+                },
+                {
+                    "PROFESSION": "Leatherworker",
+                    "DESCRIPTION": "makes items from leather such as pouches, scabbards, straps, etc."
+                },
+                {
+                    "PROFESSION": "Jeweler",
+                    "DESCRIPTION": "designs, makes, and repairs necklaces, bracelets, watches, etc., often containing jewels."
+                },
+                {
+                    "PROFESSION": "Locksmith",
+                    "DESCRIPTION": "makes and repairs locks."
+                },
+                {
+                    "PROFESSION": "Luthier",
+                    "DESCRIPTION": "makes and repairs stringed instruments."
+                },
+                {
+                    "PROFESSION": "Mercer",
+                    "DESCRIPTION": "weaves textile fabrics, especially silks, velvets, and other fine materials."
+                },
+                {
+                    "PROFESSION": "Optician",
+                    "DESCRIPTION": "makes and repairs eyeglasses."
+                },
+                {
+                    "PROFESSION": "Potter",
+                    "DESCRIPTION": "makes pots, bowls, plates, etc., out of clay."
+                },
+                {
+                    "PROFESSION": "Printer",
+                    "DESCRIPTION": "a person who applies pressure to an inked surface resting upon a print medium (such as paper or cloth), thereby transferring the ink to manufacture a text."
+                },
+                {
+                    "PROFESSION": "Restorer",
+                    "DESCRIPTION": "repairs or renovates a work of art so as to return it to its original condition."
+                },
+                {
+                    "PROFESSION": "Ropemaker",
+                    "DESCRIPTION": "braids rope."
+                },
+                {
+                    "PROFESSION": "Rugmaker",
+                    "DESCRIPTION": "makes and repairs rugs by braiding, hooking, weaving, etc."
+                },
+                {
+                    "PROFESSION": "Saddler",
+                    "DESCRIPTION": "makes and repairs saddlery."
+                },
+                {
+                    "PROFESSION": "Seamstress/Tailor",
+                    "DESCRIPTION": "makes, alters, repairs, as well as occasionally designing garments."
+                },
+                {
+                    "PROFESSION": "Soaper",
+                    "DESCRIPTION": "makes soap from accumulated mutton fat, wood ash, and natural soda."
+                },
+                {
+                    "PROFESSION": "Tanner",
+                    "DESCRIPTION": "treats the skins and hides of animals to produce leather."
+                },
+                {
+                    "PROFESSION": "Taxidermist",
+                    "DESCRIPTION": "prepares, stuffs, and mounts the skins of animals."
+                },
+                {
+                    "PROFESSION": "Tinker",
+                    "DESCRIPTION": "travels from place to place mending utensils."
+                },
+                {
+                    "PROFESSION": "Toymaker",
+                    "DESCRIPTION": "makes and repairs toys."
+                },
+                {
+                    "PROFESSION": "Watchmaker",
+                    "DESCRIPTION": "makes and repairs watches and clocks."
+                },
+                {
+                    "PROFESSION": "Weaponsmith",
+                    "DESCRIPTION": "specializes in making and repairing weapons."
+                },
+                {
+                    "PROFESSION": "Weaver",
+                    "DESCRIPTION": "makes fabric by weaving fiber together."
+                },
+                {
+                    "PROFESSION": "Wheelwright",
+                    "DESCRIPTION": "makes and repairs wooden wheels."
+                },
+                {
+                    "PROFESSION": "Whittler/Woodcarver",
+                    "DESCRIPTION": "fashions wood into various shapes."
+                }
+            ]
+        },
+        "CRIME": {
+            "LOCALES": [{
+                    "LOCALE": "City",
+                    "WEIGHT": 5
+                },
+                {
+                    "LOCALE": "Village",
+                    "WEIGHT": 1
+                },
+                {
+                    "LOCALE": "Outskirts",
+                    "WEIGHT": 4
+                }
+            ],
+            "PROFESSIONS": [{
+                    "PROFESSION": "Assassin",
+                    "DESCRIPTION": "murders through stealth for reasons pertaining to money, politics, or religion."
+                },
+                {
+                    "PROFESSION": "Bandit",
+                    "DESCRIPTION": "a robber or outlaw belonging to a gang and typically operating in an isolated or lawless area."
+                },
+                {
+                    "PROFESSION": "Burglar",
+                    "DESCRIPTION": "illegally enters buildings and steals things."
+                },
+                {
+                    "PROFESSION": "Charlatan/Conman",
+                    "DESCRIPTION": "tricks people by gaining their trust and persuading them to believe something that is not true in order to benefit from the encounter."
+                },
+                {
+                    "PROFESSION": "Cockfighter/Gamefighter",
+                    "DESCRIPTION": "engages in arena matches in which animals or monsters are pitted against one another, typically to the death."
+                },
+                {
+                    "PROFESSION": "Crime Boss",
+                    "DESCRIPTION": "controls and supervises a criminal organization."
+                },
+                {
+                    "PROFESSION": "Cutpurse",
+                    "DESCRIPTION": "a pickpocket or thief."
+                },
+                {
+                    "PROFESSION": "Drug Dealer",
+                    "DESCRIPTION": "dealer of illegal substances."
+                },
+                {
+                    "PROFESSION": "Drug Lord",
+                    "DESCRIPTION": "controls a network of persons involved in the illegal drugs trade and transactions."
+                },
+                {
+                    "PROFESSION": "Extortioner",
+                    "DESCRIPTION": "extorts money from someone by threatening to expose embarrassing information about them."
+                },
+                {
+                    "PROFESSION": "Fence",
+                    "DESCRIPTION": "deals in stolen goods."
+                },
+                {
+                    "PROFESSION": "Forger",
+                    "DESCRIPTION": "produces fraudulent copies or imitations."
+                },
+                {
+                    "PROFESSION": "Fugitive",
+                    "DESCRIPTION": "a person who has escaped from a place or is in hiding, especially to avoid arrest or persecution."
+                },
+                {
+                    "PROFESSION": "Highwayman",
+                    "DESCRIPTION": "robs travelers on a road."
+                },
+                {
+                    "PROFESSION": "Kidnapper",
+                    "DESCRIPTION": "abducts people and holds them captive, typically to obtain a ransom."
+                },
+                {
+                    "PROFESSION": "Loan Shark",
+                    "DESCRIPTION": "charges extremely high rates of interest for moneylending, typically under illegal conditions."
+                },
+                {
+                    "PROFESSION": "Pirate",
+                    "DESCRIPTION": "attacks and robs ships at sea."
+                },
+                {
+                    "PROFESSION": "Poacher",
+                    "DESCRIPTION": "hunts illegal game."
+                },
+                {
+                    "PROFESSION": "Poisoner",
+                    "DESCRIPTION": "makes poisons to harm or kill."
+                },
+                {
+                    "PROFESSION": "Raider/Marauder",
+                    "DESCRIPTION": "makes sudden, unprompted attacks against defenseless or near-defenseless settlements."
+                },
+                {
+                    "PROFESSION": "Smuggler",
+                    "DESCRIPTION": "manages the import or export of goods secretly, in violation of the law, especially without payment of legal duty."
+                },
+                {
+                    "PROFESSION": "Thief",
+                    "DESCRIPTION": "steals people’s property, especially by stealth and without using force or violence."
+                }
+            ]
+        },
+        "GOVERNMENT": {
+            "LOCALES": [{
+                    "LOCALE": "City",
+                    "WEIGHT": 3
+                },
+                {
+                    "LOCALE": "Village",
+                    "WEIGHT": 0
+                },
+                {
+                    "LOCALE": "Outskirts",
+                    "WEIGHT": 0
+                }
+            ],
+            "PROFESSIONS": [{
+                    "PROFESSION": "Affeeror",
+                    "DESCRIPTION": "determines the values of fines and amercements."
+                },
+                {
+                    "PROFESSION": "Agister",
+                    "DESCRIPTION": "affords pasture to the livestock of others for a price."
+                },
+                {
+                    "PROFESSION": "Alderman",
+                    "DESCRIPTION": "a civic dignitary in the local council ranked below the mayor."
+                },
+                {
+                    "PROFESSION": "Alienist",
+                    "DESCRIPTION": "assesses the competence of a defendant in a court of law."
+                },
+                {
+                    "PROFESSION": "Assay Master",
+                    "DESCRIPTION": "oversees the testing of currency."
+                },
+                {
+                    "PROFESSION": "Baron/Baroness",
+                    "DESCRIPTION": "a member of the lowest order of the British nobility."
+                },
+                {
+                    "PROFESSION": "Chancellor",
+                    "DESCRIPTION": "a senior state or legal official."
+                },
+                {
+                    "PROFESSION": "Chief",
+                    "DESCRIPTION": "leads or rules a people or clan."
+                },
+                {
+                    "PROFESSION": "Conservationist",
+                    "DESCRIPTION": "advocates for the protection and preservation of the environment and wildlife."
+                },
+                {
+                    "PROFESSION": "Count/Earl/Countess",
+                    "DESCRIPTION": "a nobleperson ranking above a viscount and below a marquess."
+                },
+                {
+                    "PROFESSION": "Courtier",
+                    "DESCRIPTION": "attends court as a companion or adviser to the king or queen."
+                },
+                {
+                    "PROFESSION": "Diplomat",
+                    "DESCRIPTION": "an official representing a country abroad."
+                },
+                {
+                    "PROFESSION": "Duke/Duchess",
+                    "DESCRIPTION": "rules over a duchy and is of the highest rank below the monarch."
+                },
+                {
+                    "PROFESSION": "Emperor/Empress",
+                    "DESCRIPTION": "the supreme sovereign ruler of an extensive group of states or countries under a single authority."
+                },
+                {
+                    "PROFESSION": "Judge",
+                    "DESCRIPTION": "decides cases in a court of law."
+                },
+                {
+                    "PROFESSION": "King/Queen",
+                    "DESCRIPTION": "the ruler of an independent state and its people."
+                },
+                {
+                    "PROFESSION": "Knight",
+                    "DESCRIPTION": "serves his or her sovereign after being bestowed a rank of royal honor."
+                },
+                {
+                    "PROFESSION": "Lady-in-Waiting",
+                    "DESCRIPTION": "attends a queen, princess, or other high-ranking feminine nobleperson."
+                },
+                {
+                    "PROFESSION": "Lawyer/Advocate",
+                    "DESCRIPTION": "practices or studies law, typically an attorney or a counselor."
+                },
+                {
+                    "PROFESSION": "Marquess/Marchioness",
+                    "DESCRIPTION": "a nobleperson ranking above a count and below a duke."
+                },
+                {
+                    "PROFESSION": "Master-of-Coin",
+                    "DESCRIPTION": "supervises the royal treasury, advises the monarch on financial matters, and is responsible for raising money through taxation."
+                },
+                {
+                    "PROFESSION": "Master-of-the-Revels",
+                    "DESCRIPTION": "responsible for overseeing royal festivities."
+                },
+                {
+                    "PROFESSION": "Minister",
+                    "DESCRIPTION": "assists with the administration of business."
+                },
+                {
+                    "PROFESSION": "Noble/Aristocrat",
+                    "DESCRIPTION": "a person belonging to a class with high social or political status."
+                },
+                {
+                    "PROFESSION": "Notary",
+                    "DESCRIPTION": "performs certain legal formalities, especially to draw up or certify contracts, deeds, and other documents for use in other jurisdictions."
+                },
+                {
+                    "PROFESSION": "Orator/Spokesman",
+                    "DESCRIPTION": "makes statements on behalf of a group or individual nobleperson."
+                },
+                {
+                    "PROFESSION": "Page",
+                    "DESCRIPTION": "a young attendant to a person of noble rank."
+                },
+                {
+                    "PROFESSION": "Prince/Princess",
+                    "DESCRIPTION": "the direct descendant of a monarch."
+                },
+                {
+                    "PROFESSION": "Senator",
+                    "DESCRIPTION": "partakes in governmental decision-making after being elected."
+                },
+                {
+                    "PROFESSION": "Sheriff",
+                    "DESCRIPTION": "the chief executive officer in a county, having various administrative and judicial functions."
+                },
+                {
+                    "PROFESSION": "Spymaster",
+                    "DESCRIPTION": "directs a network of subordinate espionage agents for a state, kingdom, or empire."
+                },
+                {
+                    "PROFESSION": "Steward",
+                    "DESCRIPTION": "supervises both the estate and household of his lord or lady while they are away."
+                },
+                {
+                    "PROFESSION": "Squire",
+                    "DESCRIPTION": "acts as an attendant to a knight before attempting to become a knight themselves."
+                },
+                {
+                    "PROFESSION": "Tax Collector",
+                    "DESCRIPTION": "collects unpaid taxes from people, guilds, or businesses."
+                },
+                {
+                    "PROFESSION": "Viscount/Viscountess",
+                    "DESCRIPTION": "a nobleperson ranking above a baron and below a count."
+                },
+                {
+                    "PROFESSION": "Ward",
+                    "DESCRIPTION": "a member of a noble house who has been taken in by another noble family to be raised for a time."
+                }
+            ]
+        },
+        "HOSPITALITY": {
+            "LOCALES": [{
+                    "LOCALE": "City",
+                    "WEIGHT": 8
+                },
+                {
+                    "LOCALE": "Village",
+                    "WEIGHT": 4
+                },
+                {
+                    "LOCALE": "Outskirts",
+                    "WEIGHT": 0
+                }
+            ],
+            "PROFESSIONS": [{
+                    "PROFESSION": "Acater",
+                    "DESCRIPTION": "provides and prepares foodstuffs or delicacies for events such as festivals."
+                },
+                {
+                    "PROFESSION": "Tunner",
+                    "DESCRIPTION": "fills casks in a brewery or winery."
+                },
+                {
+                    "PROFESSION": "Baker",
+                    "DESCRIPTION": "bakes bread and cakes."
+                },
+                {
+                    "PROFESSION": "Barber",
+                    "DESCRIPTION": "cuts hair and shaves or trims beards."
+                },
+                {
+                    "PROFESSION": "Barkeep",
+                    "DESCRIPTION": "works and serves drinks in a bar."
+                },
+                {
+                    "PROFESSION": "Barmaid/Barboy",
+                    "DESCRIPTION": "serves drinks and food in a bar as well as engaging with customers."
+                },
+                {
+                    "PROFESSION": "Butcher",
+                    "DESCRIPTION": "cuts up and sells meat."
+                },
+                {
+                    "PROFESSION": "Butler",
+                    "DESCRIPTION": "the chief servant of a household."
+                },
+                {
+                    "PROFESSION": "Caregiver",
+                    "DESCRIPTION": "looks after a sick, elderly, or disabled person."
+                },
+                {
+                    "PROFESSION": "Charcoal Maker",
+                    "DESCRIPTION": "manufactures charcoal by carbonizing wood in a kiln."
+                },
+                {
+                    "PROFESSION": "Chatelaine/Majordomo",
+                    "DESCRIPTION": "a person in charge of a large household."
+                },
+                {
+                    "PROFESSION": "Chimney Sweeper",
+                    "DESCRIPTION": "a small person, typically a child, who ascends chimneys to clean them."
+                },
+                {
+                    "PROFESSION": "Clerk",
+                    "DESCRIPTION": "undertakes routine administrative duties in a business or bank."
+                },
+                {
+                    "PROFESSION": "Cook",
+                    "DESCRIPTION": "prepares food for eating."
+                },
+                {
+                    "PROFESSION": "Copyist",
+                    "DESCRIPTION": "makes copies of handwritten documents or music."
+                },
+                {
+                    "PROFESSION": "Croupier",
+                    "DESCRIPTION": "runs a gaming table by gathering in and paying out money or tokens."
+                },
+                {
+                    "PROFESSION": "Exterminator",
+                    "DESCRIPTION": "exterminates unwanted rodents and insects."
+                },
+                {
+                    "PROFESSION": "Food & Drink Taster",
+                    "DESCRIPTION": "ingests food that was prepared for someone else to confirm it is safe to eat."
+                },
+                {
+                    "PROFESSION": "Gardener/Landscaper",
+                    "DESCRIPTION": "tends and cultivates a garden."
+                },
+                {
+                    "PROFESSION": "Gongfarmer",
+                    "DESCRIPTION": "digs out and removes excrement from privies and cesspits."
+                },
+                {
+                    "PROFESSION": "Gravedigger",
+                    "DESCRIPTION": "digs graves for the purposes of a funeral ceremony."
+                },
+                {
+                    "PROFESSION": "Groundskeeper",
+                    "DESCRIPTION": "maintains an athletic field, a park, or the grounds of a graveyard or other institution."
+                },
+                {
+                    "PROFESSION": "Kitchen Drudge",
+                    "DESCRIPTION": "performs menial work in a kitchen."
+                },
+                {
+                    "PROFESSION": "Knacker",
+                    "DESCRIPTION": "disposes of dead or unwanted animals."
+                },
+                {
+                    "PROFESSION": "Lamplighter",
+                    "DESCRIPTION": "lights street or road lights at dusk."
+                },
+                {
+                    "PROFESSION": "Laundry Worker",
+                    "DESCRIPTION": "a laborer who takes part in the washing, drying, and ironing of clothes and other fabric items."
+                },
+                {
+                    "PROFESSION": "Lector",
+                    "DESCRIPTION": "reads to others while they work for entertainment."
+                },
+                {
+                    "PROFESSION": "Longshoreman",
+                    "DESCRIPTION": "loads and unloads ships in a port."
+                },
+                {
+                    "PROFESSION": "Maid",
+                    "DESCRIPTION": "a domestic servant of a household."
+                },
+                {
+                    "PROFESSION": "Nanny/Nursemaid",
+                    "DESCRIPTION": "a servant employed to look after a young child or children."
+                },
+                {
+                    "PROFESSION": "Operator",
+                    "DESCRIPTION": "a laborer who operates equipment, typically in construction."
+                },
+                {
+                    "PROFESSION": "Pastry Chef",
+                    "DESCRIPTION": "makes desserts, especially cakes and pastries."
+                },
+                {
+                    "PROFESSION": "Plumber",
+                    "DESCRIPTION": "installs and repairs the fittings of water supply and sanitation."
+                },
+                {
+                    "PROFESSION": "Porter",
+                    "DESCRIPTION": "carries luggage and other loads."
+                },
+                {
+                    "PROFESSION": "Prostitute",
+                    "DESCRIPTION": "engages in sexual activity for payment."
+                },
+                {
+                    "PROFESSION": "Quarryman/Quarrywoman",
+                    "DESCRIPTION": "quarries stone."
+                },
+                {
+                    "PROFESSION": "Servant",
+                    "DESCRIPTION": "performs duties for others, especially a person employed in a house or as a personal attendant."
+                },
+                {
+                    "PROFESSION": "Stagehand",
+                    "DESCRIPTION": "moves scenery or props before or during the performance of a theatrical production."
+                },
+                {
+                    "PROFESSION": "Street Cleaner",
+                    "DESCRIPTION": "cleans streets and alleyways after dark."
+                },
+                {
+                    "PROFESSION": "Talent Scout",
+                    "DESCRIPTION": "searches for talented individuals who can be employed or promoted."
+                },
+                {
+                    "PROFESSION": "Trainer",
+                    "DESCRIPTION": "trains someone in a particular skill, usually physical, for money."
+                },
+                {
+                    "PROFESSION": "Water Bearer",
+                    "DESCRIPTION": "brings water from rivers, wells, and lakes back to their settlement."
+                },
+                {
+                    "PROFESSION": "Wet Nurse",
+                    "DESCRIPTION": "a woman employed to suckle another woman's child."
+                }
+            ]
+        },
+        "MAGIC": {
+            "LOCALES": [{
+                    "LOCALE": "City",
+                    "WEIGHT": 3
+                },
+                {
+                    "LOCALE": "Village",
+                    "WEIGHT": 1
+                },
+                {
+                    "LOCALE": "Outskirts",
+                    "WEIGHT": 1
+                }
+            ],
+            "PROFESSIONS": [{
+                    "PROFESSION": "Abjurer",
+                    "DESCRIPTION": "a mage focused in protective spells."
+                },
+                {
+                    "PROFESSION": "Alchemist",
+                    "DESCRIPTION": "transforms or creates something within nature through (usually) ritualist magic."
+                },
+                {
+                    "PROFESSION": "Archmage",
+                    "DESCRIPTION": "an extremely powerful mage."
+                },
+                {
+                    "PROFESSION": "Artificer",
+                    "DESCRIPTION": "unlocks magic in everyday objects as well as being an inventor."
+                },
+                {
+                    "PROFESSION": "Bard",
+                    "DESCRIPTION": "uses their artistic talents to induce magical effects."
+                },
+                {
+                    "PROFESSION": "Conjuror",
+                    "DESCRIPTION": "conjures spirits or familiars."
+                },
+                {
+                    "PROFESSION": "Druid",
+                    "DESCRIPTION": "a mage attuned to the magical forces of nature, able to shapeshift, call on the elements, communicate with flora and fauna, etc."
+                },
+                {
+                    "PROFESSION": "Elementalist",
+                    "DESCRIPTION": "manipulates nature’s elements to their will."
+                },
+                {
+                    "PROFESSION": "Enchanter/Enchantress",
+                    "DESCRIPTION": "uses sorcery to put someone or something under a spell."
+                },
+                {
+                    "PROFESSION": "Evoker",
+                    "DESCRIPTION": "manipulates energy or taps into an unseen source of power in order to produce a desired kinetic end."
+                },
+                {
+                    "PROFESSION": "Healer",
+                    "DESCRIPTION": "able to cure a disease or injury using magic."
+                },
+                {
+                    "PROFESSION": "Hearth Witch/Hearth Wizard",
+                    "DESCRIPTION": "incorporates spells and enchantments in cooking."
+                },
+                {
+                    "PROFESSION": "Illusionist",
+                    "DESCRIPTION": "performs tricks and spells that deceive the senses."
+                },
+                {
+                    "PROFESSION": "Mage",
+                    "DESCRIPTION": "a magic-user."
+                },
+                {
+                    "PROFESSION": "Medium",
+                    "DESCRIPTION": "uses extrasensory perception, magic, or divine powers to identify information hidden from the normal senses."
+                },
+                {
+                    "PROFESSION": "Meteorologist",
+                    "DESCRIPTION": "forecasts and manipulates weather."
+                },
+                {
+                    "PROFESSION": "Necromancer",
+                    "DESCRIPTION": "communicates with and conjures the spirits of the dead."
+                },
+                {
+                    "PROFESSION": "Ritualist",
+                    "DESCRIPTION": "practices or advocates the observance of ritual (formula intended to trigger a magical effect on a person or objects)."
+                },
+                {
+                    "PROFESSION": "Runecaster",
+                    "DESCRIPTION": "uses special alphabets to create runes (symbols possessing magical effects capable of being used multiple times)."
+                },
+                {
+                    "PROFESSION": "Sage",
+                    "DESCRIPTION": "a wise and experienced magic-user."
+                },
+                {
+                    "PROFESSION": "Seer/Oracle",
+                    "DESCRIPTION": "able to see what the future holds through supernatural insight."
+                },
+                {
+                    "PROFESSION": "Shaman",
+                    "DESCRIPTION": "accesses and influences the world of good and evil spirits."
+                },
+                {
+                    "PROFESSION": "Shapeshifter",
+                    "DESCRIPTION": "a person with the ability to change their physical form."
+                },
+                {
+                    "PROFESSION": "Sorcerer/Sorceress",
+                    "DESCRIPTION": "derives their magical abilities innately rather than through study."
+                },
+                {
+                    "PROFESSION": "Summoner",
+                    "DESCRIPTION": "a mage able to summon forth magical beasts, creatures, and monsters."
+                },
+                {
+                    "PROFESSION": "Transmuter",
+                    "DESCRIPTION": "alters matter in form, appearance, or nature."
+                },
+                {
+                    "PROFESSION": "Warlock",
+                    "DESCRIPTION": "a mage who has gained their abilities by forming a pact with an otherworldly being."
+                },
+                {
+                    "PROFESSION": "Witchdoctor",
+                    "DESCRIPTION": "a tribal mage with powers of healing, divination, and protection against the magic of others."
+                },
+                {
+                    "PROFESSION": "Witch",
+                    "DESCRIPTION": "a woman who has supernatural powers and practices sorcery, typically in solitude."
+                },
+                {
+                    "PROFESSION": "Wizard",
+                    "DESCRIPTION": "derives their magical abilities through study."
+                },
+                {
+                    "PROFESSION": "Wordsmith",
+                    "DESCRIPTION": "draws their power from language and casts by dictation."
+                }
+            ]
+        },
+        "MILITARY": {
+            "LOCALES": [{
+                    "LOCALE": "City",
+                    "WEIGHT": 8
+                },
+                {
+                    "LOCALE": "Village",
+                    "WEIGHT": 1
+                },
+                {
+                    "LOCALE": "Outskirts",
+                    "WEIGHT": 0
+                }
+            ],
+            "PROFESSIONS": [{
+                    "PROFESSION": "Admiral",
+                    "DESCRIPTION": "commands a fleet or naval squadron."
+                },
+                {
+                    "PROFESSION": "Bailiff",
+                    "DESCRIPTION": "looks after prisoners."
+                },
+                {
+                    "PROFESSION": "Bodyguard",
+                    "DESCRIPTION": "escorts and protects another person, especially a dignitary."
+                },
+                {
+                    "PROFESSION": "Bouncer",
+                    "DESCRIPTION": "prevents troublemakers from entering or to eject them from the premises of an establishment."
+                },
+                {
+                    "PROFESSION": "Captain",
+                    "DESCRIPTION": "an army officer of high rank in charge of commanding squadrons of soldiers."
+                },
+                {
+                    "PROFESSION": "Castellan",
+                    "DESCRIPTION": "the governor of a castle."
+                },
+                {
+                    "PROFESSION": "Cavalryman/Cavalier",
+                    "DESCRIPTION": "a skilled horseback rider."
+                },
+                {
+                    "PROFESSION": "City Watch",
+                    "DESCRIPTION": "an officer of law enforcement who resides in larger towns or cities."
+                },
+                {
+                    "PROFESSION": "Commissar",
+                    "DESCRIPTION": "teaches principles and policies to military units."
+                },
+                {
+                    "PROFESSION": "Constable",
+                    "DESCRIPTION": "an officer with limited policing authority, typically in a small town."
+                },
+                {
+                    "PROFESSION": "Detective/Investigator",
+                    "DESCRIPTION": "investigates and solves crimes."
+                },
+                {
+                    "PROFESSION": "Drummer/Fifer",
+                    "DESCRIPTION": "a non-combatant foot soldier who sounds signals for changes in formation in combat."
+                },
+                {
+                    "PROFESSION": "Duelist",
+                    "DESCRIPTION": "skilled in one-on-one combat."
+                },
+                {
+                    "PROFESSION": "Executioner",
+                    "DESCRIPTION": "carries out a sentence of death on a legally condemned person."
+                },
+                {
+                    "PROFESSION": "Firefighter",
+                    "DESCRIPTION": "extinguishes fires."
+                },
+                {
+                    "PROFESSION": "Guard/Sentinel",
+                    "DESCRIPTION": "a person who keeps watch, especially a soldier or other person formally assigned to protect a person or to control access to a place."
+                },
+                {
+                    "PROFESSION": "General",
+                    "DESCRIPTION": "the chief commander of an army."
+                },
+                {
+                    "PROFESSION": "Inspection Officer",
+                    "DESCRIPTION": "responsible for the inspection of military units to ensure they meet appropriate standards of training and efficiency."
+                },
+                {
+                    "PROFESSION": "Intelligence Officer",
+                    "DESCRIPTION": "collects, compiles and organizes information about the enemy."
+                },
+                {
+                    "PROFESSION": "Jailer",
+                    "DESCRIPTION": "supervises a jail and the prisoners in it."
+                },
+                {
+                    "PROFESSION": "Lieutenant",
+                    "DESCRIPTION": "an officer of middle rank in the armed forces."
+                },
+                {
+                    "PROFESSION": "Marksman/Archer",
+                    "DESCRIPTION": "in long-range weapons, such as the bow, crossbow, sling, etc. to inflict damage from afar."
+                },
+                {
+                    "PROFESSION": "Marshall",
+                    "DESCRIPTION": "has the charge of the cavalry in the household of a monarch."
+                },
+                {
+                    "PROFESSION": "Medic",
+                    "DESCRIPTION": "a medical practitioner equipped for the battlefield."
+                },
+                {
+                    "PROFESSION": "Mercenary",
+                    "DESCRIPTION": "a soldier without allegiance who works for money, typically a member of a company or guild."
+                },
+                {
+                    "PROFESSION": "Privateer",
+                    "DESCRIPTION": "engages in maritime warfare under a commission of war."
+                },
+                {
+                    "PROFESSION": "Quartermaster",
+                    "DESCRIPTION": "responsible for providing quarters, rations, clothing, and other supplies."
+                },
+                {
+                    "PROFESSION": "Royal Guard",
+                    "DESCRIPTION": "responsible for the protection of a royal person."
+                },
+                {
+                    "PROFESSION": "Runner",
+                    "DESCRIPTION": "carries information between lines in wartime."
+                },
+                {
+                    "PROFESSION": "Sapper",
+                    "DESCRIPTION": "a soldier responsible for tasks such as building and repairing roads and bridges, laying and clearing mines, etc."
+                },
+                {
+                    "PROFESSION": "Sergeant",
+                    "DESCRIPTION": "an officer instructed with a protective duty, typically worth \"half a knight\" in regard."
+                },
+                {
+                    "PROFESSION": "Sergeant-at-Arms",
+                    "DESCRIPTION": "charged with keeping order during meetings and, if necessary, participates in battle."
+                },
+                {
+                    "PROFESSION": "Scout",
+                    "DESCRIPTION": "sent ahead of a main force so as to gather information about the enemy's position, strength, or movements."
+                },
+                {
+                    "PROFESSION": "Siege Artillerist",
+                    "DESCRIPTION": "works the artillery machines of an army."
+                },
+                {
+                    "PROFESSION": "Slave Driver",
+                    "DESCRIPTION": "oversees and urges on slaves at work."
+                },
+                {
+                    "PROFESSION": "Soldier/Man-at-Arms",
+                    "DESCRIPTION": "serves in an army."
+                },
+                {
+                    "PROFESSION": "Special Force Soldier",
+                    "DESCRIPTION": "carries out special operations."
+                },
+                {
+                    "PROFESSION": "Spy",
+                    "DESCRIPTION": "secretly collects and reports information on the activities, movements, and plans of an enemy or competitor."
+                },
+                {
+                    "PROFESSION": "Tactician",
+                    "DESCRIPTION": "uses a carefully planned military strategy to achieve a specific end."
+                },
+                {
+                    "PROFESSION": "Tollkeeper",
+                    "DESCRIPTION": "collects tolls at a bridge, road etc. where a charge is made."
+                },
+                {
+                    "PROFESSION": "Torturer",
+                    "DESCRIPTION": "inflicts severe pain on someone as a punishment or in order to force them to do or say something."
+                },
+                {
+                    "PROFESSION": "Warden",
+                    "DESCRIPTION": "responsible for the supervision of a particular place or thing or for ensuring that regulations associated with it are obeyed."
+                },
+                {
+                    "PROFESSION": "Warmage",
+                    "DESCRIPTION": "a soldier skilled in destructive battle magic."
+                }
+            ]
+        },
+        "RELIGION": {
+            "LOCALES": [{
+                    "LOCALE": "City",
+                    "WEIGHT": 10
+                },
+                {
+                    "LOCALE": "Village",
+                    "WEIGHT": 4
+                },
+                {
+                    "LOCALE": "Outskirts",
+                    "WEIGHT": 0
+                }
+            ],
+            "PROFESSIONS": [{
+                    "PROFESSION": "Abbot/Abbess",
+                    "DESCRIPTION": "the head of an abbey of monks."
+                },
+                {
+                    "PROFESSION": "Acolyte",
+                    "DESCRIPTION": "assists the celebrant in a religious service or procession."
+                },
+                {
+                    "PROFESSION": "Almoner",
+                    "DESCRIPTION": "distributes money and food to poor people."
+                },
+                {
+                    "PROFESSION": "Archbishop",
+                    "DESCRIPTION": "responsible for an archdiocese, their surrounding district."
+                },
+                {
+                    "PROFESSION": "Bishop",
+                    "DESCRIPTION": "a senior member of the clergy, usually in charge of a diocese and empowered to confer holy orders."
+                },
+                {
+                    "PROFESSION": "Cantor",
+                    "DESCRIPTION": "sings liturgical music and leads prayer in a synagogue."
+                },
+                {
+                    "PROFESSION": "Cardinal",
+                    "DESCRIPTION": "a leading dignitary of a church, nominated by the highest official."
+                },
+                {
+                    "PROFESSION": "Chaplain",
+                    "DESCRIPTION": "a member of the clergy attached to a private chapel, institution, ship, branch of the armed forces, etc."
+                },
+                {
+                    "PROFESSION": "Cleric",
+                    "DESCRIPTION": "has devoted their entire being to the will of their god, thus gaining magical powers."
+                },
+                {
+                    "PROFESSION": "Confessor",
+                    "DESCRIPTION": "hears confessions and gives absolution and spiritual counsel."
+                },
+                {
+                    "PROFESSION": "Cultist",
+                    "DESCRIPTION": "a member of a cult who generally lives outside of conventional society and worships an unorthodox patron."
+                },
+                {
+                    "PROFESSION": "Cult Leader",
+                    "DESCRIPTION": "the organizational leader of a cult who is occasionally also the founder."
+                },
+                {
+                    "PROFESSION": "Deacon",
+                    "DESCRIPTION": "an ordained minister of an order ranking below that of priest."
+                },
+                {
+                    "PROFESSION": "Diviner",
+                    "DESCRIPTION": "seeks ultimate divination in order to further understand or meet godly substance."
+                },
+                {
+                    "PROFESSION": "Exorcist",
+                    "DESCRIPTION": "expels or attempts to expel evil spirits from a person or place."
+                },
+                {
+                    "PROFESSION": "High Priest/Pope",
+                    "DESCRIPTION": "the chief priest of a religion."
+                },
+                {
+                    "PROFESSION": "Inquisitor",
+                    "DESCRIPTION": "seeks to eliminate heresy and other things contrary to the doctrine or teachings of their faith."
+                },
+                {
+                    "PROFESSION": "Missionary",
+                    "DESCRIPTION": "goes on a religious mission to promote their faith in a foreign place."
+                },
+                {
+                    "PROFESSION": "Monk",
+                    "DESCRIPTION": "able to manifest their spirituality through a calm, centered being and thus gain abilities which function similarly to magic."
+                },
+                {
+                    "PROFESSION": "Nun",
+                    "DESCRIPTION": "a member of a religious community of women, especially a cloistered one, living under vows of poverty, chastity, and obedience."
+                },
+                {
+                    "PROFESSION": "Paladin",
+                    "DESCRIPTION": "a holy knight and divine spellcaster crusading in the name of good and order."
+                },
+                {
+                    "PROFESSION": "Pardoner",
+                    "DESCRIPTION": "raises money for religious works by soliciting offerings and granting indulgences."
+                },
+                {
+                    "PROFESSION": "Priest",
+                    "DESCRIPTION": "has the authority to perform certain rites and administer certain sacraments."
+                },
+                {
+                    "PROFESSION": "Prophet",
+                    "DESCRIPTION": "regarded as an inspired teacher or proclaimer of the will of God."
+                },
+                {
+                    "PROFESSION": "Sexton",
+                    "DESCRIPTION": "looks after a church and churchyard, sometimes acting as bell-ringer and formerly as a gravedigger."
+                },
+                {
+                    "PROFESSION": "Templar",
+                    "DESCRIPTION": "fights in a religious military order."
+                }
+            ]
+        },
+        "SCIENCE": {
+            "LOCALES": [{
+                    "LOCALE": "City",
+                    "WEIGHT": 3
+                },
+                {
+                    "LOCALE": "Village",
+                    "WEIGHT": 1
+                },
+                {
+                    "LOCALE": "Outskirts",
+                    "WEIGHT": 1
+                }
+            ],
+            "PROFESSIONS": [{
+                    "PROFESSION": "Abecedarian",
+                    "DESCRIPTION": "teaches the illiterate."
+                },
+                {
+                    "PROFESSION": "Accoucheur/Obstetrician/Midwife",
+                    "DESCRIPTION": "assists in childbirth and the care of women giving birth."
+                },
+                {
+                    "PROFESSION": "Anthropologist",
+                    "DESCRIPTION": "studies the customs, beliefs, and relationships of humanoids and intellectually and culturally advanced creatures."
+                },
+                {
+                    "PROFESSION": "Apothecary",
+                    "DESCRIPTION": "prepares and sells medicines, drugs, and potions."
+                },
+                {
+                    "PROFESSION": "Apprentice",
+                    "DESCRIPTION": "studies a trade under a skilled employer."
+                },
+                {
+                    "PROFESSION": "Archaeologist",
+                    "DESCRIPTION": "studies humanoid history and prehistory through the excavation of sites and the analysis of artifacts and other physical remains."
+                },
+                {
+                    "PROFESSION": "Archivist",
+                    "DESCRIPTION": "maintains and is in charge of archives."
+                },
+                {
+                    "PROFESSION": "Assayer",
+                    "DESCRIPTION": "determiner of the proportions of metal in ore and the amount of copper, silver, gold, or platinum in coins."
+                },
+                {
+                    "PROFESSION": "Astrologer",
+                    "DESCRIPTION": "uses astrology to tell others about their character or to predict their future."
+                },
+                {
+                    "PROFESSION": "Astronomer",
+                    "DESCRIPTION": "makes observations of celestial and scientific phenomena within the material plane."
+                },
+                {
+                    "PROFESSION": "Bloodletter",
+                    "DESCRIPTION": "surgically removes some of a patient's blood for therapeutic purposes."
+                },
+                {
+                    "PROFESSION": "Botanist",
+                    "DESCRIPTION": "an expert in or student of the scientific study of plants."
+                },
+                {
+                    "PROFESSION": "Cartographer",
+                    "DESCRIPTION": "a scholar and illustrator of maps."
+                },
+                {
+                    "PROFESSION": "Chemist",
+                    "DESCRIPTION": "engaged in chemical research or experiments."
+                },
+                {
+                    "PROFESSION": "Dean",
+                    "DESCRIPTION": "the head of a college or university."
+                },
+                {
+                    "PROFESSION": "Doctor/Physician",
+                    "DESCRIPTION": "a qualified practitioner of medicine."
+                },
+                {
+                    "PROFESSION": "Drakologist",
+                    "DESCRIPTION": "studies or is an expert in the branch of zoology concerned with dragons."
+                },
+                {
+                    "PROFESSION": "Engineer",
+                    "DESCRIPTION": "designer of a machine or structure."
+                },
+                {
+                    "PROFESSION": "Entomologist",
+                    "DESCRIPTION": "studies or is an expert in the branch of zoology concerned with insects."
+                },
+                {
+                    "PROFESSION": "Herbalist",
+                    "DESCRIPTION": "practices healing by the use of herbs."
+                },
+                {
+                    "PROFESSION": "Historian",
+                    "DESCRIPTION": "an expert in or student of history, especially that of a particular period, geographical region, or social phenomenon."
+                },
+                {
+                    "PROFESSION": "Horologist",
+                    "DESCRIPTION": "a scholar of time and entropy."
+                },
+                {
+                    "PROFESSION": "Librarian",
+                    "DESCRIPTION": "administers or assists in a library."
+                },
+                {
+                    "PROFESSION": "Mathematician",
+                    "DESCRIPTION": "a scholar of the abstract science of number, quantity, and space."
+                },
+                {
+                    "PROFESSION": "Mortician",
+                    "DESCRIPTION": "prepares dead bodies for burial or cremation and makes arrangements for funerals."
+                },
+                {
+                    "PROFESSION": "Nurse",
+                    "DESCRIPTION": "cares for the sick or infirm, especially in a hospital."
+                },
+                {
+                    "PROFESSION": "Optometrist",
+                    "DESCRIPTION": "examines the eyes for visual defects and prescribes eyeglasses."
+                },
+                {
+                    "PROFESSION": "Philosopher",
+                    "DESCRIPTION": "a scholar of the fundamental nature of knowledge, reality, and existence."
+                },
+                {
+                    "PROFESSION": "Professor",
+                    "DESCRIPTION": "a teacher of the highest rank in a college or university."
+                },
+                {
+                    "PROFESSION": "Scholar/Researcher",
+                    "DESCRIPTION": "a specialist in a particular branch of study who pursues the acquisition of knowledge."
+                },
+                {
+                    "PROFESSION": "Scribe",
+                    "DESCRIPTION": "copies out manuscripts."
+                },
+                {
+                    "PROFESSION": "Student",
+                    "DESCRIPTION": "attends school or learns under other to enter and pursue a particular subject."
+                },
+                {
+                    "PROFESSION": "Surgeon/Chirurgeon",
+                    "DESCRIPTION": "practices surgery."
+                },
+                {
+                    "PROFESSION": "Taxonomist",
+                    "DESCRIPTION": "groups organisms into categories."
+                },
+                {
+                    "PROFESSION": "Teacher",
+                    "DESCRIPTION": "instructs on a particular skill or subject."
+                },
+                {
+                    "PROFESSION": "Theologian",
+                    "DESCRIPTION": "engages in the study of the nature of God and religious belief."
+                },
+                {
+                    "PROFESSION": "Tutor",
+                    "DESCRIPTION": "charged with the instruction and guidance of another."
+                },
+                {
+                    "PROFESSION": "Veterinarian",
+                    "DESCRIPTION": "treats diseased or injured animals."
+                },
+                {
+                    "PROFESSION": "Zoologist",
+                    "DESCRIPTION": "an expert in or a student of the behavior, physiology, classification, and distribution of animals."
+                }
+            ]
+        },
+        "TRANSPORTATION": {
+            "LOCALES": [{
+                    "LOCALE": "City",
+                    "WEIGHT": 10
+                },
+                {
+                    "LOCALE": "Village",
+                    "WEIGHT": 0
+                },
+                {
+                    "LOCALE": "Outskirts",
+                    "WEIGHT": 0
+                }
+            ],
+            "PROFESSIONS": [{
+                    "PROFESSION": "Boatman",
+                    "DESCRIPTION": "mans a small seacraft."
+                },
+                {
+                    "PROFESSION": "Bosun",
+                    "DESCRIPTION": "in charge of organizing the equipment and crew of a ship."
+                },
+                {
+                    "PROFESSION": "Cabbie/Wagoner",
+                    "DESCRIPTION": "drives a horse-drawn wagon."
+                },
+                {
+                    "PROFESSION": "Cabin Boy/Cabin Girl",
+                    "DESCRIPTION": "waits on the orders of a ship's officers and passengers."
+                },
+                {
+                    "PROFESSION": "Caravaneer",
+                    "DESCRIPTION": "travels or lives in a caravan."
+                },
+                {
+                    "PROFESSION": "Charioteer",
+                    "DESCRIPTION": "drives a chariot."
+                },
+                {
+                    "PROFESSION": "Carter",
+                    "DESCRIPTION": "transports goods by cart."
+                },
+                {
+                    "PROFESSION": "Ferryman",
+                    "DESCRIPTION": "operates a ferry."
+                },
+                {
+                    "PROFESSION": "First Mate",
+                    "DESCRIPTION": "the deck officer second in command to the master of a ship."
+                },
+                {
+                    "PROFESSION": "Helmsman",
+                    "DESCRIPTION": "steers a ship or boat."
+                },
+                {
+                    "PROFESSION": "Navigator",
+                    "DESCRIPTION": "directs the route or course of a ship or other form of transportation, especially by using instruments and maps."
+                },
+                {
+                    "PROFESSION": "Purser",
+                    "DESCRIPTION": "keeps the accounts of a ship, especially as the head steward on a passenger vessel."
+                },
+                {
+                    "PROFESSION": "Sailor",
+                    "DESCRIPTION": "works as a member of the crew of a commercial or naval ship or boat."
+                },
+                {
+                    "PROFESSION": "Sea Captain",
+                    "DESCRIPTION": "commands a ship."
+                },
+                {
+                    "PROFESSION": "Shipwright",
+                    "DESCRIPTION": "a carpenter skilled in ship construction and repair."
+                }
+            ]
+        },
+        "MISC": {
+            "LOCALES": [{
+                    "LOCALE": "City",
+                    "WEIGHT": 5
+                },
+                {
+                    "LOCALE": "Village",
+                    "WEIGHT": 1
+                },
+                {
+                    "LOCALE": "Outskirts",
+                    "WEIGHT": 4
+                }
+            ],
+            "PROFESSIONS": [{
+                    "PROFESSION": "Adventurer",
+                    "DESCRIPTION": "wanders the world in search of knowledge, treasure, fame, glory or a multitude of additional wants and desires."
+                },
+                {
+                    "PROFESSION": "Beggar/Pauper",
+                    "DESCRIPTION": "lives by asking for money or food."
+                },
+                {
+                    "PROFESSION": "Blood Hunter/Monster Hunter",
+                    "DESCRIPTION": "takes on jobs to hunt down and kill or capture dangerous creatures."
+                },
+                {
+                    "PROFESSION": "Bounty Hunter",
+                    "DESCRIPTION": "pursues a criminal or fugitive for whom a reward is offered."
+                },
+                {
+                    "PROFESSION": "Crossing Sweeper",
+                    "DESCRIPTION": "sweeps a path ahead of people crossing dirty urban streets in exchange for a gratuity."
+                },
+                {
+                    "PROFESSION": "Deserter",
+                    "DESCRIPTION": "a member of the armed forces who has deserted."
+                },
+                {
+                    "PROFESSION": "Disgraced Noble",
+                    "DESCRIPTION": "a person of high birth who has since loss their respect, honor, or esteem in some or all noble circles."
+                },
+                {
+                    "PROFESSION": "Drunkard",
+                    "DESCRIPTION": "a person who is habitually drunk and considers themselves a professional in the task."
+                },
+                {
+                    "PROFESSION": "Dungeon Delver",
+                    "DESCRIPTION": "navigates underground labyrinths in search of any treasure they may find."
+                },
+                {
+                    "PROFESSION": "Elder",
+                    "DESCRIPTION": "a person of a greater age, especially one with a respected position in society."
+                },
+                {
+                    "PROFESSION": "Exile",
+                    "DESCRIPTION": "lives away from their native country, either from choice or compulsion."
+                },
+                {
+                    "PROFESSION": "Explorer",
+                    "DESCRIPTION": "explores unfamiliar areas in search of geographical or scientific information."
+                },
+                {
+                    "PROFESSION": "Ex-Criminal",
+                    "DESCRIPTION": "a person who has been convicted of a crime and has since served their sentence, or who has preemptively given up their life of crime."
+                },
+                {
+                    "PROFESSION": "Folk Hero",
+                    "DESCRIPTION": "a celebrity who is greatly admired by many people of a particular kind or in a particular place."
+                },
+                {
+                    "PROFESSION": "Gambler",
+                    "DESCRIPTION": "bets money on sports, card games, or games of chance in the hope of a profit."
+                },
+                {
+                    "PROFESSION": "Grave Robber/Tomb Raider",
+                    "DESCRIPTION": "steals valuables from graves and tombs."
+                },
+                {
+                    "PROFESSION": "Heretic",
+                    "DESCRIPTION": "differs in opinion from established religious dogma."
+                },
+                {
+                    "PROFESSION": "Hermit",
+                    "DESCRIPTION": "lives in solitude, typically as a religious or spiritual discipline."
+                },
+                {
+                    "PROFESSION": "Housewife/Househusband",
+                    "DESCRIPTION": "cares for his or her family by managing household affairs and completing housework."
+                },
+                {
+                    "PROFESSION": "Pilgrim",
+                    "DESCRIPTION": "journeys to some sacred place as an act of religious devotion, occasionally to settle there."
+                },
+                {
+                    "PROFESSION": "Prisoner",
+                    "DESCRIPTION": "held in confinement as a punishment for crimes they have been convicted of."
+                },
+                {
+                    "PROFESSION": "Rag-and-Bone Man",
+                    "DESCRIPTION": "collects unwanted household items and sells them to merchants."
+                },
+                {
+                    "PROFESSION": "Rebel/Political Dissident",
+                    "DESCRIPTION": "rises in opposition or armed resistance against an established government or ruler."
+                },
+                {
+                    "PROFESSION": "Refugee",
+                    "DESCRIPTION": "leaves their home in order to escape war, persecution, or natural disaster."
+                },
+                {
+                    "PROFESSION": "Runaway Slave",
+                    "DESCRIPTION": "a slave who has left their master and traveled without authorization."
+                },
+                {
+                    "PROFESSION": "Scavenger/Mudlark/Tosher",
+                    "DESCRIPTION": "searches for and collects discarded items."
+                },
+                {
+                    "PROFESSION": "Slave",
+                    "DESCRIPTION": "a person who is the legal property of another and forced to obey them."
+                },
+                {
+                    "PROFESSION": "Squatter",
+                    "DESCRIPTION": "unlawfully occupies an uninhabited building or unused land."
+                },
+                {
+                    "PROFESSION": "Traveler/Wanderer/Vagabond",
+                    "DESCRIPTION": "wanders from place to place without a permanent home or job."
+                },
+                {
+                    "PROFESSION": "Urchin",
+                    "DESCRIPTION": "a child who lives or spends most of their time in the streets, occasionally working as a thief or pickpocket."
+                }
+            ]
+        }
+    }
+}

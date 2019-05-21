@@ -1,8 +1,6 @@
 """
 Module docstring.
 """
-from rng.models.races import Races
-from rng.helpers.dice_roller import Dice
 
 
 class Age(object):
@@ -17,10 +15,3 @@ class Age(object):
 
     def __str__(self):
         return f'Lifespan: {self.lifespan}, Adulthood: {self.adulthood}'
-
-    def roll_age(self, creature_race, creature_class=None):
-        """Method docstring"""
-        dice_to_roll = '1d4'
-        if creature_race.race == Races.DRAGONBORN:
-            dice_to_roll = '1d4'
-        return self.adulthood + Dice.roll(dice_to_roll)
