@@ -33,15 +33,17 @@
             ],
             "PROFESSIONS": [{
                     "PROFESSION": "Animal/Monster Handler",
-                    "DESCRIPTION": "responsible for the safe keeping, dietary care, and exercise of animals or monsters."
-                },
-                {
-                    "PROFESSION": "Animal/Monster Handler",
-                    "DESCRIPTION": "responsible for the safe keeping, dietary care, and exercise of animals or monsters."
+                    "DESCRIPTION": "responsible for the safe keeping, dietary care, and exercise of animals or monsters.",
+                    "SKILLS": [
+                        "Animal Handling"
+                    ]
                 },
                 {
                     "PROFESSION": "Arborist",
-                    "DESCRIPTION": "maintains and cares for trees, often by surgically removing dying limbs."
+                    "DESCRIPTION": "maintains and cares for trees, often by surgically removing dying limbs.",
+                    "SKILLS": [
+                        "Nature"
+                    ]
                 },
                 {
                     "PROFESSION": "Baler",
@@ -53,7 +55,10 @@
                 },
                 {
                     "PROFESSION": "Breeder",
-                    "DESCRIPTION": "breeds livestock, animals, or monsters."
+                    "DESCRIPTION": "breeds livestock, animals, or monsters.",
+                    "SKILLS": [
+                        "Animal Handling"
+                    ]
                 },
                 {
                     "PROFESSION": "Cowherd",
@@ -65,7 +70,10 @@
                 },
                 {
                     "PROFESSION": "Falconer",
-                    "DESCRIPTION": "keeps, trains, and hunts with falcons, hawks, or other birds of prey."
+                    "DESCRIPTION": "keeps, trains, and hunts with falcons, hawks, or other birds of prey.",
+                    "SKILLS": [
+                        "Animal Handling"
+                    ]
                 },
                 {
                     "PROFESSION": "Farmer",
@@ -77,15 +85,24 @@
                 },
                 {
                     "PROFESSION": "Florist",
-                    "DESCRIPTION": "grows and arranges plants and cut flowers."
+                    "DESCRIPTION": "grows and arranges plants and cut flowers.",
+                    "SKILLS": [
+                        "Nature"
+                    ]
                 },
                 {
                     "PROFESSION": "Forager",
-                    "DESCRIPTION": "searches for food in the wild."
+                    "DESCRIPTION": "searches for food in the wild.",
+                    "SKILLS": [
+                        "Survival"
+                    ]
                 },
                 {
                     "PROFESSION": "Forester",
-                    "DESCRIPTION": "supervises the wellbeing of a forest."
+                    "DESCRIPTION": "supervises the wellbeing of a forest.",
+                    "SKILLS": [
+                        "Nature"
+                    ]
                 },
                 {
                     "PROFESSION": "Fowler",
@@ -93,7 +110,10 @@
                 },
                 {
                     "PROFESSION": "Gamekeeper",
-                    "DESCRIPTION": "breeds and protects game, typically for a large estate."
+                    "DESCRIPTION": "breeds and protects game, typically for a large estate.",
+                    "SKILLS": [
+                        "Animal Handling"
+                    ]
                 },
                 {
                     "PROFESSION": "Groom",
@@ -101,19 +121,31 @@
                 },
                 {
                     "PROFESSION": "Herder",
-                    "DESCRIPTION": "supervises a herd of livestock or makes a living from keeping livestock, especially in open country."
+                    "DESCRIPTION": "supervises a herd of livestock or makes a living from keeping livestock, especially in open country.",
+                    "SKILLS": [
+                        "Animal Handling"
+                    ]
                 },
                 {
                     "PROFESSION": "Horse Trainer",
-                    "DESCRIPTION": "tends to horses and teaches them different disciplines."
+                    "DESCRIPTION": "tends to horses and teaches them different disciplines.",
+                    "SKILLS": [
+                        "Animal Handling"
+                    ]
                 },
                 {
                     "PROFESSION": "Hunter",
-                    "DESCRIPTION": "hunts game or other wild animals."
+                    "DESCRIPTION": "hunts game or other wild animals.",
+                    "SKILLS": [
+                        "Survival"
+                    ]
                 },
                 {
                     "PROFESSION": "Lumberjack",
-                    "DESCRIPTION": "fells trees, cuts them into logs, and transports them to a sawmill."
+                    "DESCRIPTION": "fells trees, cuts them into logs, and transports them to a sawmill.",
+                    "SKILLS": [
+                        "Athletics"
+                    ]
                 },
                 {
                     "PROFESSION": "Master-of-Horses",
@@ -129,31 +161,53 @@
                 },
                 {
                     "PROFESSION": "Miner",
-                    "DESCRIPTION": "works underground in mines in order to obtain minerals such as coal, diamonds, or gold."
+                    "DESCRIPTION": "works underground in mines in order to obtain minerals such as coal, diamonds, or gold.",
+                    "SKILLS": [
+                        "Athletics"
+                    ]
                 },
                 {
                     "PROFESSION": "Pathfinder",
-                    "DESCRIPTION": "scouts ahead and discovers a path or way for others."
+                    "DESCRIPTION": "scouts ahead and discovers a path or way for others.",
+                    "SKILLS": [
+                        "Survival"
+                    ]
                 },
                 {
                     "PROFESSION": "Plumer",
-                    "DESCRIPTION": "hunts birds for their plumes."
+                    "DESCRIPTION": "hunts birds for their plumes.",
+                    "SKILLS": [
+                        "Survival"
+                    ]
                 },
                 {
                     "PROFESSION": "Prospector",
-                    "DESCRIPTION": "searches for mineral deposits, especially by drilling and excavation."
+                    "DESCRIPTION": "searches for mineral deposits, especially by drilling and excavation.",
+                    "SKILLS": [
+                        "Investigation"
+                    ]
                 },
                 {
                     "PROFESSION": "Ranger",
-                    "DESCRIPTION": "wanders or ranges over a particular area or domain."
+                    "DESCRIPTION": "wanders or ranges over a particular area or domain.",
+                    "SKILLS": [
+                        "Nature",
+                        "Survival"
+                    ]
                 },
                 {
                     "PROFESSION": "Renderer",
-                    "DESCRIPTION": "converts waste animal tissue into usable materials."
+                    "DESCRIPTION": "converts waste animal tissue into usable materials.",
+                    "SAVING_THROWS": [
+                        "Constitution"
+                    ]
                 },
                 {
                     "PROFESSION": "Shepherd",
-                    "DESCRIPTION": "herds, tends, and guards sheep."
+                    "DESCRIPTION": "herds, tends, and guards sheep.",
+                    "SKILLS": [
+                        "Animal Handling"
+                    ]
                 },
                 {
                     "PROFESSION": "Stablehand",
@@ -165,7 +219,10 @@
                 },
                 {
                     "PROFESSION": "Trapper",
-                    "DESCRIPTION": "traps wild animals, especially for their fur."
+                    "DESCRIPTION": "traps wild animals, especially for their fur.",
+                    "SKILLS": [
+                        "Survival"
+                    ]
                 },
                 {
                     "PROFESSION": "Vintner",
@@ -173,7 +230,10 @@
                 },
                 {
                     "PROFESSION": "Zookeeper",
-                    "DESCRIPTION": "maintains and cares for animals or monsters in a zoo."
+                    "DESCRIPTION": "maintains and cares for animals or monsters in a zoo.",
+                    "SKILLS": [
+                        "Animal Handling"
+                    ]
                 }
             ]
         },
@@ -193,7 +253,10 @@
             ],
             "PROFESSIONS": [{
                     "PROFESSION": "Architect",
-                    "DESCRIPTION": "designs buildings or landscapes and in many cases supervises their construction."
+                    "DESCRIPTION": "designs buildings or landscapes and in many cases supervises their construction.",
+                    "SKILLS": [
+                        "Insight"
+                    ]
                 },
                 {
                     "PROFESSION": "Brickmaker",
@@ -209,7 +272,10 @@
                 },
                 {
                     "PROFESSION": "Construction Worker",
-                    "DESCRIPTION": "a laborer in the physical construction of a built environment and its infrastructure."
+                    "DESCRIPTION": "a laborer in the physical construction of a built environment and its infrastructure.",
+                    "SKILLS": [
+                        "Athletics"
+                    ]
                 },
                 {
                     "PROFESSION": "General Contractor",
@@ -253,27 +319,45 @@
             ],
             "PROFESSIONS": [{
                     "PROFESSION": "Acrobat",
-                    "DESCRIPTION": "performs spectacular gymnastic feats."
+                    "DESCRIPTION": "performs spectacular gymnastic feats.",
+                    "SKILLS": [
+                        "Acrobatics"
+                    ]
                 },
                 {
                     "PROFESSION": "Actor",
-                    "DESCRIPTION": "impersonates characters, typically on stage in a theatrical production."
+                    "DESCRIPTION": "impersonates characters, typically on stage in a theatrical production.",
+                    "SKILLS": [
+                        "Performance"
+                    ]
                 },
                 {
                     "PROFESSION": "Aerialist/Trapezist",
-                    "DESCRIPTION": "performs acrobatics high above the ground on a tightrope or trapeze."
+                    "DESCRIPTION": "performs acrobatics high above the ground on a tightrope or trapeze.",
+                    "SKILLS": [
+                        "Acrobatics"
+                    ]
                 },
                 {
                     "PROFESSION": "Arranger",
-                    "DESCRIPTION": "adapts a musical composition for performance."
+                    "DESCRIPTION": "adapts a musical composition for performance.",
+                    "SKILLS": [
+                        "Insight"
+                    ]
                 },
                 {
                     "PROFESSION": "Athlete",
-                    "DESCRIPTION": "proficient in sports and other forms of physical exercise."
+                    "DESCRIPTION": "proficient in sports and other forms of physical exercise.",
+                    "SKILLS": [
+                        "Athletics"
+                    ]
                 },
                 {
                     "PROFESSION": "Busker/Street Musician",
-                    "DESCRIPTION": "performs in a public place, often for money."
+                    "DESCRIPTION": "performs in a public place, often for money.",
+                    "SKILLS": [
+                        "Performance"
+                    ]
                 },
                 {
                     "PROFESSION": "Celebrity",
@@ -281,31 +365,52 @@
                 },
                 {
                     "PROFESSION": "Chef",
-                    "DESCRIPTION": "a professional cook trained in the culinary arts."
+                    "DESCRIPTION": "a professional cook trained in the culinary arts.",
+                    "SKILLS": [
+                        "Insight"
+                    ]
                 },
                 {
                     "PROFESSION": "Choirmaster",
-                    "DESCRIPTION": "trains a choir and orchestrates their singing when they perform."
+                    "DESCRIPTION": "trains a choir and orchestrates their singing when they perform.",
+                    "SKILLS": [
+                        "Performance"
+                    ]
                 },
                 {
                     "PROFESSION": "Clown",
-                    "DESCRIPTION": "comic entertainer who wears a traditional costume and exaggerated makeup."
+                    "DESCRIPTION": "comic entertainer who wears a traditional costume and exaggerated makeup.",
+                    "SKILLS": [
+                        "Performance"
+                    ]
                 },
                 {
                     "PROFESSION": "Comedian",
-                    "DESCRIPTION": "entertainer whose act is designed to make an audience laugh."
+                    "DESCRIPTION": "entertainer whose act is designed to make an audience laugh.",
+                    "SKILLS": [
+                        "Performance"
+                    ]
                 },
                 {
                     "PROFESSION": "Conductor",
-                    "DESCRIPTION": "directs the performance of an orchestra."
+                    "DESCRIPTION": "directs the performance of an orchestra.",
+                    "SKILLS": [
+                        "Performance"
+                    ]
                 },
                 {
                     "PROFESSION": "Contortionist",
-                    "DESCRIPTION": "twists and bends their body into strange and unnatural positions."
+                    "DESCRIPTION": "twists and bends their body into strange and unnatural positions.",
+                    "SKILLS": [
+                        "Acrobatics"
+                    ]
                 },
                 {
                     "PROFESSION": "Curator",
-                    "DESCRIPTION": "keeper and custodian of a museum or other collections of precious items."
+                    "DESCRIPTION": "keeper and custodian of a museum or other collections of precious items.",
+                    "SKILLS": [
+                        "History"
+                    ]
                 },
                 {
                     "PROFESSION": "Costumer",
@@ -313,19 +418,31 @@
                 },
                 {
                     "PROFESSION": "Dancer",
-                    "DESCRIPTION": "moves their body rhythmically with or without musical accompaniment."
+                    "DESCRIPTION": "moves their body rhythmically with or without musical accompaniment.",
+                    "SKILLS": [
+                        "Performance"
+                    ]
                 },
                 {
                     "PROFESSION": "Equilibrist",
-                    "DESCRIPTION": "performs balancing feats."
+                    "DESCRIPTION": "performs balancing feats.",
+                    "SKILLS": [
+                        "Acrobatics"
+                    ]
                 },
                 {
                     "PROFESSION": "Fashion Designer",
-                    "DESCRIPTION": "applies design, aesthetics and natural beauty to garments and their accessories."
+                    "DESCRIPTION": "applies design, aesthetics and natural beauty to garments and their accessories.",
+                    "SKILLS": [
+                        "Inisght"
+                    ]
                 },
                 {
                     "PROFESSION": "Gladiator",
-                    "DESCRIPTION": "fights against other people, wild animals, or monsters in an arena."
+                    "DESCRIPTION": "fights against other people, wild animals, or monsters in an arena.",
+                    "SKILLS": [
+                        "Athletics"
+                    ]
                 },
                 {
                     "PROFESSION": "Glasspainter",
@@ -333,27 +450,45 @@
                 },
                 {
                     "PROFESSION": "Jester",
-                    "DESCRIPTION": "professional joker or \"fool\" at court, typically wearing a cap with bells on it and carrying a mock scepter."
+                    "DESCRIPTION": "professional joker or \"fool\" at court, typically wearing a cap with bells on it and carrying a mock scepter.",
+                    "SKILLS": [
+                        "Performance"
+                    ]
                 },
                 {
                     "PROFESSION": "Juggler",
-                    "DESCRIPTION": "keeps several objects in motion in the air at the same time by alternately tossing and catching them."
+                    "DESCRIPTION": "keeps several objects in motion in the air at the same time by alternately tossing and catching them.",
+                    "SKILLS": [
+                        "Performance"
+                    ]
                 },
                 {
                     "PROFESSION": "Illuminator",
-                    "DESCRIPTION": "paints and calligraphs to adorn or enlighten scrolls and manuscripts."
+                    "DESCRIPTION": "paints and calligraphs to adorn or enlighten scrolls and manuscripts.",
+                    "SKILLS": [
+                        "Sleight of Hand"
+                    ]
                 },
                 {
                     "PROFESSION": "Limner",
-                    "DESCRIPTION": "paints portraits or miniatures."
+                    "DESCRIPTION": "paints portraits or miniatures.",
+                    "SKILLS": [
+                        "Performance"
+                    ]
                 },
                 {
                     "PROFESSION": "Makeup Artist",
-                    "DESCRIPTION": "applies cosmetics to models, actors, nobles, etc."
+                    "DESCRIPTION": "applies cosmetics to models, actors, nobles, etc.",
+                    "SKILLS": [
+                        "Performance"
+                    ]
                 },
                 {
                     "PROFESSION": "Minstrel",
-                    "DESCRIPTION": "recites lyric or heroic poetry for nobility."
+                    "DESCRIPTION": "recites lyric or heroic poetry for nobility.",
+                    "SKILLS": [
+                        "Performance"
+                    ]
                 },
                 {
                     "PROFESSION": "Model",
@@ -361,47 +496,81 @@
                 },
                 {
                     "PROFESSION": "Musician",
-                    "DESCRIPTION": "plays a musical instrument."
+                    "DESCRIPTION": "plays a musical instrument.",
+                    "SKILLS": [
+                        "Performance"
+                    ]
                 },
                 {
                     "PROFESSION": "Painter",
-                    "DESCRIPTION": "paints pictures."
+                    "DESCRIPTION": "paints pictures.",
+                    "SKILLS": [
+                        "Performance"
+                    ]
                 },
                 {
                     "PROFESSION": "Playwright",
-                    "DESCRIPTION": "writes plays or musicals."
+                    "DESCRIPTION": "writes plays or musicals.",
+                    "SKILLS": [
+                        "Insight"
+                    ]
                 },
                 {
                     "PROFESSION": "Poet",
-                    "DESCRIPTION": "writes ballads, epics, sonnets, or other forms of poetry."
+                    "DESCRIPTION": "writes ballads, epics, sonnets, or other forms of poetry.",
+                    "SKILLS": [
+                        "Performance"
+                    ]
                 },
                 {
                     "PROFESSION": "Ringmaster/Ringmistress",
-                    "DESCRIPTION": "master of ceremony who introduces the circus acts to the audience."
+                    "DESCRIPTION": "master of ceremony who introduces the circus acts to the audience.",
+                    "SKILLS": [
+                        "Performance"
+                    ]
                 },
                 {
                     "PROFESSION": "Ropewalker",
-                    "DESCRIPTION": "walks along a tightrope to entertain others."
+                    "DESCRIPTION": "walks along a tightrope to entertain others.",
+                    "SKILLS": [
+                        "Acrobatics"
+                    ]
                 },
                 {
                     "PROFESSION": "Sculptor",
-                    "DESCRIPTION": "crafts art by carving or casting blocks of marble, stones, or other hardened minerals."
+                    "DESCRIPTION": "crafts art by carving or casting blocks of marble, stones, or other hardened minerals.",
+                    "SKILLS": [
+                        "Insight"
+                    ]
                 },
                 {
                     "PROFESSION": "Singer/Soprano",
-                    "DESCRIPTION": "sings with or without instrumental accompaniment."
+                    "DESCRIPTION": "sings with or without instrumental accompaniment.",
+                    "SKILLS": [
+                        "Performance"
+                    ]
                 },
                 {
                     "PROFESSION": "Skald",
-                    "DESCRIPTION": "composes and recites poems honoring heroes and their deeds."
+                    "DESCRIPTION": "composes and recites poems honoring heroes and their deeds.",
+                    "SKILLS": [
+                        "Performance"
+                    ]
                 },
                 {
                     "PROFESSION": "Stage Magician",
-                    "DESCRIPTION": "deceives their audience with seemingly impossible feats while using only natural means."
+                    "DESCRIPTION": "deceives their audience with seemingly impossible feats while using only natural means.",
+                    "SKILLS": [
+                        "Performance"
+                    ]
                 },
                 {
                     "PROFESSION": "Stuntman/Stuntwoman",
-                    "DESCRIPTION": "performs dangerous stunts for their audience."
+                    "DESCRIPTION": "performs dangerous stunts for their audience.",
+                    "SKILLS": [
+                        "Athletics",
+                        "Performance"
+                    ]
                 },
                 {
                     "PROFESSION": "Tattooist",
@@ -413,7 +582,10 @@
                 },
                 {
                     "PROFESSION": "Wrestler",
-                    "DESCRIPTION": "performs in matches involving grappling and grappling-type techniques."
+                    "DESCRIPTION": "performs in matches involving grappling and grappling-type techniques.",
+                    "SKILLS": [
+                        "Athletics"
+                    ]
                 },
                 {
                     "PROFESSION": "Writer",
@@ -437,11 +609,17 @@
             ],
             "PROFESSIONS": [{
                     "PROFESSION": "Accountant",
-                    "DESCRIPTION": "keeps and inspects financial accounts."
+                    "DESCRIPTION": "keeps and inspects financial accounts.",
+                    "SKILLS": [
+                        "Investigation"
+                    ]
                 },
                 {
                     "PROFESSION": "Actuary",
-                    "DESCRIPTION": "compiles and analyzes statistics and uses them to calculate risk."
+                    "DESCRIPTION": "compiles and analyzes statistics and uses them to calculate risk.",
+                    "SKILLS": [
+                        "Investigation"
+                    ]
                 },
                 {
                     "PROFESSION": "Animal Collector/Monster Collector",
@@ -449,7 +627,10 @@
                 },
                 {
                     "PROFESSION": "Business Owner",
-                    "DESCRIPTION": "owns a business entity in an attempt to profit from its successful operations."
+                    "DESCRIPTION": "owns a business entity in an attempt to profit from its successful operations.",
+                    "SKILLS": [
+                        "Persuasion"
+                    ]
                 },
                 {
                     "PROFESSION": "Debt Collector",
@@ -457,19 +638,31 @@
                 },
                 {
                     "PROFESSION": "Draper",
-                    "DESCRIPTION": "an alcohol merchant."
+                    "DESCRIPTION": "an alcohol merchant.",
+                    "SKILLS": [
+                        "Persuasion"
+                    ]
                 },
                 {
                     "PROFESSION": "Appraiser",
-                    "DESCRIPTION": "assesses the monetary value of something."
+                    "DESCRIPTION": "assesses the monetary value of something.",
+                    "SKILLS": [
+                        "Insight"
+                    ]
                 },
                 {
                     "PROFESSION": "Auctioneer",
-                    "DESCRIPTION": "conducts auctions by accepting bids and declaring goods sold."
+                    "DESCRIPTION": "conducts auctions by accepting bids and declaring goods sold.",
+                    "SKILLS": [
+                        "Performance"
+                    ]
                 },
                 {
                     "PROFESSION": "Banker",
-                    "DESCRIPTION": "an officer or owner of a bank or group of banks."
+                    "DESCRIPTION": "an officer or owner of a bank or group of banks.",
+                    "SKILLS": [
+                        "Insight"
+                    ]
                 },
                 {
                     "PROFESSION": "Bagniokeeper",
@@ -489,11 +682,17 @@
                 },
                 {
                     "PROFESSION": "Entrepreneur",
-                    "DESCRIPTION": "organizes and operates a business or businesses, taking on greater than normal financial risks in order to do so."
+                    "DESCRIPTION": "organizes and operates a business or businesses, taking on greater than normal financial risks in order to do so.",
+                    "SKILLS": [
+                        "Insight"
+                    ]
                 },
                 {
                     "PROFESSION": "Grocer",
-                    "DESCRIPTION": "a food merchant."
+                    "DESCRIPTION": "a food merchant.",
+                    "SKILLS": [
+                        "Persuasion"
+                    ]
                 },
                 {
                     "PROFESSION": "Guild Master",
@@ -501,7 +700,10 @@
                 },
                 {
                     "PROFESSION": "Innkeeper",
-                    "DESCRIPTION": "owns and runs an inn."
+                    "DESCRIPTION": "owns and runs an inn.",
+                    "SKILLS": [
+                        "Persuasion"
+                    ]
                 },
                 {
                     "PROFESSION": "Land Surveyor",
@@ -509,7 +711,10 @@
                 },
                 {
                     "PROFESSION": "Merchant",
-                    "DESCRIPTION": "sells and trades goods."
+                    "DESCRIPTION": "sells and trades goods.",
+                    "SKILLS": [
+                        "Persuasion"
+                    ]
                 },
                 {
                     "PROFESSION": "Moneychanger",
@@ -521,7 +726,10 @@
                 },
                 {
                     "PROFESSION": "Peddler",
-                    "DESCRIPTION": "travels from place to place selling assorted items."
+                    "DESCRIPTION": "travels from place to place selling assorted items.",
+                    "SKILLS": [
+                        "Persuasion"
+                    ]
                 },
                 {
                     "PROFESSION": "Pimp/Madame",
@@ -545,7 +753,10 @@
                 },
                 {
                     "PROFESSION": "Vendor",
-                    "DESCRIPTION": "deals items in the street."
+                    "DESCRIPTION": "deals items in the street.",
+                    "SKILLS": [
+                        "Persuasion"
+                    ]
                 }
             ]
         },
@@ -617,15 +828,24 @@
                 },
                 {
                     "PROFESSION": "Armorer",
-                    "DESCRIPTION": "specializes in making and repairing armor."
+                    "DESCRIPTION": "specializes in making and repairing armor.",
+                    "SKILLS": [
+                        "Athletics"
+                    ]
                 },
                 {
                     "PROFESSION": "Blacksmith",
-                    "DESCRIPTION": "forges and repairs things in metal, including weapons, armor, utensils, etc."
+                    "DESCRIPTION": "forges and repairs things in metal, including weapons, armor, utensils, etc.",
+                    "SKILLS": [
+                        "Athletics"
+                    ]
                 },
                 {
                     "PROFESSION": "Bladesmith",
-                    "DESCRIPTION": "specializes in making and repairing bladed weapons, especially swords and daggers."
+                    "DESCRIPTION": "specializes in making and repairing bladed weapons, especially swords and daggers.",
+                    "SKILLS": [
+                        "Athletics"
+                    ]
                 },
                 {
                     "PROFESSION": "Bookbinder",
@@ -797,7 +1017,10 @@
                 },
                 {
                     "PROFESSION": "Weaponsmith",
-                    "DESCRIPTION": "specializes in making and repairing weapons."
+                    "DESCRIPTION": "specializes in making and repairing weapons.",
+                    "SKILLS": [
+                        "Athletics"
+                    ]
                 },
                 {
                     "PROFESSION": "Weaver",
@@ -829,7 +1052,10 @@
             ],
             "PROFESSIONS": [{
                     "PROFESSION": "Assassin",
-                    "DESCRIPTION": "murders through stealth for reasons pertaining to money, politics, or religion."
+                    "DESCRIPTION": "murders through stealth for reasons pertaining to money, politics, or religion.",
+                    "SKILLS": [
+                        "Stealth"
+                    ]
                 },
                 {
                     "PROFESSION": "Bandit",
@@ -841,7 +1067,10 @@
                 },
                 {
                     "PROFESSION": "Charlatan/Conman",
-                    "DESCRIPTION": "tricks people by gaining their trust and persuading them to believe something that is not true in order to benefit from the encounter."
+                    "DESCRIPTION": "tricks people by gaining their trust and persuading them to believe something that is not true in order to benefit from the encounter.",
+                    "SKILLS": [
+                        "Deception"
+                    ]
                 },
                 {
                     "PROFESSION": "Cockfighter/Gamefighter",
@@ -849,11 +1078,17 @@
                 },
                 {
                     "PROFESSION": "Crime Boss",
-                    "DESCRIPTION": "controls and supervises a criminal organization."
+                    "DESCRIPTION": "controls and supervises a criminal organization.",
+                    "SKILLS": [
+                        "Insight"
+                    ]
                 },
                 {
                     "PROFESSION": "Cutpurse",
-                    "DESCRIPTION": "a pickpocket or thief."
+                    "DESCRIPTION": "a pickpocket or thief.",
+                    "SKILLS": [
+                        "Sleight of Hand"
+                    ]
                 },
                 {
                     "PROFESSION": "Drug Dealer",
@@ -861,11 +1096,17 @@
                 },
                 {
                     "PROFESSION": "Drug Lord",
-                    "DESCRIPTION": "controls a network of persons involved in the illegal drugs trade and transactions."
+                    "DESCRIPTION": "controls a network of persons involved in the illegal drugs trade and transactions.",
+                    "SKILLS": [
+                        "Insight"
+                    ]
                 },
                 {
                     "PROFESSION": "Extortioner",
-                    "DESCRIPTION": "extorts money from someone by threatening to expose embarrassing information about them."
+                    "DESCRIPTION": "extorts money from someone by threatening to expose embarrassing information about them.",
+                    "SKILLS": [
+                        "Intimidation"
+                    ]
                 },
                 {
                     "PROFESSION": "Fence",
@@ -913,7 +1154,11 @@
                 },
                 {
                     "PROFESSION": "Thief",
-                    "DESCRIPTION": "steals people’s property, especially by stealth and without using force or violence."
+                    "DESCRIPTION": "steals people’s property, especially by stealth and without using force or violence.",
+                    "SKILLS": [
+                        "Sleight of Hand",
+                        "Stealth"
+                    ]
                 }
             ]
         },
@@ -933,7 +1178,10 @@
             ],
             "PROFESSIONS": [{
                     "PROFESSION": "Affeeror",
-                    "DESCRIPTION": "determines the values of fines and amercements."
+                    "DESCRIPTION": "determines the values of fines and amercements.",
+                    "SKILLS": [
+                        "TODO: Continue"
+                    ]
                 },
                 {
                     "PROFESSION": "Agister",

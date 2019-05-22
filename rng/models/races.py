@@ -54,25 +54,49 @@ class CharacterRaces(object):
         ]
 
     @classmethod
+    def roll(cls, race_name=None, amount=1):
+        """Method docstring."""
+
+        if not amount:
+            return None
+
+        name_to_race_map = {
+            cls.DRAGONBORN: Dragonborn,
+            cls.DWARF: [HillDwarf, MountainDwarf],
+            cls.HILL_DWARF: HillDwarf,
+            cls.MOUNTAIN_DWARF: MountainDwarf,
+            cls.ELF: [HighElf, WoodElf, DarkElf],
+            cls.HIGH_ELF: HighElf,
+            cls.WOOD_ELF: WoodElf,
+            cls.DARK_ELF: DarkElf,
+            cls.GNOME: [RockGnome, ForestGnome],
+            cls.ROCK_GNOME: RockGnome,
+            cls.FOREST_GNOME: ForestGnome,
+            cls.HALF_ELF: HalfElf,
+            cls.HALF_ORC: HalfOrc,
+            cls.HALFLING: [LightfootHalfling, StoutHalfling],
+            cls.LIGHTFOOT_HALFLING: LightfootHalfling,
+            cls.STOUT_HALFLING: StoutHalfling,
+            cls.HUMAN: Human,
+            cls.TIEFLING: Tiefling
+        }
+
+        if not race_name or race_name == Strings.RANDOM:
+            available_races = [v for k, v in name_to_race_map.items()]
+        else:
+            available_races = [name_to_race_map[race_name]]
+
+        results = [random.choice(c)() if isinstance(c, list) else c() for c in random.choices(available_races, k=amount)]
+        return results[0] if amount == 1 else results
+
+    @classmethod
     def roll_random(cls, amount=1):
         """Method docstring."""
 
         if not amount:
             return None
 
-        available_races = [
-            Dragonborn,
-            HillDwarf, MountainDwarf,
-            HighElf, WoodElf, DarkElf,
-            RockGnome, ForestGnome,
-            HalfElf,
-            HalfOrc,
-            LightfootHalfling, StoutHalfling,
-            Human,
-            Tiefling
-        ]
-        results = [c() for c in random.choices(available_races, k=amount)]
-        return results[0] if amount == 1 else results
+        return cls.roll(Strings.RANDOM, amount)
 
 
 class CharacterRace(object):
@@ -86,36 +110,44 @@ class CharacterRace(object):
         self.speed = 0
         self.age = None
         self.ability_score_increases = []
+        self._original_ability_score_increases = None
         self.languages = []
+        self._original_languages = None
         self.senses = []
         self.skills = []
+        self._original_skills = None
 
     def __str__(self):
         string = f'Race: {self.name}{Strings.NEWLINE}'
-        string += f'Size: {self.size}{Strings.NEWLINE}'
-        string += f'Speed: {self.speed} ft.{Strings.NEWLINE}'
-        string += f'Age: {self.age}{Strings.NEWLINE}'
+        string += f'  Size: {self.size}{Strings.NEWLINE}'
+        string += f'  Speed: {self.speed} ft.{Strings.NEWLINE}'
+        string += f'  Age: {self.age}{Strings.NEWLINE}'
         if self.ability_score_increases:
-            string += f'Ability Score Increases:{Strings.NEWLINE}'
+            string += f'  Ability Score Increases:{Strings.NEWLINE}'
             for elem in self.ability_score_increases:
-                string += f'{Strings.TAB}{elem[0]}: {elem[1]}{Strings.NEWLINE}'
+                string += f'    {elem[0]}: {elem[1]}{Strings.NEWLINE}'
         if self.senses:
-            string += f'Senses:{Strings.NEWLINE}'
+            string += f'  Senses:{Strings.NEWLINE}'
             for elem in self.senses:
-                string += f'{Strings.TAB}{elem}{Strings.NEWLINE}'
+                string += f'    {elem}{Strings.NEWLINE}'
         if self.languages:
-            string += f'Languages:{Strings.NEWLINE}'
+            string += f'  Languages:{Strings.NEWLINE}'
             for elem in self.languages:
-                string += f'{Strings.TAB}{elem}{Strings.NEWLINE}'
+                string += f'    {elem}{Strings.NEWLINE}'
         if self.skills:
-            string += f'Skills:{Strings.NEWLINE}'
+            string += f'  Skills:{Strings.NEWLINE}'
             for elem in self.skills:
-                string += f'{Strings.TAB}{elem}{Strings.NEWLINE}'
-        return string[:-1]  # Strip the last newline
+                string += f'    {elem}{Strings.NEWLINE}'
+        return string.strip()
 
     def _parse_random_ability_score_increases(self):
         if not self.ability_score_increases:
             return
+
+        if self._original_ability_score_increases is None:
+            self._original_ability_score_increases = self.ability_score_increases[:]
+        else:
+            self.ability_score_increases = self._original_ability_score_increases[:]
 
         abilities = Abilities.as_list()
         for ability in self.ability_score_increases:
@@ -132,6 +164,11 @@ class CharacterRace(object):
     def _parse_random_languages(self):
         if not self.languages:
             return
+
+        if self._original_languages is None:
+            self._original_languages = self.languages[:]
+        else:
+            self.languages = self._original_languages[:]
 
         standard_languages = [l for l in Languages.standard_as_list() if l not in self.languages]
         exotic_languages = [l for l in Languages.exotic_as_list() if l not in self.languages]
@@ -156,6 +193,11 @@ class CharacterRace(object):
         if not self.skills:
             return
 
+        if self._original_skills is None:
+            self._original_skills = self.skills[:]
+        else:
+            self.skills = self._original_skills[:]
+
         skills = Skills.as_list()
         for skill in self.skills:
             if skill not in skills:
@@ -173,6 +215,24 @@ class CharacterRace(object):
         self._parse_random_ability_score_increases()
         self._parse_random_languages()
         self._parse_random_skills()
+
+    def roll_random_ability_score_increases(self):
+        """Method docstring."""
+        self._parse_random_ability_score_increases()
+
+    def roll_random_languages(self):
+        """Method docstring."""
+        self._parse_random_languages()
+
+    def roll_random_skills(self):
+        """Method docstring."""
+        self._parse_random_skills()
+
+    def roll_random_abilities(self):
+        """Method docstring."""
+        self.roll_random_ability_score_increases()
+        self.roll_random_languages()
+        self.roll_random_skills()
 
 
 class Dragonborn(CharacterRace):

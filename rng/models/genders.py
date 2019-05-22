@@ -4,7 +4,7 @@ Module docstring.
 import random
 
 
-class CharacterSexes(object):
+class CharacterGenders(object):
     """Class docstring."""
 
     MALE = 'Male'
@@ -25,15 +25,15 @@ class CharacterSexes(object):
         if not amount:
             return None
 
-        results = [CharacterSex(s) for s in random.choices(cls.as_list(), k=amount)]
+        results = [CharacterGender(s) for s in random.choices(cls.as_list(), k=amount)]
         return results[0] if amount == 1 else results
 
 
-class CharacterSex(object):
+class CharacterGender(object):
     """Class docstring."""
 
-    def __init__(self, sex):
-        self.sex = sex
+    def __init__(self, gender):
+        self.gender = gender
 
     def __str__(self):
-        return f'Sex: {self.sex}'
+        return f'Gender: {self.gender}'

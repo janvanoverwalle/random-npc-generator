@@ -85,3 +85,15 @@ class Skills(object):
         """Method docstring."""
         for skill in cls.as_list(abilities):
             yield skill
+
+    @classmethod
+    def convert(cls, obj):
+        """Method docstring."""
+        if obj is None:
+            return None
+        parsed_string = ''.join([c for c in str(obj).lower() if c.isalpha()])
+        for skill in cls.iterate():
+            parsed_skill = ''.join([c for c in skill.lower() if c.isalpha()])
+            if parsed_string == parsed_skill:
+                return skill
+        return str(obj)

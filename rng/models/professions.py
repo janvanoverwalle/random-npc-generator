@@ -4,6 +4,8 @@ Module docstring.
 import json
 import random
 from pathlib import Path
+from rng.resources.objects.abilities import Abilities
+from rng.resources.objects.skills import Skills
 from rng.resources.objects.strings import Strings
 
 
@@ -14,11 +16,13 @@ class CharacterProfessions(object):
     PROFESSIONS = 'PROFESSIONS'
     PROFESSION = 'PROFESSION'
     DESCRIPTION = 'DESCRIPTION'
+    SKILLS = 'SKILLS'
+    SAVING_THROWS = 'SAVING_THROWS'
     LOCALES = 'LOCALES'
     LOCALE = 'LOCALE'
     WEIGHT = 'WEIGHT'
 
-    _json_path = Path(__file__).parent.parent / 'resources' / 'json' / 'professions.json'
+    _json_path = Path(__file__).parent.parent / 'resources' / 'json' / 'character_professions.json'
     _categories = {}
 
     professions = []
@@ -60,12 +64,14 @@ class CharacterProfessions(object):
         for p_data in data:
             profession = p_data.get(cls.PROFESSION)
             description = p_data.get(cls.DESCRIPTION)
+            skills = p_data.get(cls.SKILLS)
+            saving_throws = p_data.get(cls.SAVING_THROWS)
             locale_data = p_data.get(cls.LOCALES, locale_data)
 
             if cls.professions is None:
                 cls.professions = []
 
-            profession_obj = CharacterProfession(profession, description, category, locale_data)
+            profession_obj = CharacterProfession(profession, description, category, skills, saving_throws, locale_data)
             cls.professions.append(profession_obj)
 
     @classmethod
@@ -90,17 +96,29 @@ class CharacterProfessions(object):
 
 class CharacterProfession(object):
     """Class docstring."""
-    def __init__(self, name, description=None, category=None, locale_data=None):
+    def __init__(self, name, description=None, category=None, skills=None, saving_throws=None, locale_data=None):
         self.name = name
         self.description = description.capitalize() if isinstance(description, str) else description
         self.category = category
+        tmp_skills = [skills] if isinstance(skills, str) or skills is None else skills
+        self.skills = [Skills.convert(s) for s in tmp_skills if s]
+        tmp_saving_throws = [saving_throws] if isinstance(saving_throws, str) or saving_throws is None else saving_throws
+        self.saving_throws = [Abilities.convert(s) for s in tmp_saving_throws if s]
         self._locale_data = locale_data
 
     def __str__(self):
         # cat_str = f'[{self.category}] ' if self.category else ''
-        name_str = f'{self.name}'
-        descr_str = f' ({self.description})' if self.description else ''
-        return f'Profession: {name_str}{descr_str}'
+        string = f'Profession: {self.name}{Strings.NEWLINE}'
+        string += f'  Description: {self.description}{Strings.NEWLINE}' if self.description else ''
+        if self.saving_throws:
+            string += f'  Saving Throws:{Strings.NEWLINE}'
+            for elem in self.saving_throws:
+                string += f'    {elem}{Strings.NEWLINE}'
+        if self.skills:
+            string += f'  Skills:{Strings.NEWLINE}'
+            for elem in self.skills:
+                string += f'    {elem}{Strings.NEWLINE}'
+        return string.strip()
 
     def __repr__(self):
         return f'{self.name}'
@@ -111,10 +129,10 @@ class CharacterProfession(object):
         if not locale:
             return 1
         for data in self._locale_data:
-            l = data.get(CharacterProfessions.LOCALE)
-            if not l:
+            loc = data.get(CharacterProfessions.LOCALE)
+            if not loc:
                 continue
-            if locale.lower() == l.lower():
+            if locale.lower() == loc.lower():
                 try:
                     return float(data.get(CharacterProfessions.WEIGHT, 0))
                 except (TypeError, ValueError):

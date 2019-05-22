@@ -19,6 +19,9 @@ class Senses(object):
     def __str__(self):
         return f'{self.name} ({self.range} ft.)'
 
+    def __repr__(self):
+        return str(self)
+
 
 class Blindsight(Senses):
     """Class docstring."""

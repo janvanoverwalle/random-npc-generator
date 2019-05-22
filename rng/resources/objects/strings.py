@@ -9,3 +9,8 @@ class Strings(object):
     NEWLINE = '\n'
     TAB = '\t'
     RANDOM = 'random'
+
+    @classmethod
+    def equals_ignore_case(cls, a, b):
+        """Method docstring."""
+        return a.lower() == b.lower()
