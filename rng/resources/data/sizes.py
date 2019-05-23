@@ -2,7 +2,7 @@
 Module docstring.
 """
 
-class Size(object):
+class Sizes(object):
     """Class docstring."""
 
     NONE = 'none'

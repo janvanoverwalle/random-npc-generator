@@ -4,54 +4,16 @@ Module docstring.
 import random
 from rng.models.ages import Age
 from rng.models.senses import Darkvision
-from rng.resources.objects.abilities import Abilities
-from rng.resources.objects.languages import Languages
-from rng.resources.objects.sizes import Size
-from rng.resources.objects.skills import Skills
-from rng.resources.objects.strings import Strings
+from rng.resources.data.abilities import Abilities
+from rng.resources.data.languages import Languages
+from rng.resources.data.races import Races
+from rng.resources.data.sizes import Sizes
+from rng.resources.data.skills import Skills
+from rng.resources.data.strings import Strings
 
 
 class CharacterRaces(object):
     """Class docstring."""
-
-    DRAGONBORN = 'Dragonborn'
-    DWARF = 'Dwarf'
-    HILL_DWARF = f'Hill {DWARF}'
-    MOUNTAIN_DWARF = f'Mountain {DWARF}'
-    ELF = 'Elf'
-    HIGH_ELF = f'High {ELF}'
-    WOOD_ELF = f'Wood {ELF}'
-    DARK_ELF = f'Dark {ELF}'
-    GNOME = 'Gnome'
-    ROCK_GNOME = f'Rock {GNOME}'
-    FOREST_GNOME = f'Forest {GNOME}'
-    HALF_ELF = 'Half-elf'
-    HALF_ORC = 'Half-orc'
-    HALFLING = 'Halfling'
-    LIGHTFOOT_HALFLING = f'Lightfoot {HALFLING}'
-    STOUT_HALFLING = f'Stout {HALFLING}'
-    HUMAN = 'Human'
-    TIEFLING = 'Tiefling'
-
-    @classmethod
-    def as_list(cls):
-        """Method docstring."""
-        return [
-            cls.DRAGONBORN,
-            cls.HILL_DWARF,
-            cls.MOUNTAIN_DWARF,
-            cls.HIGH_ELF,
-            cls.WOOD_ELF,
-            cls.DARK_ELF,
-            cls.ROCK_GNOME,
-            cls.FOREST_GNOME,
-            cls.HALF_ELF,
-            cls.HALF_ORC,
-            cls.LIGHTFOOT_HALFLING,
-            cls.STOUT_HALFLING,
-            cls.HUMAN,
-            cls.TIEFLING,
-        ]
 
     @classmethod
     def roll(cls, race_name=None, amount=1):
@@ -61,24 +23,24 @@ class CharacterRaces(object):
             return None
 
         name_to_race_map = {
-            cls.DRAGONBORN: Dragonborn,
-            cls.DWARF: [HillDwarf, MountainDwarf],
-            cls.HILL_DWARF: HillDwarf,
-            cls.MOUNTAIN_DWARF: MountainDwarf,
-            cls.ELF: [HighElf, WoodElf, DarkElf],
-            cls.HIGH_ELF: HighElf,
-            cls.WOOD_ELF: WoodElf,
-            cls.DARK_ELF: DarkElf,
-            cls.GNOME: [RockGnome, ForestGnome],
-            cls.ROCK_GNOME: RockGnome,
-            cls.FOREST_GNOME: ForestGnome,
-            cls.HALF_ELF: HalfElf,
-            cls.HALF_ORC: HalfOrc,
-            cls.HALFLING: [LightfootHalfling, StoutHalfling],
-            cls.LIGHTFOOT_HALFLING: LightfootHalfling,
-            cls.STOUT_HALFLING: StoutHalfling,
-            cls.HUMAN: Human,
-            cls.TIEFLING: Tiefling
+            Races.DRAGONBORN: Dragonborn,
+            Races.DWARF: [HillDwarf, MountainDwarf],
+            Races.HILL_DWARF: HillDwarf,
+            Races.MOUNTAIN_DWARF: MountainDwarf,
+            Races.ELF: [HighElf, WoodElf, DarkElf],
+            Races.HIGH_ELF: HighElf,
+            Races.WOOD_ELF: WoodElf,
+            Races.DARK_ELF: DarkElf,
+            Races.GNOME: [RockGnome, ForestGnome],
+            Races.ROCK_GNOME: RockGnome,
+            Races.FOREST_GNOME: ForestGnome,
+            Races.HALF_ELF: HalfElf,
+            Races.HALF_ORC: HalfOrc,
+            Races.HALFLING: [LightfootHalfling, StoutHalfling],
+            Races.LIGHTFOOT_HALFLING: LightfootHalfling,
+            Races.STOUT_HALFLING: StoutHalfling,
+            Races.HUMAN: Human,
+            Races.TIEFLING: Tiefling
         }
 
         if not race_name or race_name == Strings.RANDOM:
@@ -106,7 +68,7 @@ class CharacterRace(object):
         self._basic_rules = True
 
         self.name = name
-        self.size = Size.NONE
+        self.size = Sizes.NONE
         self.speed = 0
         self.age = None
         self.ability_score_increases = []
@@ -118,26 +80,26 @@ class CharacterRace(object):
         self._original_skills = None
 
     def __str__(self):
-        string = f'Race: {self.name}{Strings.NEWLINE}'
-        string += f'  Size: {self.size}{Strings.NEWLINE}'
-        string += f'  Speed: {self.speed} ft.{Strings.NEWLINE}'
-        string += f'  Age: {self.age}{Strings.NEWLINE}'
+        string = f'Race: {self.name}{Strings.LF}'
+        string += f'  Sizes: {self.size}{Strings.LF}'
+        string += f'  Speed: {self.speed} ft.{Strings.LF}'
+        string += f'  Age: {self.age}{Strings.LF}'
         if self.ability_score_increases:
-            string += f'  Ability Score Increases:{Strings.NEWLINE}'
+            string += f'  Ability Score Increases:{Strings.LF}'
             for elem in self.ability_score_increases:
-                string += f'    {elem[0]}: {elem[1]}{Strings.NEWLINE}'
+                string += f'    {elem[0]}: {elem[1]}{Strings.LF}'
         if self.senses:
-            string += f'  Senses:{Strings.NEWLINE}'
+            string += f'  Senses:{Strings.LF}'
             for elem in self.senses:
-                string += f'    {elem}{Strings.NEWLINE}'
+                string += f'    {elem}{Strings.LF}'
         if self.languages:
-            string += f'  Languages:{Strings.NEWLINE}'
+            string += f'  Languages:{Strings.LF}'
             for elem in self.languages:
-                string += f'    {elem}{Strings.NEWLINE}'
+                string += f'    {elem}{Strings.LF}'
         if self.skills:
-            string += f'  Skills:{Strings.NEWLINE}'
+            string += f'  Skills:{Strings.LF}'
             for elem in self.skills:
-                string += f'    {elem}{Strings.NEWLINE}'
+                string += f'    {elem}{Strings.LF}'
         return string.strip()
 
     def _parse_random_ability_score_increases(self):
@@ -234,18 +196,22 @@ class CharacterRace(object):
         self.roll_random_languages()
         self.roll_random_skills()
 
+    def roll_age(self, char_class=None):
+        """Method docstring."""
+        return self.age.roll_random(self, char_class)
+
 
 class Dragonborn(CharacterRace):
     """Class docstring."""
 
     def __init__(self):
-        super().__init__(CharacterRaces.DRAGONBORN)
+        super().__init__(Races.DRAGONBORN)
         self.ability_score_increases = [
             (Abilities.STRENGTH, 2),
             (Abilities.CHARISMA, 1)
         ]
         self.age = Age(80, 3, 15)
-        self.size = Size.MEDIUM
+        self.size = Sizes.MEDIUM
         self.speed = 30
         self.languages = [
             Languages.COMMON,
@@ -257,12 +223,12 @@ class Dwarf(CharacterRace):
     """Class docstring."""
 
     def __init__(self, race=None):
-        super().__init__(race if race else CharacterRaces.DWARF)
+        super().__init__(race if race else Races.DWARF)
         self.ability_score_increases = [
             (Abilities.CONSTITUTION, 2)
         ]
         self.age = Age(350, 20, 50)
-        self.size = Size.MEDIUM
+        self.size = Sizes.MEDIUM
         self.speed = 25
         self.languages = [
             Languages.COMMON,
@@ -277,7 +243,7 @@ class HillDwarf(Dwarf):
     """Class docstring."""
 
     def __init__(self):
-        super().__init__(CharacterRaces.HILL_DWARF)
+        super().__init__(Races.HILL_DWARF)
         self.ability_score_increases.append((Abilities.WISDOM, 1))
 
 
@@ -285,7 +251,7 @@ class MountainDwarf(Dwarf):
     """Class docstring."""
 
     def __init__(self):
-        super().__init__(CharacterRaces.MOUNTAIN_DWARF)
+        super().__init__(Races.MOUNTAIN_DWARF)
         self.ability_score_increases.append((Abilities.STRENGTH, 2))
 
 
@@ -293,12 +259,12 @@ class Elf(CharacterRace):
     """Class docstring."""
 
     def __init__(self, race=None):
-        super().__init__(race if race else CharacterRaces.ELF)
+        super().__init__(race if race else Races.ELF)
         self.ability_score_increases = [
             (Abilities.DEXTERITY, 2)
         ]
         self.age = Age(750, 20, 100)
-        self.size = Size.MEDIUM
+        self.size = Sizes.MEDIUM
         self.speed = 30
         self.languages = [
             Languages.COMMON,
@@ -316,7 +282,7 @@ class HighElf(Elf):
     """Class docstring."""
 
     def __init__(self):
-        super().__init__(CharacterRaces.HIGH_ELF)
+        super().__init__(Races.HIGH_ELF)
         self.ability_score_increases.append((Abilities.INTELLIGENCE, 1))
 
 
@@ -324,7 +290,7 @@ class WoodElf(Elf):
     """Class docstring."""
 
     def __init__(self):
-        super().__init__(CharacterRaces.WOOD_ELF)
+        super().__init__(Races.WOOD_ELF)
         self.ability_score_increases.append((Abilities.WISDOM, 1))
         self.speed = 35
 
@@ -333,7 +299,7 @@ class DarkElf(Elf):
     """Class docstring."""
 
     def __init__(self):
-        super().__init__(CharacterRaces.DARK_ELF)
+        super().__init__(Races.DARK_ELF)
         self._basic_rules = False
 
         self.ability_score_increases.append((Abilities.CHARISMA, 1))
@@ -346,12 +312,12 @@ class Gnome(CharacterRace):
     """Class docstring."""
 
     def __init__(self, race=None):
-        super().__init__(race if race else CharacterRaces.GNOME)
+        super().__init__(race if race else Races.GNOME)
         self.ability_score_increases = [
             (Abilities.INTELLIGENCE, 2)
         ]
-        self.age = Age((350, 500), 40, 40)
-        self.size = Size.SMALL
+        self.age = Age((350, 500), 40)
+        self.size = Sizes.SMALL
         self.speed = 25
         self.languages = [
             Languages.COMMON,
@@ -366,7 +332,7 @@ class RockGnome(Gnome):
     """Class docstring."""
 
     def __init__(self):
-        super().__init__(CharacterRaces.ROCK_GNOME)
+        super().__init__(Races.ROCK_GNOME)
         self.ability_score_increases.append((Abilities.CONSTITUTION, 1))
 
 
@@ -374,7 +340,7 @@ class ForestGnome(Gnome):
     """Class docstring."""
 
     def __init__(self):
-        super().__init__(CharacterRaces.FOREST_GNOME)
+        super().__init__(Races.FOREST_GNOME)
         self._basic_rules = False
 
         self.ability_score_increases.append((Abilities.DEXTERITY, 1))
@@ -384,10 +350,10 @@ class HalfElf(CharacterRace):
     """Class docstring."""
 
     def __init__(self, race=None):
-        super().__init__(race if race else CharacterRaces.HALF_ELF)
+        super().__init__(race if race else Races.HALF_ELF)
 
-        self.age = Age(180, 20, 20)
-        self.size = Size.MEDIUM
+        self.age = Age(180, 20)
+        self.size = Sizes.MEDIUM
         self.speed = 30
         self.ability_score_increases = [
             (Abilities.CHARISMA, 2),
@@ -413,13 +379,13 @@ class HalfOrc(CharacterRace):
     """Class docstring."""
 
     def __init__(self, race=None):
-        super().__init__(race if race else CharacterRaces.HALF_ORC)
+        super().__init__(race if race else Races.HALF_ORC)
         self.ability_score_increases = [
             (Abilities.STRENGTH, 2),
             (Abilities.CONSTITUTION, 1)
         ]
-        self.age = Age(75, 14, 14)
-        self.size = Size.MEDIUM
+        self.age = Age(75, 14)
+        self.size = Sizes.MEDIUM
         self.speed = 30
         self.languages = [
             Languages.COMMON,
@@ -437,12 +403,12 @@ class Halfling(CharacterRace):
     """Class docstring."""
 
     def __init__(self, race=None):
-        super().__init__(race if race else CharacterRaces.HALFLING)
+        super().__init__(race if race else Races.HALFLING)
         self.ability_score_increases = [
             (Abilities.DEXTERITY, 2)
         ]
-        self.age = Age(150, 20, 20)
-        self.size = Size.SMALL
+        self.age = Age(150, 20)
+        self.size = Sizes.SMALL
         self.speed = 25
         self.languages = [
             Languages.COMMON,
@@ -454,7 +420,7 @@ class LightfootHalfling(Halfling):
     """Class docstring."""
 
     def __init__(self):
-        super().__init__(CharacterRaces.LIGHTFOOT_HALFLING)
+        super().__init__(Races.LIGHTFOOT_HALFLING)
         self.ability_score_increases.append((Abilities.CHARISMA, 1))
 
 
@@ -462,7 +428,7 @@ class StoutHalfling(Halfling):
     """Class docstring."""
 
     def __init__(self):
-        super().__init__(CharacterRaces.STOUT_HALFLING)
+        super().__init__(Races.STOUT_HALFLING)
         self.ability_score_increases.append((Abilities.CONSTITUTION, 1))
 
 
@@ -470,7 +436,7 @@ class Human(CharacterRace):
     """Class docstring."""
 
     def __init__(self, race=None):
-        super().__init__(race if race else CharacterRaces.HUMAN)
+        super().__init__(race if race else Races.HUMAN)
         self.ability_score_increases = [
             (Abilities.STRENGTH, 1),
             (Abilities.DEXTERITY, 1),
@@ -479,8 +445,8 @@ class Human(CharacterRace):
             (Abilities.WISDOM, 1),
             (Abilities.CHARISMA, 1)
         ]
-        self.age = Age(85, 20, 20)
-        self.size = Size.MEDIUM
+        self.age = Age(80, 20)
+        self.size = Sizes.MEDIUM
         self.speed = 30
         self.languages = [
             Languages.COMMON,
@@ -493,7 +459,7 @@ class VariantHuman(Human):
     """Class docstring."""
 
     def __init__(self, race=None):
-        super().__init__(race if race else CharacterRaces.HUMAN)
+        super().__init__(race if race else Races.HUMAN)
         self.ability_score_increases = [
             (Strings.RANDOM, 1),
             (Strings.RANDOM, 1)
@@ -511,13 +477,13 @@ class Tiefling(CharacterRace):
     """Class docstring."""
 
     def __init__(self, race=None):
-        super().__init__(race if race else CharacterRaces.TIEFLING)
+        super().__init__(race if race else Races.TIEFLING)
         self.ability_score_increases = [
             (Abilities.INTELLIGENCE, 1),
             (Abilities.CHARISMA, 2)
         ]
-        self.age = Age(90, 20, 20)
-        self.size = Size.MEDIUM
+        self.age = Age(90, 20)
+        self.size = Sizes.MEDIUM
         self.speed = 30
         self.languages = [
             Languages.COMMON,

@@ -11,6 +11,10 @@ class Senses(object):
     TREMORSENSE = 'Tremorsense'
     TRUESIGHT = 'Truesight'
 
+
+class Sense(object):
+    """Class docstring."""
+
     def __init__(self, name, range_in_feet, description=None):
         self.name = name
         self.range = range_in_feet
@@ -23,7 +27,7 @@ class Senses(object):
         return str(self)
 
 
-class Blindsight(Senses):
+class Blindsight(Sense):
     """Class docstring."""
 
     def __init__(self, range_in_feet):
@@ -33,15 +37,15 @@ class Blindsight(Senses):
             '\n'
             'Creatures without eyes, such as grimlocks and gray oozes, '
             'typically have this special sense, '
-            'as do creatures with echolocation or heightened senses, such as bats and true dragons.'
+            'as do creatures with echolocation or heightened Sense, such as bats and true dragons.'
             '\n'
             'If a monster is naturally blind, it has a parenthetical note to this effect, '
             'indicating that the radius of its blindsight defines the maximum range of its perception.'
         )
-        super().__init__(self.BLINDSIGHT, range_in_feet, description)
+        super().__init__(Senses.BLINDSIGHT, range_in_feet, description)
 
 
-class Darkvision(Senses):
+class Darkvision(Sense):
     """Class docstring."""
 
     def __init__(self, range_in_feet):
@@ -52,10 +56,10 @@ class Darkvision(Senses):
             'The monster can\'t discern color in darkness, only shades of gray. '
             'Many creatures that live underground have this special sense.'
         )
-        super().__init__(self.DARKVISION, range_in_feet, description)
+        super().__init__(Senses.DARKVISION, range_in_feet, description)
 
 
-class Tremorsense(Senses):
+class Tremorsense(Sense):
     """Class docstring."""
 
     def __init__(self, range_in_feet):
@@ -66,10 +70,10 @@ class Tremorsense(Senses):
             'Tremorsense can\'t be used to detect flying or incorporeal creatures. Many burrowing creatures, '
             'such as ankhegs, have this special sense.'
         )
-        super().__init__(self.TREMORSENSE, range_in_feet, description)
+        super().__init__(Senses.TREMORSENSE, range_in_feet, description)
 
 
-class Truesight(Senses):
+class Truesight(Sense):
     """Class docstring."""
 
     def __init__(self, range_in_feet):
@@ -80,4 +84,4 @@ class Truesight(Senses):
             'and perceive the original form of a shapechanger or a creature that is transformed by magic. '
             'Furthermore, the monster can see into the Ethereal Plane within the same range.'
         )
-        super().__init__(self.TRUESIGHT, range_in_feet, description)
+        super().__init__(Senses.TRUESIGHT, range_in_feet, description)

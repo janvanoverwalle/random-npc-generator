@@ -1,7 +1,7 @@
 """
 Module docstring.
 """
-from rng.models.characters import RandomCharacter
+from rng.models.characters import RandomNPC
 from rng.models.names import CharacterNames
 from rng.models.professions import CharacterProfessions
 from rng.models.races import CharacterRaces
@@ -33,10 +33,10 @@ def roll_independently():
 def roll_character():
     """Function docstring."""
 
-    character = RandomCharacter()
+    npc = RandomNPC()
 
-    print(f'{character}')
-    # print(f'{character.race.name}: {character.skills}')
+    print(f'{npc.long_description()}')
+    # print(f'{npc.race.name}: {npc.skills}')
 
 
 def main():

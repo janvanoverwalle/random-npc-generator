@@ -8,9 +8,13 @@ class Dice(object):
     """Class docstring."""
 
     @classmethod
-    def roll(cls, dice_to_roll: str):
+    def roll(cls, dice_to_roll: str, **kwargs):
         """Method docstring."""
-        dice_to_roll_list = dice_to_roll.lower().strip().replace(' ', '').split(',')
+        if isinstance(dice_to_roll, str):
+            dice_to_roll_list = dice_to_roll.lower().strip().replace(' ', '').split(',')
+        else:
+            dice_to_roll_list = dice_to_roll
+
         outcome = 0
         for dice in dice_to_roll_list:
             dice_data = dice.split('d')
@@ -29,7 +33,12 @@ class Dice(object):
 
             total = 0
             for _ in range(amount):
-                total += random.randint(1, dice_type)
+                if kwargs.get('max'):
+                    total += dice_type
+                elif kwargs.get('min'):
+                    total += 1
+                else:
+                    total += random.randint(1, dice_type)
 
             outcome += total + modifier
         return outcome

@@ -6,7 +6,8 @@ Module docstring.
 class Strings(object):
     """Class docstring."""
 
-    NEWLINE = '\n'
+    CR = '\r'
+    LF = '\n'
     TAB = '\t'
     RANDOM = 'random'
 

@@ -6,6 +6,8 @@ import random
 from pathlib import Path
 from rng.models.races import CharacterRaces
 from rng.models.genders import CharacterGenders
+from rng.resources.data.races import Races
+from rng.resources.data.genders import Genders
 
 
 class CharacterNames(object):
@@ -23,8 +25,8 @@ class CharacterNames(object):
     def _create_empty_json_template(cls):
         return  # Safeguard (remove when required)
 
-        all_races = CharacterRaces.as_list()
-        all_genders = CharacterGenders.as_list()
+        all_races = Races.as_list()
+        all_genders = Genders.as_list()
         gender_dict = {s.upper():[] for s in all_genders}
         gender_dict[cls.LAST] = []
         data = {e.upper().replace(' ', '_').replace('-', ''):gender_dict for e in all_races}
@@ -41,47 +43,6 @@ class CharacterNames(object):
 
         with open(f'{cls._json_path}', encoding='utf8') as json_file:
             cls._name_data = json.load(json_file)
-
-    @classmethod
-    def roll_random(cls, race=None, gender=None, amount=1, sources=None):
-        """Method docstring."""
-
-        if not amount:
-            return None
-
-        if sources:
-            if isinstance(sources, str):
-                sources = [sources]
-            sources = [s.strip().upper().replace(' ', '_') for s in sources]
-
-        cls._load_json_data()
-
-        cls._selected_sources = sources
-
-        if not race:
-            race = CharacterRaces.roll_random()
-
-        if not gender:
-            gender = CharacterGenders.roll_random()
-
-        first_names, last_names = cls._retrieve_names(race.name, gender.gender, sources)
-
-        if not first_names:
-            return None
-
-        resulting_first_names = [s for s in random.choices(first_names, k=amount)]
-
-        if not last_names:
-            results = [CharacterName(s) for s in random.choices(resulting_first_names, k=amount)]
-            return results[0] if amount == 1 else results
-
-        resulting_last_names = [s for s in random.choices(last_names, k=amount)]
-
-        results = []
-        for index, first_name in enumerate(resulting_first_names):
-            last_name = resulting_last_names[index]
-            results.append(CharacterName(first_name, last_name))
-        return results[0] if amount == 1 else results
 
     @classmethod
     def _retrieve_race_data(cls, race_key):
@@ -164,8 +125,49 @@ class CharacterNames(object):
             references += [n for n in name_list if cls.REF in n and n not in references]
             name_list = [n for n in name_list if cls.REF not in n]
             last_names += name_list
-        
+
         return last_names, references
+
+    @classmethod
+    def roll_random(cls, race=None, gender=None, amount=1, sources=None):
+        """Method docstring."""
+
+        if not amount:
+            return None
+
+        if sources:
+            if isinstance(sources, str):
+                sources = [sources]
+            sources = [s.strip().upper().replace(' ', '_') for s in sources]
+
+        cls._load_json_data()
+
+        cls._selected_sources = sources
+
+        if not race:
+            race = CharacterRaces.roll_random()
+
+        if not gender:
+            gender = CharacterGenders.roll_random()
+
+        first_names, last_names = cls._retrieve_names(race.name, gender.gender, sources)
+
+        if not first_names:
+            return None
+
+        resulting_first_names = [s for s in random.choices(first_names, k=amount)]
+
+        if not last_names:
+            results = [CharacterName(s) for s in random.choices(resulting_first_names, k=amount)]
+            return results[0] if amount == 1 else results
+
+        resulting_last_names = [s for s in random.choices(last_names, k=amount)]
+
+        results = []
+        for index, first_name in enumerate(resulting_first_names):
+            last_name = resulting_last_names[index]
+            results.append(CharacterName(first_name, last_name))
+        return results[0] if amount == 1 else results
 
 
 class CharacterName(object):
@@ -177,7 +179,7 @@ class CharacterName(object):
 
     def __str__(self):
         string = (
-            f'Name: {self.first_name}'
+            f'{self.first_name}'
             f'{" " + self.last_name if self.last_name else ""}'
         )
         return string

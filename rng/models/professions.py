@@ -4,9 +4,9 @@ Module docstring.
 import json
 import random
 from pathlib import Path
-from rng.resources.objects.abilities import Abilities
-from rng.resources.objects.skills import Skills
-from rng.resources.objects.strings import Strings
+from rng.resources.data.abilities import Abilities
+from rng.resources.data.skills import Skills
+from rng.resources.data.strings import Strings
 
 
 class CharacterProfessions(object):
@@ -108,16 +108,16 @@ class CharacterProfession(object):
 
     def __str__(self):
         # cat_str = f'[{self.category}] ' if self.category else ''
-        string = f'Profession: {self.name}{Strings.NEWLINE}'
-        string += f'  Description: {self.description}{Strings.NEWLINE}' if self.description else ''
+        string = f'Profession: {self.name}{Strings.LF}'
+        string += f'  Description: {self.description}{Strings.LF}' if self.description else ''
         if self.saving_throws:
-            string += f'  Saving Throws:{Strings.NEWLINE}'
+            string += f'  Saving Throws:{Strings.LF}'
             for elem in self.saving_throws:
-                string += f'    {elem}{Strings.NEWLINE}'
+                string += f'    {elem}{Strings.LF}'
         if self.skills:
-            string += f'  Skills:{Strings.NEWLINE}'
+            string += f'  Skills:{Strings.LF}'
             for elem in self.skills:
-                string += f'    {elem}{Strings.NEWLINE}'
+                string += f'    {elem}{Strings.LF}'
         return string.strip()
 
     def __repr__(self):

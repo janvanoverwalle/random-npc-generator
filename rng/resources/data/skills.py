@@ -1,7 +1,7 @@
 """
 Module docstring.
 """
-from rng.resources.objects.abilities import Abilities
+from rng.resources.data.abilities import Abilities
 
 
 class Skills(object):
