@@ -10,7 +10,14 @@ class CharacterClasses(object):
     @classmethod
     def roll(cls, class_name=None, amount=1):
         """Method docstring."""
-        return []
+        if not amount:
+            return None
+
+        if not class_name or Strings.equals_ignore_case(class_name, Strings.RANDOM):
+            results = [None]
+        else:
+            results = [None]
+        return results[0] if amount == 1 else results
 
     @classmethod
     def roll_random(cls, amount=1):

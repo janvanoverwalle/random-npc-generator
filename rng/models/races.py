@@ -43,7 +43,7 @@ class CharacterRaces(object):
             Races.TIEFLING: Tiefling
         }
 
-        if not race_name or race_name == Strings.RANDOM:
+        if not race_name or Strings.equals_ignore_case(race_name, Strings.RANDOM):
             available_races = [v for k, v in name_to_race_map.items()]
         else:
             available_races = [name_to_race_map[race_name]]

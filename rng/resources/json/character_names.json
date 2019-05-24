@@ -896,7 +896,7 @@
     },
     "ROCK_GNOME": "ref:GNOME",
     "FOREST_GNOME": "ref:GNOME",
-    "HALFELF": {
+    "HALF_ELF": {
         "MALE": [{
             "SOURCE": "PHB",
             "NAMES": [
@@ -919,7 +919,7 @@
             ]
         }]
     },
-    "HALFORC": {
+    "HALF_ORC": {
         "MALE": [{
             "SOURCE": "XANATHAR",
             "NAMES": [

@@ -23,13 +23,13 @@ class Age(object):
     }
 
     _age_description_map = {
-        'a child': range(0, 12),
-        'a teenager': range(12, 17),
-        'a young adult': range(18, 30),
-        'an adult': range(30, 45),
-        'middle-aged': range(45, 65),
-        'a senior': range(65, 75),
-        'elderly': range(75, 100)
+        'child': range(0, 12),
+        'teenager': range(12, 17),
+        'young adult': range(18, 30),
+        'adult': range(30, 45),
+        'middle-aged person': range(45, 65),
+        'senior': range(65, 75),
+        'elderly person': range(75, 100)
     }
 
     def __init__(self, lifespan, physical, mental=None, current=None):

@@ -29,7 +29,7 @@ class CharacterNames(object):
         all_genders = Genders.as_list()
         gender_dict = {s.upper():[] for s in all_genders}
         gender_dict[cls.LAST] = []
-        data = {e.upper().replace(' ', '_').replace('-', ''):gender_dict for e in all_races}
+        data = {e.upper().replace(' ', '_').replace('-', '_'):gender_dict for e in all_races}
 
         with open(f'{cls._json_path}', 'w', encoding='utf8') as json_file:
             json.dump(data, json_file, indent=4)
@@ -46,7 +46,7 @@ class CharacterNames(object):
 
     @classmethod
     def _retrieve_race_data(cls, race_key):
-        race_key = race_key.upper().replace(' ', '_').replace('-', '')
+        race_key = race_key.upper().replace(' ', '_').replace('-', '_')
         # print(f'{race_namrace_keye_key}')
         race_data_dict = cls._name_data.get(race_key)
 
