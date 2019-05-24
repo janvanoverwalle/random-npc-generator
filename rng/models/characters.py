@@ -4,11 +4,70 @@ Module docstring.
 import random
 from rng.helpers.utils import Utils
 from rng.models.names import CharacterNames
+from rng.models.classes import CharacterClasses
 from rng.models.professions import CharacterProfessions
+from rng.models.descriptions import CharacterDescriptions
 from rng.models.races import CharacterRaces
 from rng.models.genders import CharacterGenders
 from rng.models.quirks import CharacterQuirks
 from rng.resources.data.strings import Strings
+
+
+class Characters(object):
+    """Class docstring."""
+
+    PC = 'PC'
+    NPC = 'NPC'
+
+    _type_to_character_map = None
+
+    @classmethod
+    def get(cls, class_name):
+        """Method docstring."""
+        if not cls._type_to_character_map:
+            cls._type_to_character_map = {
+                cls.PC: RandomPC,
+                cls.NPC: RandomNPC
+            }
+
+        if not isinstance(class_name, (list, tuple)):
+            class_name = [class_name]
+
+        characters = []
+        for name in class_name:
+            if not name or Strings.equals_ignore_case(name, Strings.RANDOM):
+                characters += [v for k, v in cls._type_to_character_map.items() if v not in characters]
+            else:
+                name = cls._type_to_character_map.get(name)
+                if name not in characters:
+                    characters.append(name)
+        return characters
+
+    @classmethod
+    def roll(cls, character_type=None, amount=1, **kwargs):
+        """Method docstring."""
+        if not amount:
+            return None
+
+        available_characters = cls.get(character_type)
+
+        results = [random.choice(c)(**kwargs) if isinstance(c, list) else c() for c in random.choices(available_characters, k=amount)]
+        return results[0] if amount == 1 else results
+
+    @classmethod
+    def roll_pc(cls, amount=1, **kwargs):
+        """Method docstring."""
+        return cls.roll(cls.PC, amount, **kwargs)
+
+    @classmethod
+    def roll_npc(cls, amount=1, **kwargs):
+        """Method docstring."""
+        return cls.roll(cls.NPC, amount, **kwargs)
+
+    @classmethod
+    def roll_random(cls, amount=1, **kwargs):
+        """Method docstring."""
+        return cls.roll(Strings.RANDOM, amount, **kwargs)
 
 
 class Character(object):
@@ -21,6 +80,7 @@ class Character(object):
     PROFESSION = 'profession'
     JOB = 'job'
     QUIRKS = 'quirks'
+    DESCRIPTION = 'description'
 
     def __init__(self, **kwargs):
         self._name = kwargs.get(self.NAME)
@@ -29,6 +89,7 @@ class Character(object):
         self._class = kwargs.get(self.CLASS)
         self._profession = kwargs.get(self.PROFESSION, kwargs.get(self.JOB))
         self._quirks = kwargs.get(self.QUIRKS)
+        self._description = kwargs.get(self.DESCRIPTION)
 
         self._race.roll_random_abilities()
         self._race.roll_age(self._class)
@@ -48,6 +109,7 @@ class Character(object):
         string = str(self)
         string += self._age_description(detail_descriptions, independent=False)
         string += self._class_description(detail_descriptions, independent=False)
+        string += self._character_descriptions(detail_descriptions, independent=False)
         string += self._quirk_descriptions(detail_descriptions, independent=False)
         return string
 
@@ -130,6 +192,10 @@ class Character(object):
             string += Strings.LF
         return string
 
+    def _character_descriptions(self, detail_descriptions, independent=True):
+        # TODO: Finish
+        return ''
+
     def _quirk_descriptions(self, detail_descriptions, independent=True):
         if independent:
             subject = self._name.first_name
@@ -159,12 +225,14 @@ class RandomNPC(Character):
         profession = kwargs.get(self.PROFESSION, CharacterProfessions.roll_random(random.choice(locales)))
         name = kwargs.get(self.NAME, CharacterNames.roll_random(race, gender))
         quirks = kwargs.get(self.QUIRKS, CharacterQuirks.roll_random())
+        description = kwargs.get(self.DESCRIPTION, CharacterDescriptions.roll_random())
         kwargs = {
             self.NAME: name,
             self.GENDER: gender,
             self.RACE: race,
             self.PROFESSION: profession,
-            self.QUIRKS: quirks
+            self.QUIRKS: quirks,
+            self.DESCRIPTION: description
         }
         super().__init__(**kwargs)
 
@@ -175,12 +243,16 @@ class RandomPC(Character):
     def __init__(self):
         gender = CharacterGenders.roll_random()
         race = CharacterRaces.roll_random()
-        char_class = None
+        char_class = CharacterClasses.roll_random()
         name = CharacterNames.roll_random(race, gender)
+        quirks = CharacterQuirks.roll_random()
+        description = CharacterDescriptions.roll_random()
         kwargs = {
             self.NAME: name,
             self.GENDER: gender,
             self.RACE: race,
-            self.CLASS: char_class
+            self.CLASS: char_class,
+            self.QUIRKS: quirks,
+            self.DESCRIPTION: description
         }
         super().__init__(**kwargs)

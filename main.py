@@ -1,7 +1,7 @@
 """
 Module docstring.
 """
-from rng.models.characters import RandomNPC
+from rng.models.characters import Characters
 from rng.models.names import CharacterNames
 from rng.models.professions import CharacterProfessions
 from rng.models.races import CharacterRaces
@@ -31,28 +31,17 @@ def roll_independently():
     print(f'{rolled_profession}')
 
 
-def roll_character(**kwargs):
+def roll_character():
     """Function docstring."""
+    npc = Characters.roll_npc(**{'race': Races.HALF_ELF})
 
-    new_kwargs = {}
-
-    gender = kwargs.get('gender')
-    if gender:
-        new_kwargs['gender'] = CharacterGenders.roll(gender)
-    race = kwargs.get('race')
-    if race:
-        new_kwargs['race'] = CharacterRaces.roll(race)
-
-    npc = RandomNPC(**new_kwargs)
-
-    print(f'{npc.long_description(False)}')
+    print(f'{npc.long_description(detail_descriptions=True)}')
 
 
 def main():
     """Function docstring."""
-
     # roll_independently()
-    roll_character(**{'race': Races.HALF_ELF})
+    roll_character()
 
 
 if __name__ == '__main__':

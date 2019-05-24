@@ -190,9 +190,8 @@
                 {
                     "PROFESSION": "Ranger",
                     "DESCRIPTION": "wanders or ranges over a particular area or domain.",
-                    "SKILLS": [
-                        "Nature",
-                        "Survival"
+                    "CLASSES": [
+                        "Ranger"
                     ]
                 },
                 {
@@ -1053,6 +1052,9 @@
             "PROFESSIONS": [{
                     "PROFESSION": "Assassin",
                     "DESCRIPTION": "murders through stealth for reasons pertaining to money, politics, or religion.",
+                    "CLASSES": [
+                        "Rogue"
+                    ],
                     "SKILLS": [
                         "Stealth"
                     ]
@@ -1529,7 +1531,10 @@
             ],
             "PROFESSIONS": [{
                     "PROFESSION": "Abjurer",
-                    "DESCRIPTION": "a mage focused in protective spells."
+                    "DESCRIPTION": "a mage focused in protective spells.",
+                    "CLASSES": [
+                        "Wizard"
+                    ]
                 },
                 {
                     "PROFESSION": "Alchemist",
@@ -1537,7 +1542,11 @@
                 },
                 {
                     "PROFESSION": "Archmage",
-                    "DESCRIPTION": "an extremely powerful mage."
+                    "DESCRIPTION": "an extremely powerful mage.",
+                    "CLASSES": [
+                        "Wizard",
+                        "Sorcerer"
+                    ]
                 },
                 {
                     "PROFESSION": "Artificer",
@@ -1545,7 +1554,10 @@
                 },
                 {
                     "PROFESSION": "Bard",
-                    "DESCRIPTION": "uses their artistic talents to induce magical effects."
+                    "DESCRIPTION": "uses their artistic talents to induce magical effects.",
+                    "CLASSES": [
+                        "Bard"
+                    ]
                 },
                 {
                     "PROFESSION": "Conjuror",
@@ -1553,7 +1565,10 @@
                 },
                 {
                     "PROFESSION": "Druid",
-                    "DESCRIPTION": "a mage attuned to the magical forces of nature, able to shapeshift, call on the elements, communicate with flora and fauna, etc."
+                    "DESCRIPTION": "a mage attuned to the magical forces of nature, able to shapeshift, call on the elements, communicate with flora and fauna, etc.",
+                    "CLASSES": [
+                        "Druid"
+                    ]
                 },
                 {
                     "PROFESSION": "Elementalist",
@@ -1581,7 +1596,11 @@
                 },
                 {
                     "PROFESSION": "Mage",
-                    "DESCRIPTION": "a magic-user."
+                    "DESCRIPTION": "a magic-user.",
+                    "CLASSES": [
+                        "Wizard",
+                        "Sorcerer"
+                    ]
                 },
                 {
                     "PROFESSION": "Medium",
@@ -1621,11 +1640,17 @@
                 },
                 {
                     "PROFESSION": "Sorcerer/Sorceress",
-                    "DESCRIPTION": "derives their magical abilities innately rather than through study."
+                    "DESCRIPTION": "derives their magical abilities innately rather than through study.",
+                    "CLASSES": [
+                        "Sorcerer"
+                    ]
                 },
                 {
                     "PROFESSION": "Summoner",
-                    "DESCRIPTION": "a mage able to summon forth magical beasts, creatures, and monsters."
+                    "DESCRIPTION": "a mage able to summon forth magical beasts, creatures, and monsters.",
+                    "CLASSES": [
+                        "Wizard"
+                    ]
                 },
                 {
                     "PROFESSION": "Transmuter",
@@ -1633,7 +1658,10 @@
                 },
                 {
                     "PROFESSION": "Warlock",
-                    "DESCRIPTION": "a mage who has gained their abilities by forming a pact with an otherworldly being."
+                    "DESCRIPTION": "a mage who has gained their abilities by forming a pact with an otherworldly being.",
+                    "CLASSES": [
+                        "Warlock"
+                    ]
                 },
                 {
                     "PROFESSION": "Witchdoctor",
@@ -1645,7 +1673,10 @@
                 },
                 {
                     "PROFESSION": "Wizard",
-                    "DESCRIPTION": "derives their magical abilities through study."
+                    "DESCRIPTION": "derives their magical abilities through study.",
+                    "CLASSES": [
+                        "Wizard"
+                    ]
                 },
                 {
                     "PROFESSION": "Wordsmith",
@@ -1685,7 +1716,10 @@
                 },
                 {
                     "PROFESSION": "Captain",
-                    "DESCRIPTION": "an army officer of high rank in charge of commanding squadrons of soldiers."
+                    "DESCRIPTION": "an army officer of high rank in charge of commanding squadrons of soldiers.",
+                    "CLASSES": [
+                        "Fighter"
+                    ]
                 },
                 {
                     "PROFESSION": "Castellan",
@@ -1733,7 +1767,10 @@
                 },
                 {
                     "PROFESSION": "General",
-                    "DESCRIPTION": "the chief commander of an army."
+                    "DESCRIPTION": "the chief commander of an army.",
+                    "CLASSES": [
+                        "Fighter"
+                    ]
                 },
                 {
                     "PROFESSION": "Inspection Officer",
@@ -1765,7 +1802,10 @@
                 },
                 {
                     "PROFESSION": "Mercenary",
-                    "DESCRIPTION": "a soldier without allegiance who works for money, typically a member of a company or guild."
+                    "DESCRIPTION": "a soldier without allegiance who works for money, typically a member of a company or guild.",
+                    "CLASSES": [
+                        "Fighter"
+                    ]
                 },
                 {
                     "PROFESSION": "Privateer",
@@ -1797,7 +1837,10 @@
                 },
                 {
                     "PROFESSION": "Scout",
-                    "DESCRIPTION": "sent ahead of a main force so as to gather information about the enemy's position, strength, or movements."
+                    "DESCRIPTION": "sent ahead of a main force so as to gather information about the enemy's position, strength, or movements.",
+                    "CLASSES": [
+                        "Rogue"
+                    ]
                 },
                 {
                     "PROFESSION": "Siege Artillerist",
@@ -1813,11 +1856,18 @@
                 },
                 {
                     "PROFESSION": "Special Force Soldier",
-                    "DESCRIPTION": "carries out special operations."
+                    "DESCRIPTION": "carries out special operations.",
+                    "CLASSES": [
+                        "Fighter",
+                        "Rogue"
+                    ]
                 },
                 {
                     "PROFESSION": "Spy",
-                    "DESCRIPTION": "secretly collects and reports information on the activities, movements, and plans of an enemy or competitor."
+                    "DESCRIPTION": "secretly collects and reports information on the activities, movements, and plans of an enemy or competitor.",
+                    "CLASSES": [
+                        "Rogue"
+                    ]
                 },
                 {
                     "PROFESSION": "Tactician",
@@ -1837,7 +1887,11 @@
                 },
                 {
                     "PROFESSION": "Warmage",
-                    "DESCRIPTION": "a soldier skilled in destructive battle magic."
+                    "DESCRIPTION": "a soldier skilled in destructive battle magic.",
+                    "CLASSES": [
+                        "Wizard",
+                        "Fighter"
+                    ]
                 }
             ]
         },
@@ -1889,7 +1943,10 @@
                 },
                 {
                     "PROFESSION": "Cleric",
-                    "DESCRIPTION": "has devoted their entire being to the will of their god, thus gaining magical powers."
+                    "DESCRIPTION": "has devoted their entire being to the will of their god, thus gaining magical powers.",
+                    "CLASSES": [
+                        "Cleric"
+                    ]
                 },
                 {
                     "PROFESSION": "Confessor",
@@ -1929,7 +1986,10 @@
                 },
                 {
                     "PROFESSION": "Monk",
-                    "DESCRIPTION": "able to manifest their spirituality through a calm, centered being and thus gain abilities which function similarly to magic."
+                    "DESCRIPTION": "able to manifest their spirituality through a calm, centered being and thus gain abilities which function similarly to magic.",
+                    "CLASSES": [
+                        "Monk"
+                    ]
                 },
                 {
                     "PROFESSION": "Nun",
@@ -1937,7 +1997,10 @@
                 },
                 {
                     "PROFESSION": "Paladin",
-                    "DESCRIPTION": "a holy knight and divine spellcaster crusading in the name of good and order."
+                    "DESCRIPTION": "a holy knight and divine spellcaster crusading in the name of good and order.",
+                    "CLASSES": [
+                        "Paladin"
+                    ]
                 },
                 {
                     "PROFESSION": "Pardoner",

@@ -42,20 +42,19 @@ class Skills(object):
             if not isinstance(abilities, (list, tuple)):
                 abilities = [abilities]
             abilities = [str(a).strip().lower() for a in abilities]
-        else:
-            abilities = Abilities.as_list()
+
         ret = []
-        if Abilities.STRENGTH in abilities:
+        if not abilities or Abilities.STRENGTH in abilities:
             ret += [
                 cls.ATHLETICS
             ]
-        if Abilities.DEXTERITY in abilities:
+        if not abilities or Abilities.DEXTERITY in abilities:
             ret += [
                 cls.ACROBATICS,
                 cls.SLEIGHT_OF_HAND,
                 cls.STEALTH
             ]
-        if Abilities.INTELLIGENCE in abilities:
+        if not abilities or Abilities.INTELLIGENCE in abilities:
             ret += [
                 cls.ARCANA,
                 cls.HISTORY,
@@ -63,7 +62,7 @@ class Skills(object):
                 cls.NATURE,
                 cls.RELIGION
             ]
-        if Abilities.WISDOM in abilities:
+        if not abilities or Abilities.WISDOM in abilities:
             ret += [
                 cls.ANIMAL_HANDLING,
                 cls.INSIGHT,
@@ -71,7 +70,7 @@ class Skills(object):
                 cls.PERCEPTION,
                 cls.SURVIVAL
             ]
-        if Abilities.CHARISMA in abilities:
+        if not abilities or Abilities.CHARISMA in abilities:
             ret += [
                 cls.DECEPTION,
                 cls.INTIMIDATION,
