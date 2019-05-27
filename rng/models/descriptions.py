@@ -3,6 +3,7 @@ Module docstring.
 """
 import json
 import random
+import numpy
 from pathlib import Path
 from rng.helpers.definition_lookup import DefinitionLookup
 from rng.resources.data.strings import Strings
@@ -12,49 +13,8 @@ from rng.helpers.utils import Utils
 class CharacterDescriptions(object):
     """Class docstring."""
 
-    TAG_OBJ_PN = '{object_pronoun}'
-    TAG_SUB_PN = '{subject_pronoun}'
-    TAG_POS_PN = '{prosessive_pronoun}'
-    TAG_NOUN = '{noun}'
-    TAG_ART = '{article}'
-    TAG_ADJ = '{adjective}'
-    TAG_ADV = '{adverb}'
-    TAG_VERB = '{verb}'
-    TAG_CONJ = '{conjunction}'
-
-    repeat = lambda tag, mi, ma: f'{tag}:{{' + (str(mi) if mi else '0') + ':' + (str(ma) if ma else '9') + '}'
-
-    KEY_ADJECTIVES = 'ADJECTIVE'
-    KEY_ADVERBS = 'ADVERB'
-    KEY_NOUNS = 'NOUN'
-    KEY_VERBS = 'VERB'
-
-    _json_path = Path(__file__).parent.parent / 'resources' / 'json' / 'character_descriptions.json'
+    _json_path = Path(__file__).parent.parent / 'resources' / 'json' / 'old_character_descriptions.json'
     _description_data = {}
-
-    _structure_map = [
-        (
-            TAG_POS_PN,
-            repeat(TAG_ADJ, 0, 2),
-            TAG_NOUN
-        ),
-        (
-            TAG_POS_PN,
-            repeat(TAG_ADJ, 0, 2),
-            TAG_NOUN,
-            TAG_CONJ,
-            repeat(TAG_ADJ, 0, 2),
-            TAG_NOUN
-        )
-    ]
-    """
-    cfg1.add_prod()
-    cfg1.add_prod('NP', 'I | he | she | Joe')
-    cfg1.add_prod()
-    cfg1.add_prod('Det', 'a | the | my | his')
-    cfg1.add_prod('N', 'elephant | cat | jeans | suit')
-    cfg1.add_prod('V', 'kicked | followed | shot')
-    """
 
     @classmethod
     def _load_json_data(cls, force_update=False):
@@ -67,11 +27,19 @@ class CharacterDescriptions(object):
             cls._description_data = json.load(json_file)
 
     @classmethod
-    def _generate_sentence_structure(cls):
-        pass
+    def _calculate_distribution(cls, length=10):
+        norm = numpy.random.normal(length/4, length/4, 10000)
+        norm.sort()
+        norm = [int(n+0.5)+1 for n in norm if 0 <= n+0.5 < length]
+        freq = {}
+        for n in norm:
+            if n not in freq:
+                freq[n] = 0
+            freq[n] += 1
+        return [v/len(norm)*100 for k, v in freq.items()]
 
     @classmethod
-    def roll_random(cls, amount=1, gender=None, race=None):
+    def roll_random(cls, amount=1):
         """Method docstring."""
 
         if not amount:
@@ -80,66 +48,28 @@ class CharacterDescriptions(object):
         cls._load_json_data()
 
         results = []
-        for _ in range(amount):
+        for _ in range(amount):            
+            descr_key_count = len(cls._description_data.keys())
+            population = range(0, descr_key_count)
+            weights = cls._calculate_distribution(descr_key_count)
+            amount_of_traits = random.choices(population, weights, k=1)[0]
+            all_descr_keys = [k for k, v in cls._description_data.items()]
+            trait_keys = random.choices(all_descr_keys, k=amount_of_traits)
             traits = {}
-            for k, v in cls._description_data.items():
-                if not v or random.randint(1, 10) < 9:
+            for key in trait_keys:
+                value = cls._description_data[key]
+                if not value:
                     continue
-                traits[k] = random.choice(v)
+                traits[key] = random.choice(value)
             results.append(CharacterDescription(traits))
 
         return results[0] if amount == 1 else results
-
-    @classmethod
-    def test(cls, gender=None, race=None):
-        """Method docstring."""
-        cls._load_json_data()
-
-        sentence = []
-        structure = random.choice(cls._structure_map)
-
-        article = False
-        for tag in structure:
-            repeat = (1, 1)
-            if ':' in tag:
-                idx = tag.find(':')
-                repeat = tuple([int(e) for e in tag[idx+2:-1].split(':')])
-
-            rand_range = random.randint(repeat[0], repeat[1])
-            print(rand_range)
-            for _ in range(rand_range):
-                if cls.TAG_OBJ_PN in tag:
-                    sentence.append('it' if not gender else gender.object_pronoun)
-                elif cls.TAG_SUB_PN in tag:
-                    sentence.append('it' if not gender else gender.subject_pronoun)
-                elif cls.TAG_POS_PN in tag:
-                    sentence.append('its' if not gender else gender.possessive_pronoun)
-                elif cls.TAG_NOUN in tag:
-                    sentence.append(random.choice(cls._description_data[cls.KEY_NOUNS])['WORD'])
-                elif cls.TAG_ART in tag:
-                    article = True
-                    sentence.append(cls.TAG_ART)
-                elif cls.TAG_ADJ in tag:
-                    sentence.append(random.choice(cls._description_data[cls.KEY_ADJECTIVES])['WORD'])
-                elif cls.TAG_ADV in tag:
-                    sentence.append(random.choice(cls._description_data[cls.KEY_ADVERBS])['WORD'])
-                elif cls.TAG_VERB in tag:
-                    sentence.append(random.choice(cls._description_data[cls.KEY_VERBS])['WORD'])
-                elif cls.TAG_CONJ in tag:
-                    sentence.append('and')
-
-            if article:
-                sentence[-2] = Utils.article_for(sentence[-1])
-                article = False
-
-        return ' '.join(sentence)
 
 
 class CharacterDescription(object):
     """Class docstring."""
 
     def __init__(self, traits, definitions=None):
-        self._generate_structure()
         self.traits = traits
         self._definitions = definitions
 
@@ -149,8 +79,32 @@ class CharacterDescription(object):
     def __repr__(self):
         return str(self)
 
-    def _generate_structure(self):
-        pass
+    def _unpack_kwargs(self, **kwargs):
+        s = kwargs.get('subject')
+        o = kwargs.get('object')
+        p = kwargs.get('possessive')
+        sp = kwargs.get('spacer')
+        return s, o, p, sp
+
+    def _readable_eyes(self, traits, **kwargs):
+        sub_noun_str, obj_noun_str, pos_noun_str, spacer = self._unpack_kwargs(**kwargs)
+        return 'TODO'
+
+    def _readable_skin(self, traits, **kwargs):
+        sub_noun_str, obj_noun_str, pos_noun_str, spacer = self._unpack_kwargs(**kwargs)
+        return 'TODO'
+
+    def _readable_face(self, traits, **kwargs):
+        sub_noun_str, obj_noun_str, pos_noun_str, spacer = self._unpack_kwargs(**kwargs)
+        return 'TODO'
+
+    def _readable_hair(self, traits, **kwargs):
+        sub_noun_str, obj_noun_str, pos_noun_str, spacer = self._unpack_kwargs(**kwargs)
+        return 'TODO'
+
+    def _readable_body(self, traits, **kwargs):
+        sub_noun_str, obj_noun_str, pos_noun_str, spacer = self._unpack_kwargs(**kwargs)
+        return 'TODO'
 
     def definition(self, trait):
         """Method docstring."""
@@ -163,6 +117,14 @@ class CharacterDescription(object):
             self._definitions[key] = DefinitionLookup.look_up_definition(trait)
         return self._definitions
 
-    def description(self):
+    def readable_description(self, **kwargs):
         """Method docstring."""
-        return ''
+        iterator = self.traits.items()
+        description = [
+            self._readable_eyes({k:v for k, v in iterator if 'EYE' in k}, **kwargs),
+            self._readable_skin({k:v for k, v in iterator if 'SKIN' in k}, **kwargs),
+            self._readable_face({k:v for k, v in iterator if k in ('FACE', 'NOSE', 'MOUTH')}, **kwargs),
+            self._readable_hair({k:v for k, v in iterator if 'HAIR' in k}, **kwargs),
+            self._readable_body({k:v for k, v in iterator if 'BODY' in k}, **kwargs)
+        ]
+        return ' '.join(description)

@@ -96,6 +96,5 @@ def create_description_data():
 
 
 if __name__ == '__main__':
-    print(CharacterDescriptions.test() + Strings.LF)
-    # main()
+    main()
     # create_description_data()

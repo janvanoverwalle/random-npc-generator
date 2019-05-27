@@ -206,13 +206,14 @@ class Character(object):
             object_str = self._gender.object_pronoun.capitalize()
             possessive_str = self._gender.possessive_pronoun.capitalize()
             spacer = '  '
-        string = self._description.description()
-        string = string.replace('{Subject}', subject_str)
-        string = string.replace('{Object}', object_str)
-        string = string.replace('{Possessive}', possessive_str)
-        string = string.replace('{pronoun}', self._gender.subject_pronoun)
-        string = spacer + (('\n' + spacer).join(string.split('\n'))).strip(' ')
-        return string if string.strip() else ''
+        print(f'{self._description.traits}')
+        kwargs = {
+            'subject': subject_str,
+            'object': object_str,
+            'possessive': possessive_str,
+            'spacer': spacer
+        }
+        return self_description.readable_description(**kwargs)
 
     def _quirk_descriptions(self, full_details, standalone=True):
         if standalone:
