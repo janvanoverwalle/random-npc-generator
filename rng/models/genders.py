@@ -45,6 +45,15 @@ class CharacterGender(object):
         return self.gender == Genders.FEMALE
 
     @property
+    def noun(self):
+        """Method docstring."""
+        if self.gender == Genders.MALE:
+            return 'man'
+        if self.gender == Genders.FEMALE:
+            return 'woman'
+        return 'thing'
+
+    @property
     def object_pronoun(self):
         """Method docstring."""
         if self.gender == Genders.MALE:

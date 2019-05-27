@@ -88,5 +88,5 @@ class CharacterQuirk(object):
     def definition(self):
         """Method docstring."""
         if not self._definition:
-            self._definition = DefinitionLookup.look_up(self.quirk)
+            self._definition = DefinitionLookup.look_up_definition(self.quirk)
         return self._definition
