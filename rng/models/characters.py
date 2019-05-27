@@ -104,13 +104,13 @@ class Character(object):
         """Method docstring."""
         return str(self)
 
-    def long_description(self, detail_descriptions=True):
+    def detailed_description(self, full_details=True):
         """Method docstring."""
         string = str(self)
-        string += self._age_description(detail_descriptions, independent=False)
-        string += self._class_description(detail_descriptions, independent=False)
-        string += self._character_descriptions(detail_descriptions, independent=False)
-        string += self._quirk_descriptions(detail_descriptions, independent=False)
+        string += self._age_description(full_details, standalone=False)
+        string += self._class_description(full_details, standalone=False)
+        string += self._character_descriptions(full_details, standalone=False)
+        string += self._quirk_descriptions(full_details, standalone=False)
         return string
 
     @property
@@ -156,26 +156,27 @@ class Character(object):
             ret = ret.union(set(self._race.saving_throws))
         return list(ret)
 
-    def _age_description(self, detail_descriptions=True, independent=True):
-        if independent:
+    def _age_description(self, full_details=True, standalone=True):
+        if standalone:
             subject = self._name.first_name
         else:
             subject = f'  {self._gender.subject_pronoun.capitalize()}'
-        s = 's' if detail_descriptions else ''
+        s = 's' if full_details else ''
         string = (
             f'{subject} is a'
             f' {self.age.current} year{s} old'
         )
-        if detail_descriptions:
+        if full_details:
             string += f' {self.age.age_description()}'
         return string
 
-    def _class_description(self, detail_descriptions=True, independent=True):
-        if independent:
+    def _class_description(self, full_details=True, standalone=True):
+        if standalone:
             subject = self._name.first_name
         else:
-            subject = ' who'
-        string = f'{subject} works as '
+            subject = ' ' + random.choice(['who', 'and', 'working'])
+        verb = 'as ' if subject.endswith('ing') else random.choice(['works as', 'is']) + ' '
+        string = f'{subject} {verb}'
         if self._class:
             job_name = f'{self._class.name}'
         if self._profession:
@@ -183,7 +184,7 @@ class Character(object):
         string += Utils.article_for(job_name)
         string += f' {job_name}'
         string += Strings.LF
-        if detail_descriptions:
+        if full_details:
             if self._class:
                 job_descr = f'{self._class.description}'
             if self._profession:
@@ -192,24 +193,41 @@ class Character(object):
             string += Strings.LF
         return string
 
-    def _character_descriptions(self, detail_descriptions, independent=True):
-        # TODO: Finish
-        return ''
+    def _character_descriptions(self, full_details, standalone=True):
+        if standalone:
+            subject_str = self._name.first_name
+            object_str = self._name.first_name
+            possessive_str = self._name.first_name + '\''
+            if possessive_str[0].lower() not in 's':
+                possessive_str += 's'
+            spacer = ''
+        else:
+            subject_str = self._gender.subject_pronoun.capitalize()
+            object_str = self._gender.object_pronoun.capitalize()
+            possessive_str = self._gender.possessive_pronoun.capitalize()
+            spacer = '  '
+        string = self._description.description()
+        string = string.replace('{Subject}', subject_str)
+        string = string.replace('{Object}', object_str)
+        string = string.replace('{Possessive}', possessive_str)
+        string = string.replace('{pronoun}', self._gender.subject_pronoun)
+        string = spacer + (('\n' + spacer).join(string.split('\n'))).strip(' ')
+        return string if string.strip() else ''
 
-    def _quirk_descriptions(self, detail_descriptions, independent=True):
-        if independent:
+    def _quirk_descriptions(self, full_details, standalone=True):
+        if standalone:
             subject = self._name.first_name
         else:
             subject = f'  {self._gender.subject_pronoun.capitalize()}'
         quirks = self._quirks if isinstance(list, tuple) else [self._quirks]
         string = ''
         for quirk in quirks:
-            string += f'{subject}'
+            string += subject
             adverb = random.choices(['', 'very ', 'a bit of a ', 'rather '], [7, 1, 1, 1], k=1)[0]
             article = Utils.article_for(adverb) if adverb else Utils.article_for(quirk)
             string += f' tends to be {article} {adverb}{quirk} person'
             string += Strings.LF
-            if detail_descriptions:
+            if full_details:
                 string += f'    <{quirk.quirk.capitalize()}: {quirk.definition}>'
                 string += Strings.LF
         return string

@@ -35,7 +35,7 @@ def roll_character():
     """Function docstring."""
     npc = Characters.roll_npc(**{'race': Races.HALF_ELF})
 
-    print(f'{npc.long_description(detail_descriptions=True)}')
+    print(f'{npc.detailed_description(full_details=False)}')
 
 
 def main():

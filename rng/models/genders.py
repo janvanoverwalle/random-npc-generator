@@ -36,6 +36,14 @@ class CharacterGender(object):
     def __str__(self):
         return f'{self.gender}'
 
+    def is_male(self):
+        """Method docstring."""
+        return self.gender == Genders.MALE
+
+    def is_female(self):
+        """Method docstring."""
+        return self.gender == Genders.FEMALE
+
     @property
     def object_pronoun(self):
         """Method docstring."""
@@ -53,4 +61,13 @@ class CharacterGender(object):
         if self.gender == Genders.FEMALE:
             return 'she'
         return 'it'
+
+    @property
+    def possessive_pronoun(self):
+        """Method docstring."""
+        if self.gender == Genders.MALE:
+            return 'his'
+        if self.gender == Genders.FEMALE:
+            return 'her'
+        return 'its'
 

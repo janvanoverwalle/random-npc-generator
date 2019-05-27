@@ -1,4 +1,16 @@
 {
+    "ADJECTIVES": [
+
+    ],
+    "ADVERBS": [
+
+    ],
+    "NOUNS": [
+
+    ],
+    "VERBS": [
+
+    ],
     "EYES": [
         "large",
         "small",
@@ -30,10 +42,7 @@
         "cat-like",
         "jewel-like",
         "steely",
-        "hard",
-        "fringed with long lashes",
-        "with sweeping eyelashes",
-        "with thick eyelashes"
+        "hard"
     ],
     "EYES_COLOR": [
         "chestnut",
@@ -256,6 +265,7 @@
     "FACIAL_HAIR": [
         "clean-shaven",
         "smooth-shaven",
+        "short beard",
         "beard",
         "neckbeard",
         "goatee",
