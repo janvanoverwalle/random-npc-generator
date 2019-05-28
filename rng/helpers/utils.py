@@ -1,22 +1,12 @@
 """
 Module docstring.
 """
+import random
+from rng.resources.data.strings import Strings
 
 
 class Utils(object):
     """Class docstring."""
-
-    @classmethod
-    def char_is_vowel(cls, char):
-        """Method docstring."""
-        return char.lower() in 'aeiou'
-
-    @classmethod
-    def string_is_vowel(cls, string):
-        """Method docstring."""
-        if not isinstance(string, str):
-            string = str(string)
-        return all([cls.char_is_vowel(c) for c in string])
 
     @classmethod
     def article_for(cls, string):
@@ -25,6 +15,13 @@ class Utils(object):
             string = str(string)
         if string.lower().startswith(('a ', 'an ')):
             return ''
-        if cls.char_is_vowel(string[0]):
+        if Strings.is_vowel(string[0]):
             return 'an'
         return 'a'
+
+    @classmethod
+    def random_intensifier(cls, uniform=False):
+        """Method docstring."""
+        intensifiers = ['', 'rather', 'slightly', 'very', 'mostly', 'a bit']
+        weights = ([1] * len(intensifiers)) if uniform else [5, 1, 1, 1, 1, 1]
+        return random.choices(intensifiers, weights, k=1)[0]

@@ -43,8 +43,10 @@ class DefinitionLookup(object):
     def look_up_definition(cls, word, part=None):
         """Method docstring."""
         meaning = cls.meaning_of(word)
+        if not meaning:
+            return None
         if not part:
-            all_parts = meaning.keys()
+            all_parts = [k for k, v in meaning.items()]
             part = all_parts[0]
         part_data = meaning.get(part)
         results = [p.get(cls.DEFINITION) for p in part_data]

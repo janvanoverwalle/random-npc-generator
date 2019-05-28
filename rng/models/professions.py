@@ -25,6 +25,7 @@ class CharacterProfessions(object):
     WEIGHT = 'WEIGHT'
 
     _json_path = Path(__file__).parent.parent / 'resources' / 'json' / 'character_professions.json'
+    _profession_data = {}
     _categories = {}
 
     professions = []
@@ -34,13 +35,14 @@ class CharacterProfessions(object):
         if cls._categories and cls.professions and not force_update:
             return
 
+        cls._profession_data.clear()
         cls._categories.clear()
         cls.professions.clear()
 
         with open(f'{cls._json_path}', encoding='utf8') as json_file:
-            data = json.load(json_file)
+            cls._profession_data = json.load(json_file)
 
-        cls._parse_profession_data(data)
+        cls._parse_profession_data(cls._profession_data)
 
     @classmethod
     def _parse_profession_data(cls, data):
@@ -73,7 +75,7 @@ class CharacterProfessions(object):
 
             if cls.professions is None:
                 cls.professions = []
-
+            
             kwargs = {}
             if assoc_class:
                 kwargs[cls.CLASSES] = assoc_class

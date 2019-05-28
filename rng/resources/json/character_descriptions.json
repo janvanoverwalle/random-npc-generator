@@ -1,1220 +1,443 @@
 {
-    "NOUN": [{
-            "WORD": "afro",
-            "DEFINITION": "A thick hairstyle consisting of very tight curls that sticks out all around the head, like the natural hair of some black people."
-        },
-        {
-            "WORD": "alabaster",
-            "DEFINITION": "A fine-grained, translucent form of gypsum, typically white, often carved into ornaments."
-        },
-        {
-            "WORD": "amber",
-            "DEFINITION": "Hard translucent fossilized resin produced by extinct coniferous trees of the Tertiary period, typically yellowish in color."
-        },
-        {
-            "WORD": "aquamarine",
-            "DEFINITION": "A precious stone consisting of a light bluish-green variety of beryl."
-        },
-        {
-            "WORD": "baby-soft",
-            "DEFINITION": "A very young child, especially one newly or recently born."
-        },
-        {
-            "WORD": "beard",
-            "DEFINITION": "A growth of hair on the chin and lower cheeks of a man's face."
-        },
-        {
-            "WORD": "bedhead",
-            "DEFINITION": "Hair with an untidy appearance, such as results from lying in bed."
-        },
-        {
-            "WORD": "bedroom",
-            "DEFINITION": "A room for sleeping in."
-        },
-        {
-            "WORD": "bisque",
-            "DEFINITION": "A rich, creamy soup typically made with shellfish, especially lobster."
-        },
-        {
-            "WORD": "blemished",
-            "DEFINITION": "A small mark or flaw which spoils the appearance of something."
-        },
-        {
-            "WORD": "braids",
-            "DEFINITION": "Threads of silk, cotton, or other material woven into a decorative band for edging or trimming garments."
-        },
-        {
-            "WORD": "brandy",
-            "DEFINITION": "A strong alcoholic spirit distilled from wine or fermented fruit juice."
-        },
-        {
-            "WORD": "bronze",
-            "DEFINITION": "A yellowish-brown alloy of copper with up to one-third tin."
-        },
-        {
-            "WORD": "bruised",
-            "DEFINITION": "An injury appearing as an area of discolored skin on the body, caused by a blow or impact rupturing underlying blood vessels."
-        },
-        {
-            "WORD": "brunette",
-            "DEFINITION": "A person, typically a woman, with dark brown hair."
-        },
-        {
-            "WORD": "butterscotch",
-            "DEFINITION": "A flavor created originally by combining melted butter with brown sugar."
-        },
-        {
-            "WORD": "button",
-            "DEFINITION": "A small disk or knob sewn on to a garment, either to fasten it by being pushed through a slit made for the purpose or for decoration."
-        },
-        {
-            "WORD": "caramel",
-            "DEFINITION": "Sugar or syrup heated until it turns brown, used as a flavoring or coloring for food or drink."
-        },
-        {
-            "WORD": "chestnut",
-            "DEFINITION": "A glossy brown nut that may be roasted and eaten."
-        },
-        {
-            "WORD": "chrome",
-            "DEFINITION": "Chromium plate as a decorative or protective finish on motor-vehicle fittings and other objects."
-        },
-        {
-            "WORD": "cinnamon",
-            "DEFINITION": "An aromatic spice made from the peeled, dried, and rolled bark of a Southeast Asian tree."
-        },
-        {
-            "WORD": "coal",
-            "DEFINITION": "A combustible black or dark brown rock consisting mainly of carbonized plant matter, found mainly in underground deposits and widely used as fuel."
-        },
-        {
-            "WORD": "cognac",
-            "DEFINITION": "A high-quality brandy, properly that distilled in Cognac in western France."
-        },
-        {
-            "WORD": "comb-over",
-            "DEFINITION": "A strip of hair combed over a bald patch on a man's head in an attempt to conceal it."
-        },
-        {
-            "WORD": "copper",
-            "DEFINITION": "A red-brown metal, the chemical element of atomic number 29."
-        },
-        {
-            "WORD": "corkscrews",
-            "DEFINITION": "A device for pulling corks from bottles, consisting of a spiral metal rod that is inserted into the cork, and a handle that extracts it."
-        },
-        {
-            "WORD": "crewcut",
-            "DEFINITION": "A very short haircut for men and boys."
-        },
-        {
-            "WORD": "ebony",
-            "DEFINITION": "Heavy blackish or very dark brown timber from a mainly tropical tree."
-        },
-        {
-            "WORD": "emerald",
-            "DEFINITION": "A bright green precious stone consisting of a chromium-rich variety of beryl."
-        },
-        {
-            "WORD": "fawn",
-            "DEFINITION": "A young deer in its first year."
-        },
-        {
-            "WORD": "flared",
-            "DEFINITION": "A sudden brief burst of bright flame or light."
-        },
-        {
-            "WORD": "flecked",
-            "DEFINITION": "A very small patch of color or light."
-        },
-        {
-            "WORD": "ginger",
-            "DEFINITION": "A hot, fragrant spice made from the rhizome of a plant, which may be chopped or powdered for cooking, preserved in syrup, or candied."
-        },
-        {
-            "WORD": "goatee",
-            "DEFINITION": "A small, sometimes pointed, beard."
-        },
-        {
-            "WORD": "hawk",
-            "DEFINITION": "A bird of prey with broad rounded wings and a long tail, typically taking prey by surprise with a short chase."
-        },
-        {
-            "WORD": "hazel",
-            "DEFINITION": "A temperate shrub or small tree with broad leaves, bearing prominent male catkins in spring and round hard-shelled edible nuts in autumn."
-        },
-        {
-            "WORD": "honey",
-            "DEFINITION": "A sweet, sticky yellowish-brown fluid made by bees and other insects from nectar collected from flowers."
-        },
-        {
-            "WORD": "hourglass",
-            "DEFINITION": "An invertible device with two connected glass bulbs containing sand that takes an hour to pass from the upper to the lower bulb."
-        },
-        {
-            "WORD": "ivory",
-            "DEFINITION": "A hard creamy-white substance composing the main part of the tusks of an elephant, walrus, or narwhal, often (especially formerly) used to make ornaments and other articles."
-        },
-        {
-            "WORD": "jewel-like",
-            "DEFINITION": "A precious stone, typically a single crystal or piece of a hard lustrous or translucent mineral cut into shape with flat facets or smoothed and polished for use as an ornament."
-        },
-        {
-            "WORD": "layers",
-            "DEFINITION": "A sheet, quantity, or thickness of material, typically one of several, covering a surface or body."
-        },
-        {
-            "WORD": "light",
-            "DEFINITION": "The natural agent that stimulates sight and makes things visible."
-        },
-        {
-            "WORD": "lined",
-            "DEFINITION": "A long, narrow mark or band."
-        },
-        {
-            "WORD": "mahogany",
-            "DEFINITION": "Hard reddish-brown timber from a tropical tree, used for high-quality furniture."
-        },
-        {
-            "WORD": "manicured",
-            "DEFINITION": "A cosmetic treatment of the hands involving cutting, shaping, and often painting of the nails, removal of the cuticles, and softening of the skin."
-        },
-        {
-            "WORD": "midnight",
-            "DEFINITION": "Twelve o'clock at night."
-        },
-        {
-            "WORD": "milk",
-            "DEFINITION": "An opaque white fluid rich in fat and protein, secreted by female mammals for the nourishment of their young."
-        },
-        {
-            "WORD": "mocha",
-            "DEFINITION": "A fine-quality coffee."
-        },
-        {
-            "WORD": "moustache",
-            "DEFINITION": "A strip of hair left to grow above the upper lip."
-        },
-        {
-            "WORD": "mullet",
-            "DEFINITION": "A chiefly marine fish that is widely caught for food."
-        },
-        {
-            "WORD": "neckbeard",
-            "DEFINITION": "A growth of hair on a man's neck, especially when regarded as indicative of poor grooming."
-        },
-        {
-            "WORD": "oblong",
-            "DEFINITION": "An object or flat figure in an elongated rectangle or oval shape."
-        },
-        {
-            "WORD": "obsidian",
-            "DEFINITION": "A hard, dark, glasslike volcanic rock formed by the rapid solidification of lava without crystallization."
-        },
-        {
-            "WORD": "olive",
-            "DEFINITION": "A small oval fruit with a hard pit and bitter flesh, green when unripe and brownish black when ripe, used as food and as a source of oil."
-        },
-        {
-            "WORD": "onyx",
-            "DEFINITION": "A semiprecious variety of agate with different colors in layers."
-        },
-        {
-            "WORD": "overbite",
-            "DEFINITION": "The overlapping of the lower teeth by the upper."
-        },
-        {
-            "WORD": "parted",
-            "DEFINITION": "A piece or segment of something such as an object, activity, or period of time, which combined with other pieces makes up the whole."
-        },
-        {
-            "WORD": "pasty",
-            "DEFINITION": "A folded pastry case with a savoury filling, typically of seasoned meat and vegetables."
-        },
-        {
-            "WORD": "peach",
-            "DEFINITION": "A round stone fruit with juicy yellow flesh and downy pinkish-yellow skin."
-        },
-        {
-            "WORD": "pewter",
-            "DEFINITION": "A gray alloy of tin with copper and antimony (formerly, tin and lead)."
-        },
-        {
-            "WORD": "platinum",
-            "DEFINITION": "A precious silvery-white metal, the chemical element of atomic number 78. It was first encountered by the Spanish in South America in the 16th century, and is used in jewelry, electrical contacts, laboratory equipment, and industrial catalysts."
-        },
-        {
-            "WORD": "plush",
-            "DEFINITION": "A rich fabric of silk, cotton, wool, or a combination of these, with a long, soft nap."
-        },
-        {
-            "WORD": "porcelain",
-            "DEFINITION": "A white vitrified translucent ceramic; china."
-        },
-        {
-            "WORD": "raven",
-            "DEFINITION": "A large heavily built crow with mainly black plumage, feeding chiefly on carrion."
-        },
-        {
-            "WORD": "ringlets",
-            "DEFINITION": "A lock of hair hanging in a corkscrew-shaped curl."
-        },
-        {
-            "WORD": "rosebud",
-            "DEFINITION": "An unopened flower of a rose."
-        },
-        {
-            "WORD": "sable",
-            "DEFINITION": "A marten with a short tail and dark brown fur, native to Japan and Siberia and valued for its fur."
-        },
-        {
-            "WORD": "scarred",
-            "DEFINITION": "A mark left on the skin or within body tissue where a wound, burn, or sore has not healed completely and fibrous connective tissue has developed."
-        },
-        {
-            "WORD": "seamed",
-            "DEFINITION": "A line along which two pieces of fabric are sewn together in a garment or other article."
-        },
-        {
-            "WORD": "sepia",
-            "DEFINITION": "A reddish-brown color associated particularly with monochrome photographs of the 19th and early 20th centuries."
-        },
-        {
-            "WORD": "sideburns",
-            "DEFINITION": "A strip of hair grown by a man down each side of the face in front of his ears."
-        },
-        {
-            "WORD": "square",
-            "DEFINITION": "A plane figure with four equal straight sides and four right angles."
-        },
-        {
-            "WORD": "stubble",
-            "DEFINITION": "The cut stalks of grain plants left sticking out of the ground after the grain is harvested."
-        },
-        {
-            "WORD": "sunburned",
-            "DEFINITION": "Reddening, inflammation, and, in severe cases, blistering and peeling of the skin caused by overexposure to the ultraviolet rays of the sun."
-        },
-        {
-            "WORD": "tattooed",
-            "DEFINITION": "An evening drum or bugle signal recalling soldiers to their quarters."
-        },
-        {
-            "WORD": "topaz",
-            "DEFINITION": "A precious stone, typically colorless, yellow, or pale blue, consisting of a fluorine-containing aluminum silicate."
-        },
-        {
-            "WORD": "turquoise",
-            "DEFINITION": "A greenish-blue color."
-        },
-        {
-            "WORD": "underbite",
-            "DEFINITION": "(in nontechnical use) the projection of the lower teeth beyond the upper."
-        },
-        {
-            "WORD": "wheat",
-            "DEFINITION": "A cereal plant that is the most important kind grown in temperate countries, the grain of which is ground to make flour for bread, pasta, pastry, etc."
-        },
-        {
-            "WORD": "whiskey",
-            "DEFINITION": "A spirit distilled from malted grain, especially barley or rye."
-        },
-        {
-            "WORD": "wrinkled",
-            "DEFINITION": "A slight line or fold in something, especially fabric or the skin of the face."
-        }
+    "EYES": [
+        "large",
+        "small",
+        "narrow",
+        "sharp",
+        "squinty",
+        "round",
+        "wide-set",
+        "close-set",
+        "deep-set",
+        "sunken",
+        "bulging",
+        "protruding",
+        "wide",
+        "hooded",
+        "heavy-lidded",
+        "bedroom",
+        "bright",
+        "sparkling",
+        "glittering",
+        "flecked",
+        "dull",
+        "bleary",
+        "rheumy",
+        "cloudy",
+        "red-rimmed",
+        "beady",
+        "birdlike",
+        "cat-like",
+        "jewel-like",
+        "steely",
+        "hard"
     ],
-    "ADJECTIVE": [{
-            "WORD": "ample",
-            "DEFINITION": "Enough or more than enough; plentiful."
-        },
-        {
-            "WORD": "aquiline",
-            "DEFINITION": "Like an eagle."
-        },
-        {
-            "WORD": "arched",
-            "DEFINITION": "Constructed with or in the form of an arch or arches."
-        },
-        {
-            "WORD": "athletic",
-            "DEFINITION": "Physically strong, fit, and active."
-        },
-        {
-            "WORD": "auburn",
-            "DEFINITION": "(chiefly of a person's hair) of a reddish-brown color."
-        },
-        {
-            "WORD": "azure",
-            "DEFINITION": "Bright blue in color like a cloudless sky."
-        },
-        {
-            "WORD": "bald",
-            "DEFINITION": "Having a scalp wholly or partly lacking hair."
-        },
-        {
-            "WORD": "barrel-chested",
-            "DEFINITION": "Having a large rounded chest."
-        },
-        {
-            "WORD": "beady",
-            "DEFINITION": "(of a person's eyes) small, round, and gleaming."
-        },
-        {
-            "WORD": "beefy",
-            "DEFINITION": "Muscular or robust."
-        },
-        {
-            "WORD": "big",
-            "DEFINITION": "Of considerable size, extent, or intensity."
-        },
-        {
-            "WORD": "birdlike",
-            "DEFINITION": "Resembling a bird in appearance or behavior."
-        },
-        {
-            "WORD": "black",
-            "DEFINITION": "Of the very darkest color owing to the absence of or complete absorption of light; the opposite of white."
-        },
-        {
-            "WORD": "bleached",
-            "DEFINITION": "Made white or much lighter by a chemical process or by exposure to sunlight."
-        },
-        {
-            "WORD": "bleary",
-            "DEFINITION": "(of the eyes) unfocused or filmy from sleep or tiredness."
-        },
-        {
-            "WORD": "blonde",
-            "DEFINITION": "(of hair) fair or pale yellow."
-        },
-        {
-            "WORD": "blue-black",
-            "DEFINITION": "Black with a tinge of blue."
-        },
-        {
-            "WORD": "bony",
-            "DEFINITION": "Of or like bone."
-        },
-        {
-            "WORD": "bouncy",
-            "DEFINITION": "Bouncing or causing things to bounce."
-        },
-        {
-            "WORD": "bowlegged",
-            "DEFINITION": "Having legs that curve outward at the knee."
-        },
-        {
-            "WORD": "brawny",
-            "DEFINITION": "Physically strong; muscular."
-        },
-        {
-            "WORD": "bright",
-            "DEFINITION": "Giving out or reflecting a lot of light; shining."
-        },
-        {
-            "WORD": "broad",
-            "DEFINITION": "Having an ample distance from side to side; wide."
-        },
-        {
-            "WORD": "broad-shouldered",
-            "DEFINITION": "(of a person) having broad shoulders that do not slope."
-        },
-        {
-            "WORD": "brown",
-            "DEFINITION": "Of a color produced by mixing red, yellow, and blue, as of dark wood or rich soil."
-        },
-        {
-            "WORD": "bulbous",
-            "DEFINITION": "Fat, round, or bulging."
-        },
-        {
-            "WORD": "bulging",
-            "DEFINITION": "Swelling outward; protruding."
-        },
-        {
-            "WORD": "bulky",
-            "DEFINITION": "Taking up much space, typically inconveniently; large and unwieldy."
-        },
-        {
-            "WORD": "burly",
-            "DEFINITION": "(of a person) large and strong; heavily built."
-        },
-        {
-            "WORD": "bushy",
-            "DEFINITION": "Growing thickly into or so as to resemble a bush."
-        },
-        {
-            "WORD": "calloused",
-            "DEFINITION": "(of a part of the body) having an area of hardened skin."
-        },
-        {
-            "WORD": "cat-like",
-            "DEFINITION": "Resembling a cat in appearance, action, or character, especially by moving gracefully or stealthily."
-        },
-        {
-            "WORD": "catlike",
-            "DEFINITION": "Resembling a cat in appearance, action, or character, especially by moving gracefully or stealthily."
-        },
-        {
-            "WORD": "cerulean",
-            "DEFINITION": "Deep blue in color like a clear sky."
-        },
-        {
-            "WORD": "chalky",
-            "DEFINITION": "Consisting of or rich in chalk."
-        },
-        {
-            "WORD": "chiseled",
-            "DEFINITION": "(of wood or stone) shaped or cut with a chisel."
-        },
-        {
-            "WORD": "chubby",
-            "DEFINITION": "Plump and rounded."
-        },
-        {
-            "WORD": "chunky",
-            "DEFINITION": "Bulky and solid."
-        },
-        {
-            "WORD": "clean-shaven",
-            "DEFINITION": "(of a man) without a beard or mustache."
-        },
-        {
-            "WORD": "clear",
-            "DEFINITION": "Easy to perceive, understand, or interpret."
-        },
-        {
-            "WORD": "clipped",
-            "DEFINITION": "(of speech) having short, sharp vowel sounds and clear pronunciation."
-        },
-        {
-            "WORD": "close-set",
-            "DEFINITION": "(of two or more things) placed or occurring with little space in between."
-        },
-        {
-            "WORD": "cloudy",
-            "DEFINITION": "(of the sky or weather) covered with or characterized by clouds; overcast."
-        },
-        {
-            "WORD": "coltish",
-            "DEFINITION": "Energetic but awkward in one's movements or behavior."
-        },
-        {
-            "WORD": "compact",
-            "DEFINITION": "Closely and neatly packed together; dense."
-        },
-        {
-            "WORD": "cracked",
-            "DEFINITION": "Damaged and showing lines on the surface from having split without coming apart."
-        },
-        {
-            "WORD": "craggy",
-            "DEFINITION": "(of a landscape) having many crags."
-        },
-        {
-            "WORD": "cream/creamy",
-            "DEFINITION": "Resembling cream in consistency or color."
-        },
-        {
-            "WORD": "crooked",
-            "DEFINITION": "Bent or twisted out of shape or out of place."
-        },
-        {
-            "WORD": "cropped",
-            "DEFINITION": "(especially of hair) cut very short."
-        },
-        {
-            "WORD": "curly",
-            "DEFINITION": "Made, growing, or arranged in curls or curves."
-        },
-        {
-            "WORD": "curvy",
-            "DEFINITION": "Having many curves."
-        },
-        {
-            "WORD": "dainty",
-            "DEFINITION": "Delicately small and pretty."
-        },
-        {
-            "WORD": "dark",
-            "DEFINITION": "With little or no light."
-        },
-        {
-            "WORD": "deep-set",
-            "DEFINITION": "Embedded or positioned firmly or deeply."
-        },
-        {
-            "WORD": "delicate",
-            "DEFINITION": "Very fine in texture or structure; of intricate workmanship or quality."
-        },
-        {
-            "WORD": "dewy",
-            "DEFINITION": "Wet with dew."
-        },
-        {
-            "WORD": "dimpled",
-            "DEFINITION": "Having a dimple or dimples."
-        },
-        {
-            "WORD": "doughy",
-            "DEFINITION": "(of food) having a thick, malleable consistency."
-        },
-        {
-            "WORD": "dry",
-            "DEFINITION": "Free from moisture or liquid; not wet or moist."
-        },
-        {
-            "WORD": "dull",
-            "DEFINITION": "Lacking interest or excitement."
-        },
-        {
-            "WORD": "elegant",
-            "DEFINITION": "Pleasingly graceful and stylish in appearance or manner."
-        },
-        {
-            "WORD": "elongated",
-            "DEFINITION": "Unusually long in relation to its width."
-        },
-        {
-            "WORD": "emaciated",
-            "DEFINITION": "Abnormally thin or weak, especially because of illness or a lack of food."
-        },
-        {
-            "WORD": "faint",
-            "DEFINITION": "(of a sight, smell, or sound) barely perceptible."
-        },
-        {
-            "WORD": "fair",
-            "DEFINITION": "In accordance with the rules or standards; legitimate."
-        },
-        {
-            "WORD": "fair-haired",
-            "DEFINITION": "Having light-colored hair."
-        },
-        {
-            "WORD": "fine",
-            "DEFINITION": "Of high quality."
-        },
-        {
-            "WORD": "firm",
-            "DEFINITION": "Having a solid, almost unyielding surface or structure."
-        },
-        {
-            "WORD": "fit",
-            "DEFINITION": "Of a suitable quality, standard, or type to meet the required purpose."
-        },
-        {
-            "WORD": "flabby",
-            "DEFINITION": "(of a part of a person's body) soft, loose, and fleshy."
-        },
-        {
-            "WORD": "flaky",
-            "DEFINITION": "Breaking or separating easily into small thin pieces."
-        },
-        {
-            "WORD": "flawless",
-            "DEFINITION": "Without any blemishes or imperfections; perfect."
-        },
-        {
-            "WORD": "flaxen",
-            "DEFINITION": "Of flax."
-        },
-        {
-            "WORD": "florid",
-            "DEFINITION": "Having a red or flushed complexion."
-        },
-        {
-            "WORD": "freckled",
-            "DEFINITION": "Covered with freckles."
-        },
-        {
-            "WORD": "frizzy",
-            "DEFINITION": "Formed of a mass of small, tight curls or tufts."
-        },
-        {
-            "WORD": "full",
-            "DEFINITION": "Containing or holding as much or as many as possible; having no empty space."
-        },
-        {
-            "WORD": "full-figured",
-            "DEFINITION": "(of a woman) having a plump or curvaceous body."
-        },
-        {
-            "WORD": "fuzzy",
-            "DEFINITION": "Having a frizzy, fluffy, or frayed texture or appearance."
-        },
-        {
-            "WORD": "gangling",
-            "DEFINITION": "(of a person) tall, thin, and awkward in movements or bearing."
-        },
-        {
-            "WORD": "gaunt",
-            "DEFINITION": "(of a person) lean and haggard, especially because of suffering, hunger, or age."
-        },
-        {
-            "WORD": "generous",
-            "DEFINITION": "(of a person) showing a readiness to give more of something, as money or time, than is strictly necessary or expected."
-        },
-        {
-            "WORD": "glittering",
-            "DEFINITION": "Shining with a shimmering or sparkling light."
-        },
-        {
-            "WORD": "glossy",
-            "DEFINITION": "Shiny and smooth."
-        },
-        {
-            "WORD": "glowing",
-            "DEFINITION": "Expressing great praise."
-        },
-        {
-            "WORD": "golden",
-            "DEFINITION": "Colored or shining like gold."
-        },
-        {
-            "WORD": "greasy",
-            "DEFINITION": "Covered with or resembling an oily substance."
-        },
-        {
-            "WORD": "hard",
-            "DEFINITION": "Solid, firm, and rigid; not easily broken, bent, or pierced."
-        },
-        {
-            "WORD": "heart-shaped",
-            "DEFINITION": "Shaped like the conventional representation of a heart, with two equal curves meeting at a point at the bottom and a cusp at the top."
-        },
-        {
-            "WORD": "heavy",
-            "DEFINITION": "Of great weight; difficult to lift or move."
-        },
-        {
-            "WORD": "heavy-lidded"
-        },
-        {
-            "WORD": "hooded",
-            "DEFINITION": "(of an article of clothing) having a hood."
-        },
-        {
-            "WORD": "hulking",
-            "DEFINITION": "(of a person or object) large, heavy, or clumsy."
-        },
-        {
-            "WORD": "ink-stained",
-            "DEFINITION": "Marked or discolored with something that is not easily removed."
-        },
-        {
-            "WORD": "jowly"
-        },
-        {
-            "WORD": "lanky",
-            "DEFINITION": "(of a person) ungracefully thin and tall."
-        },
-        {
-            "WORD": "large",
-            "DEFINITION": "Of considerable or relatively great size, extent, or capacity."
-        },
-        {
-            "WORD": "leathery",
-            "DEFINITION": "Having a tough, hard texture."
-        },
-        {
-            "WORD": "leggy/long-legged",
-            "DEFINITION": "Having long legs."
-        },
-        {
-            "WORD": "lissome",
-            "DEFINITION": "(of a person or their body) thin, supple, and graceful."
-        },
-        {
-            "WORD": "lithe",
-            "DEFINITION": "(especially of a person's body) thin, supple, and graceful."
-        },
-        {
-            "WORD": "long",
-            "DEFINITION": "Measuring a great distance from end to end."
-        },
-        {
-            "WORD": "loose",
-            "DEFINITION": "Not firmly or tightly fixed in place; detached or able to be detached."
-        },
-        {
-            "WORD": "luminescent",
-            "DEFINITION": "Emitting light not caused by heat."
-        },
-        {
-            "WORD": "luminous",
-            "DEFINITION": "Full of or shedding light; bright or shining, especially in the dark."
-        },
-        {
-            "WORD": "lush",
-            "DEFINITION": "(of vegetation) growing luxuriantly."
-        },
-        {
-            "WORD": "lustrous",
-            "DEFINITION": "Having luster; shining."
-        },
-        {
-            "WORD": "luxuriant",
-            "DEFINITION": "(of vegetation) rich and profuse in growth; lush."
-        },
-        {
-            "WORD": "messy",
-            "DEFINITION": "Untidy or dirty."
-        },
-        {
-            "WORD": "moist",
-            "DEFINITION": "Slightly wet; damp or humid."
-        },
-        {
-            "WORD": "mottled",
-            "DEFINITION": "Marked with spots or smears of color."
-        },
-        {
-            "WORD": "muscular",
-            "DEFINITION": "Relating to or affecting the muscles."
-        },
-        {
-            "WORD": "narrow",
-            "DEFINITION": "(especially of something that is considerably longer or higher than it is wide) of small width."
-        },
-        {
-            "WORD": "obese",
-            "DEFINITION": "Grossly fat or overweight."
-        },
-        {
-            "WORD": "oily",
-            "DEFINITION": "Containing oil."
-        },
-        {
-            "WORD": "oval",
-            "DEFINITION": "Having a rounded and slightly elongated outline or shape like that of an egg."
-        },
-        {
-            "WORD": "overweight",
-            "DEFINITION": "Above a weight considered normal or desirable."
-        },
-        {
-            "WORD": "pale",
-            "DEFINITION": "Light in color or having little color."
-        },
-        {
-            "WORD": "pallid",
-            "DEFINITION": "(of a person's face) pale, typically because of poor health."
-        },
-        {
-            "WORD": "petite",
-            "DEFINITION": "(of a woman) having a small and attractively dainty build."
-        },
-        {
-            "WORD": "pimply"
-        },
-        {
-            "WORD": "pitted",
-            "DEFINITION": "Having a hollow or indentation on the surface."
-        },
-        {
-            "WORD": "plump",
-            "DEFINITION": "Having a full rounded shape."
-        },
-        {
-            "WORD": "pockmarked",
-            "DEFINITION": "Covered or disfigured with pockmarks."
-        },
-        {
-            "WORD": "pointed",
-            "DEFINITION": "Having a sharpened or tapered tip or end."
-        },
-        {
-            "WORD": "portly",
-            "DEFINITION": "(especially of a man) having a stout body; somewhat fat."
-        },
-        {
-            "WORD": "pot-bellied"
-        },
-        {
-            "WORD": "powerful",
-            "DEFINITION": "Having great power or strength."
-        },
-        {
-            "WORD": "protruding",
-            "DEFINITION": "Sticking out; projecting."
-        },
-        {
-            "WORD": "pudgy",
-            "DEFINITION": "(of a person or part of their body) slightly fat."
-        },
-        {
-            "WORD": "rangy",
-            "DEFINITION": "(of a person) tall and slim with long, slender limbs."
-        },
-        {
-            "WORD": "raw",
-            "DEFINITION": "(of food) uncooked."
-        },
-        {
-            "WORD": "red",
-            "DEFINITION": "Of a color at the end of the spectrum next to orange and opposite violet, as of blood, fire, or rubies."
-        },
-        {
-            "WORD": "red-rimmed",
-            "DEFINITION": "(of the eyes) having the inner edges of the eyelids reddened as a result of crying or irritation."
-        },
-        {
-            "WORD": "rheumy",
-            "DEFINITION": "(especially of the eyes) full of rheum; watery."
-        },
-        {
-            "WORD": "ripped",
-            "DEFINITION": "(of clothes or fabric) badly torn."
-        },
-        {
-            "WORD": "ropy",
-            "DEFINITION": "Resembling a rope, especially in being long, strong, and fibrous."
-        },
-        {
-            "WORD": "rose/rosy",
-            "DEFINITION": "(especially of a person's skin) colored like a pink or red rose, typically as an indication of health, youth, or embarrassment."
-        },
-        {
-            "WORD": "rough",
-            "DEFINITION": "Having an uneven or irregular surface; not smooth or level."
-        },
-        {
-            "WORD": "round",
-            "DEFINITION": "Shaped like or approximately like a circle or cylinder."
-        },
-        {
-            "WORD": "rounded",
-            "DEFINITION": "Having a smooth, curved surface."
-        },
-        {
-            "WORD": "ruddy",
-            "DEFINITION": "(of a person's face) having a healthy red color."
-        },
-        {
-            "WORD": "russet",
-            "DEFINITION": "Reddish brown in color."
-        },
-        {
-            "WORD": "sagging",
-            "DEFINITION": "Sinking or bulging downward under weight or pressure or through lack of strength."
-        },
-        {
-            "WORD": "sallow",
-            "DEFINITION": "(of a person's face or complexion) of an unhealthy yellow or pale brown color."
-        },
-        {
-            "WORD": "satiny",
-            "DEFINITION": "Having a smooth, glossy surface or finish like that of satin."
-        },
-        {
-            "WORD": "scaly",
-            "DEFINITION": "Covered in scales."
-        },
-        {
-            "WORD": "shaggy",
-            "DEFINITION": "(of hair or fur) long, thick, and unkempt."
-        },
-        {
-            "WORD": "sharp",
-            "DEFINITION": "(of an object) having an edge or point that is able to cut or pierce something."
-        },
-        {
-            "WORD": "shiny",
-            "DEFINITION": "(of a smooth surface) reflecting light, typically because very clean or polished."
-        },
-        {
-            "WORD": "short",
-            "DEFINITION": "Measuring a small distance from end to end."
-        },
-        {
-            "WORD": "shoulder-length",
-            "DEFINITION": "(of hair) reaching down to the shoulders."
-        },
-        {
-            "WORD": "silken",
-            "DEFINITION": "Made of silk."
-        },
-        {
-            "WORD": "sinewy",
-            "DEFINITION": "Consisting of or resembling sinews."
-        },
-        {
-            "WORD": "skinny",
-            "DEFINITION": "(of a person or part of their body) very thin."
-        },
-        {
-            "WORD": "sleek",
-            "DEFINITION": "(of hair, fur, or skin) smooth and glossy."
-        },
-        {
-            "WORD": "slender",
-            "DEFINITION": "(of a person or part of the body) gracefully thin."
-        },
-        {
-            "WORD": "slim",
-            "DEFINITION": "(of a person or their build) gracefully thin; slenderly built (used approvingly)"
-        },
-        {
-            "WORD": "small",
-            "DEFINITION": "Of a size that is less than normal or usual."
-        },
-        {
-            "WORD": "smooth",
-            "DEFINITION": "Having an even and regular surface or consistency; free from perceptible projections, lumps, or indentations."
-        },
-        {
-            "WORD": "smooth-shaven",
-            "DEFINITION": "Shaved so that the skin is smooth."
-        },
-        {
-            "WORD": "snow-white",
-            "DEFINITION": "Of a pure white color."
-        },
-        {
-            "WORD": "soft",
-            "DEFINITION": "Easy to mold, cut, compress, or fold; not hard or firm to the touch."
-        },
-        {
-            "WORD": "solid",
-            "DEFINITION": "Firm and stable in shape; not liquid or fluid."
-        },
-        {
-            "WORD": "spare",
-            "DEFINITION": "Additional to what is required for ordinary use."
-        },
-        {
-            "WORD": "sparkling",
-            "DEFINITION": "Shining brightly with flashes of light."
-        },
-        {
-            "WORD": "sparse",
-            "DEFINITION": "Thinly dispersed or scattered."
-        },
-        {
-            "WORD": "spiky",
-            "DEFINITION": "Having many spikes or sharp projecting points."
-        },
-        {
-            "WORD": "spirals",
-            "DEFINITION": "Winding in a continuous and gradually widening (or tightening) curve, either around a central point on a flat plane or about an axis so as to form a cone."
-        },
-        {
-            "WORD": "squinty"
-        },
-        {
-            "WORD": "steely",
-            "DEFINITION": "Resembling steel in color, brightness, or strength."
-        },
-        {
-            "WORD": "stocky",
-            "DEFINITION": "(of a person) broad and sturdily built."
-        },
-        {
-            "WORD": "stout",
-            "DEFINITION": "(of a person) somewhat fat or of heavy build."
-        },
-        {
-            "WORD": "straggly",
-            "DEFINITION": "Growing or spreading in an irregular, untidy way."
-        },
-        {
-            "WORD": "straight",
-            "DEFINITION": "Extending or moving uniformly in one direction only; without a curve or bend."
-        },
-        {
-            "WORD": "strapping",
-            "DEFINITION": "(especially of a young person) big and strong."
-        },
-        {
-            "WORD": "stringy",
-            "DEFINITION": "(especially of hair) resembling string; long, thin, and lusterless."
-        },
-        {
-            "WORD": "strong",
-            "DEFINITION": "Having the power to move heavy weights or perform other physically demanding tasks."
-        },
-        {
-            "WORD": "sturdy",
-            "DEFINITION": "(of a person or their body) strongly and solidly built."
-        },
-        {
-            "WORD": "sunken",
-            "DEFINITION": "Having sunk or been submerged in water."
-        },
-        {
-            "WORD": "tall",
-            "DEFINITION": "Of great or more than average height, especially (with reference to an object) relative to width."
-        },
-        {
-            "WORD": "tangled",
-            "DEFINITION": "Twisted together untidily; matted."
-        },
-        {
-            "WORD": "taut",
-            "DEFINITION": "Stretched or pulled tight; not slack."
-        },
-        {
-            "WORD": "tawny",
-            "DEFINITION": "Of an orange-brown or yellowish-brown color."
-        },
-        {
-            "WORD": "thick",
-            "DEFINITION": "With opposite sides or surfaces that are a great or relatively great distance apart."
-        },
-        {
-            "WORD": "thin",
-            "DEFINITION": "Having opposite surfaces or sides close together; of little thickness or depth."
-        },
-        {
-            "WORD": "thinning",
-            "DEFINITION": "Becoming less dense, crowded, or numerous."
-        },
-        {
-            "WORD": "tiny",
-            "DEFINITION": "Very small."
-        },
-        {
-            "WORD": "toned",
-            "DEFINITION": "Having firm and well-defined muscles."
-        },
-        {
-            "WORD": "translucent",
-            "DEFINITION": "(of a substance) allowing light, but not detailed shapes, to pass through; semitransparent."
-        },
-        {
-            "WORD": "turned-up",
-            "DEFINITION": "(of an ankle) twisted or sprained."
-        },
-        {
-            "WORD": "uneven",
-            "DEFINITION": "Not level or smooth."
-        },
-        {
-            "WORD": "unkempt",
-            "DEFINITION": "(especially of a person) having an untidy or disheveled appearance."
-        },
-        {
-            "WORD": "unruly",
-            "DEFINITION": "Disorderly and disruptive and not amenable to discipline or control."
-        },
-        {
-            "WORD": "untamed",
-            "DEFINITION": "Not domesticated or otherwise controlled."
-        },
-        {
-            "WORD": "veined",
-            "DEFINITION": "Marked with or as if with veins."
-        },
-        {
-            "WORD": "velvety",
-            "DEFINITION": "Having a smooth, soft appearance, feel, or taste."
-        },
-        {
-            "WORD": "voluminous",
-            "DEFINITION": "(of clothing or drapery) loose and ample."
-        },
-        {
-            "WORD": "voluptuous",
-            "DEFINITION": "(of a woman) curvaceous and sexually attractive."
-        },
-        {
-            "WORD": "wavy",
-            "DEFINITION": "Having a form or edge that smoothly curves in and out."
-        },
-        {
-            "WORD": "weather-beaten",
-            "DEFINITION": "Damaged or worn by exposure to the weather."
-        },
-        {
-            "WORD": "white",
-            "DEFINITION": "Of the color of milk or fresh snow, due to the reflection of most wavelengths of visible light; the opposite of black."
-        },
-        {
-            "WORD": "wide",
-            "DEFINITION": "Of great or more than average width."
-        },
-        {
-            "WORD": "wide-set",
-            "DEFINITION": "Of great or more than average width."
-        },
-        {
-            "WORD": "wild",
-            "DEFINITION": "(of an animal or plant) living or growing in the natural environment; not domesticated or cultivated."
-        },
-        {
-            "WORD": "willowy",
-            "DEFINITION": "Bordered, shaded, or covered by willows."
-        },
-        {
-            "WORD": "windblown",
-            "DEFINITION": "Carried or driven by the wind."
-        },
-        {
-            "WORD": "wiry",
-            "DEFINITION": "Resembling wire in form and texture."
-        },
-        {
-            "WORD": "wispy",
-            "DEFINITION": "(of hair, threads, smoke, etc.) fine; feathery."
-        },
-        {
-            "WORD": "wolfish",
-            "DEFINITION": "Resembling or likened to a wolf, especially in being rapacious, voracious, or lascivious."
-        }
+    "EYE_COLOR": [
+        "chestnut",
+        "chocolate brown",
+        "cocoa brown",
+        "coffee brown",
+        "mocha",
+        "mahogany",
+        "sepia",
+        "sienna brown",
+        "mink brown",
+        "copper",
+        "amber",
+        "cognac",
+        "whiskey",
+        "brandy",
+        "honey",
+        "tawny",
+        "topaz",
+        "hazel",
+        "obsidian",
+        "onyx",
+        "coal",
+        "raven",
+        "midnight",
+        "sky blue",
+        "sunny blue",
+        "cornflower blue",
+        "steel blue",
+        "ice blue",
+        "arctic blue",
+        "glacial blue",
+        "crystal blue",
+        "cerulean",
+        "electric blue",
+        "azure",
+        "lake blue",
+        "aquamarine",
+        "turquoise",
+        "denim blue",
+        "slate blue/slate gray",
+        "storm blue/storm gray",
+        "silver/silver gray",
+        "chrome",
+        "platinum",
+        "pewter",
+        "smoky gray",
+        "ash gray",
+        "concrete gray",
+        "dove gray",
+        "shark gray",
+        "fog gray",
+        "gunmetal gray",
+        "olive",
+        "emerald",
+        "leaf green",
+        "moss green"
     ],
-    "VERB": [{
-            "WORD": "bob",
-            "DEFINITION": "(of a thing) make a quick short movement up and down."
-        },
-        {
-            "WORD": "built",
-            "DEFINITION": "past and past participle of build"
-        },
-        {
-            "WORD": "chapped",
-            "DEFINITION": "(of the skin) become cracked, rough, or sore, typically through exposure to cold weather."
-        },
-        {
-            "WORD": "drooping",
-            "DEFINITION": "Bend or hang downward limply."
-        },
-        {
-            "WORD": "lean",
-            "DEFINITION": "Be in or move into a sloping position."
-        },
-        {
-            "WORD": "limp",
-            "DEFINITION": "Walk with difficulty, typically because of a damaged or stiff leg or foot."
-        },
-        {
-            "WORD": "plucked",
-            "DEFINITION": "Take hold of (something) and quickly remove it from its place."
-        },
-        {
-            "WORD": "scratched",
-            "DEFINITION": "Score or mark the surface of (something) with a sharp or pointed object."
-        },
-        {
-            "WORD": "sculpted",
-            "DEFINITION": "Create or represent (something) by carving, casting, or other shaping techniques."
-        },
-        {
-            "WORD": "shaved",
-            "DEFINITION": "Cut the hair off one's face with a razor."
-        },
-        {
-            "WORD": "snub",
-            "DEFINITION": "Rebuff, ignore, or spurn disdainfully."
-        },
-        {
-            "WORD": "tousled",
-            "DEFINITION": "Make (something, especially a person's hair) untidy."
-        },
-        {
-            "WORD": "trim",
-            "DEFINITION": "Make (something) neat or of the required size or form by cutting away irregular or unwanted parts."
-        }
+    "EYEBROWS": [
+        "arched",
+        "straight",
+        "plucked",
+        "sparse",
+        "trim",
+        "dark",
+        "faint",
+        "thin",
+        "thick",
+        "unruly",
+        "bushy",
+        "heavy"
+    ],
+    "SKIN": [
+        "lined",
+        "wrinkled",
+        "seamed",
+        "leathery",
+        "sagging",
+        "drooping",
+        "loose",
+        "clear",
+        "smooth",
+        "silken",
+        "satiny",
+        "dry",
+        "flaky",
+        "scaly",
+        "delicate",
+        "thin",
+        "translucent",
+        "luminescent",
+        "baby-soft",
+        "flawless",
+        "poreless",
+        "covered with large pores",
+        "glowing",
+        "dewy",
+        "dull",
+        "velvety",
+        "fuzzy",
+        "rough",
+        "uneven",
+        "mottled",
+        "dimpled",
+        "doughy",
+        "firm",
+        "freckled",
+        "pimply",
+        "pockmarked",
+        "blemished",
+        "pitted",
+        "scarred",
+        "bruised",
+        "veined",
+        "scratched",
+        "sunburned",
+        "weather-beaten",
+        "raw",
+        "tattooed",
+        "pale",
+        "pallid",
+        "pasty",
+        "fair",
+        "light"
+    ],
+    "SKIN_COLOR": [
+        "amber",
+        "bronze",
+        "cinnamon",
+        "copper",
+        "dark brown",
+        "deep brown",
+        "ebony",
+        "honey",
+        "golden",
+        "cream/creamy",
+        "alabaster",
+        "ivory",
+        "bisque",
+        "milk",
+        "porcelain",
+        "chalky",
+        "sallow",
+        "olive",
+        "peach",
+        "rose/rosy",
+        "ruddy",
+        "florid",
+        "russet",
+        "tawny",
+        "fawn"
+    ],
+    "FACE": [
+        "square",
+        "round",
+        "oblong",
+        "oval",
+        "elongated",
+        "narrow",
+        "heart-shaped",
+        "catlike",
+        "wolfish",
+        "high forehead",
+        "broad forehead",
+        "prominent brow ridge",
+        "protruding brow bone",
+        "sharp cheekbones",
+        "high cheekbones",
+        "angular cheekbones",
+        "hollow cheeks",
+        "square jaw",
+        "chiseled",
+        "sculpted",
+        "craggy",
+        "soft",
+        "jowly",
+        "jutting chin",
+        "pointed chin",
+        "weak chin",
+        "receding chin",
+        "double chin",
+        "cleft chin",
+        "dimple in chin",
+        "visible Adam's apple"
+    ],
+    "NOSE": [
+        "snub",
+        "dainty",
+        "button",
+        "turned-up",
+        "long",
+        "broad",
+        "thin",
+        "straight",
+        "pointed",
+        "crooked",
+        "aquiline",
+        "bulbous",
+        "flared",
+        "hawk",
+        "strong"
+    ],
+    "MOUTH": [
+        "thin",
+        "narrow",
+        "full",
+        "lush",
+        "rosebud",
+        "dry",
+        "cracked",
+        "chapped",
+        "moist",
+        "glossy",
+        "straight teeth",
+        "a gap between teeth",
+        "gleaming white teeth",
+        "with an overbite",
+        "with an underbite"
+    ],
+    "HAIR": [
+        "long",
+        "short",
+        "shoulder-length",
+        "loose",
+        "limp",
+        "dull",
+        "shiny",
+        "glossy",
+        "sleek",
+        "smooth",
+        "luminous",
+        "lustrous",
+        "spiky",
+        "stringy",
+        "shaggy",
+        "tangled",
+        "messy",
+        "tousled",
+        "windblown",
+        "unkempt",
+        "bedhead",
+        "straggly",
+        "neatly combed",
+        "parted",
+        "slicked down/slicked back",
+        "cropped",
+        "clipped",
+        "buzzed/buzz cut",
+        "a crewcut",
+        "a bob",
+        "a mullet",
+        "curly",
+        "bushy",
+        "frizzy",
+        "wavy",
+        "straight",
+        "lanky",
+        "dry",
+        "oily",
+        "greasy",
+        "corkscrewy",
+        "spiraly",
+        "braided",
+        "a widow's peak",
+        "bald",
+        "shaved",
+        "combed-over",
+        "an afro",
+        "thick",
+        "luxuriant",
+        "voluminous",
+        "full",
+        "wild",
+        "untamed",
+        "bouncy",
+        "wispy",
+        "fine",
+        "thinning"
+    ],
+    "HAIR_COLOR": [
+        "black",
+        "blue-black",
+        "jet black",
+        "raven",
+        "ebony",
+        "inky black",
+        "midnight",
+        "sable",
+        "salt and pepper",
+        "silver/silver gray",
+        "charcoal gray",
+        "steel gray",
+        "white",
+        "snow-white",
+        "brown",
+        "brunette",
+        "chocolate brown",
+        "coffee brown",
+        "ash brown",
+        "brown sugar",
+        "nut brown",
+        "caramel",
+        "tawny brown",
+        "toffee brown",
+        "red",
+        "ginger",
+        "auburn",
+        "copper",
+        "strawberry blonde",
+        "butterscotch",
+        "honey",
+        "wheat",
+        "blonde",
+        "golden",
+        "sandy blond",
+        "flaxen",
+        "fair-haired",
+        "bleached",
+        "platinum"
+    ],
+    "FACIAL_HAIR": [
+        "clean-shaven",
+        "smooth-shaven",
+        "a beard",
+        "a neckbeard",
+        "a goatee",
+        "a moustache",
+        "sideburns",
+        "mutton-chop sideburns",
+        "a stubble",
+        "a few days' growth of beard",
+        "a five o'clock shadow"
+    ],
+    "BODY_TYPE": [
+        "tall",
+        "average height",
+        "short",
+        "petite",
+        "tiny",
+        "compact",
+        "big",
+        "large",
+        "burly",
+        "beefy",
+        "bulky",
+        "brawny",
+        "barrel-chested",
+        "heavy/heavy-set",
+        "fat",
+        "overweight",
+        "obese",
+        "flabby",
+        "chunky",
+        "chubby",
+        "pudgy",
+        "pot-bellied",
+        "portly",
+        "thick",
+        "stout",
+        "lush",
+        "plush",
+        "full-figured",
+        "ample",
+        "rounded",
+        "generous",
+        "voluptuous",
+        "curvy",
+        "hourglass",
+        "plump",
+        "leggy/long-legged",
+        "gangling",
+        "lanky",
+        "coltish",
+        "lissome",
+        "willowy",
+        "lithe",
+        "lean",
+        "slim",
+        "slender",
+        "trim",
+        "thin",
+        "skinny",
+        "emaciated",
+        "gaunt",
+        "bony",
+        "spare",
+        "solid",
+        "stocky",
+        "wiry",
+        "rangy",
+        "sinewy",
+        "stringy",
+        "ropy",
+        "sturdy",
+        "strapping",
+        "powerful",
+        "hulking",
+        "fit",
+        "athletic",
+        "toned",
+        "built",
+        "muscular",
+        "chiseled",
+        "taut",
+        "ripped",
+        "broad-shouldered",
+        "sloping shoulders",
+        "bowlegged"
     ]
 }

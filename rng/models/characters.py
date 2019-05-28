@@ -113,6 +113,10 @@ class Character(object):
         string += self._quirk_descriptions(full_details, standalone=False)
         return string
 
+    def shave(self):
+        """Method docstring."""
+        self._description.remove_facial_hair()
+
     @property
     def age(self):
         """Method docstring."""
@@ -162,8 +166,9 @@ class Character(object):
         else:
             subject = f'  {self._gender.subject_pronoun.capitalize()}'
         s = 's' if full_details else ''
+        age_article = ('an' if str(self.age.current).startswith('8') else 'a')
         string = (
-            f'{subject} is a'
+            f'{subject} is {age_article}'
             f' {self.age.current} year{s} old'
         )
         if full_details:
@@ -206,14 +211,17 @@ class Character(object):
             object_str = self._gender.object_pronoun.capitalize()
             possessive_str = self._gender.possessive_pronoun.capitalize()
             spacer = '  '
-        print(f'{self._description.traits}')
+        noun_str = self._gender.noun
         kwargs = {
             'subject': subject_str,
             'object': object_str,
             'possessive': possessive_str,
-            'spacer': spacer
+            'noun': noun_str,
+            'full_details': full_details
         }
-        return self_description.readable_description(**kwargs)
+        readable_descriptions = self._description.readable_description(**kwargs)
+        readable_str = f'{Strings.LF}{spacer}'.join(readable_descriptions)
+        return (spacer + readable_str + Strings.LF) if readable_descriptions else Strings.EMPTY
 
     def _quirk_descriptions(self, full_details, standalone=True):
         if standalone:
@@ -224,9 +232,16 @@ class Character(object):
         string = ''
         for quirk in quirks:
             string += subject
-            adverb = random.choices(['', 'very ', 'a bit of a ', 'rather '], [7, 1, 1, 1], k=1)[0]
-            article = Utils.article_for(adverb) if adverb else Utils.article_for(quirk)
-            string += f' tends to be {article} {adverb}{quirk} person'
+            verb = random.choice([' tends to be', '\'s considered to be', '\'s known to be', '\'s'])
+            intensifier = Utils.random_intensifier()
+            if intensifier:
+                if intensifier == 'a bit':
+                    intensifier += ' of ' + Utils.article_for(quirk)
+                intensifier += ' '
+            article = Utils.article_for(intensifier) if intensifier else Utils.article_for(quirk)
+            if article:
+                article += ' '
+            string += f'{verb} {article}{intensifier}{quirk} person'
             string += Strings.LF
             if full_details:
                 string += f'    <{quirk.quirk.capitalize()}: {quirk.definition}>'
@@ -254,6 +269,9 @@ class RandomNPC(Character):
             self.DESCRIPTION: description
         }
         super().__init__(**kwargs)
+
+        if self._gender.is_female():
+            self.shave()
 
 
 class RandomPC(Character):
