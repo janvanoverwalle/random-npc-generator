@@ -42,6 +42,18 @@ class Age(object):
 
     def __str__(self):
         if self.current:
+            return f'{self.current}'
+        else:
+            return f'0 to {"/".join(self.lifespan) if isinstance(self.lifespan, (tuple, list)) else self.lifespan}'
+
+    @property
+    def human_equivalent(self):
+        """Method docstring."""
+        return int((self.current/self.expected_lifespan)*80)
+
+    def info_string(self):
+        """Method docstring."""
+        if self.current:
             info = f'Expected lifespan: {self.expected_lifespan}, Adulthood: {self.adulthood}'
             return f'{self.current} years old ({info}, Human Equivalent: ~{self.human_equivalent})'
 
@@ -50,11 +62,6 @@ class Age(object):
         else:
             lifespan = self.lifespan
         return f'Expected lifespan: {lifespan}, Adulthood: {self.adulthood}'
-
-    @property
-    def human_equivalent(self):
-        """Method docstring."""
-        return int((self.current/self.expected_lifespan)*80)
 
     def age_description(self):
         """Method docstring."""
@@ -75,7 +82,7 @@ class Age(object):
         die_list = self._race_to_age_dice_map.get(Races.get_base_race(race.name))
 
         if char_class:
-            pass  # TODO: Take class into account
+            die = char_class.hit_die
         else:
             die = random.choice(die_list)
 

@@ -51,25 +51,3 @@ class DefinitionLookup(object):
         part_data = meaning.get(part)
         results = [p.get(cls.DEFINITION) for p in part_data]
         return results[0] if results else None
-
-    @classmethod
-    def _scan_for_key(cls, obj, key):
-        """Method docstring."""
-        if not obj:
-            return None
-
-        results = []
-        if isinstance(obj, (list, tuple)):
-            for elem in obj:
-                result = cls._scan_for_key(elem, key)
-                if result:
-                    results += result
-        elif isinstance(obj, dict):
-            for k, v in obj.items():
-                if k == key:
-                    results.append(v)
-                else:
-                    result = cls._scan_for_key(v, key)
-                    if result:
-                        results += result
-        return results

@@ -95,27 +95,7 @@ class CharacterRace(object):
         self._original_feats = None
 
     def __str__(self):
-        string = f'Race: {self._name}{Strings.LF}'
-        string += f'  Sizes: {self._size}{Strings.LF}'
-        string += f'  Speed: {self._speed} ft.{Strings.LF}'
-        string += f'  Age: {self._age}{Strings.LF}'
-        if self._ability_score_increases:
-            string += f'  Ability Score Increases:{Strings.LF}'
-            for elem in self._ability_score_increases:
-                string += f'    {elem[0]}: {elem[1]}{Strings.LF}'
-        if self._senses:
-            string += f'  Senses:{Strings.LF}'
-            for elem in self._senses:
-                string += f'    {elem}{Strings.LF}'
-        if self._languages:
-            string += f'  Languages:{Strings.LF}'
-            for elem in self._languages:
-                string += f'    {elem}{Strings.LF}'
-        if self._skills:
-            string += f'  Skills:{Strings.LF}'
-            for elem in self._skills:
-                string += f'    {elem}{Strings.LF}'
-        return string.strip()
+        return f'{self._name}'
 
     def _parse_random_ability_score_increases(self):
         if not self._ability_score_increases:
@@ -240,6 +220,30 @@ class CharacterRace(object):
     def skills(self):
         """Method docstring."""
         return self._skills
+
+    def info_string(self):
+        """Method docstring."""
+        string = f'Race: {self._name}{Strings.LF}'
+        string += f'  Sizes: {self._size}{Strings.LF}'
+        string += f'  Speed: {self._speed} ft.{Strings.LF}'
+        string += f'  Age: {self._age}{Strings.LF}'
+        if self._ability_score_increases:
+            string += f'  Ability Score Increases:{Strings.LF}'
+            for elem in self._ability_score_increases:
+                string += f'    {elem[0]}: {elem[1]}{Strings.LF}'
+        if self._senses:
+            string += f'  Senses:{Strings.LF}'
+            for elem in self._senses:
+                string += f'    {elem}{Strings.LF}'
+        if self._languages:
+            string += f'  Languages:{Strings.LF}'
+            for elem in self._languages:
+                string += f'    {elem}{Strings.LF}'
+        if self._skills:
+            string += f'  Skills:{Strings.LF}'
+            for elem in self._skills:
+                string += f'    {elem}{Strings.LF}'
+        return string.strip()
 
     def roll_random_ability_score_increases(self):
         """Method docstring."""

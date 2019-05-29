@@ -71,6 +71,9 @@ class CharacterClass(object):
         self._primary_abilities = None
         self._saving_throws = None
 
+    def __str__(self):
+        return self._name
+
     @property
     def name(self):
         """Method docstring."""
@@ -89,7 +92,8 @@ class CharacterClass(object):
     @hit_die.setter
     def hit_die(self, value):
         """Method docstring."""
-        self._hit_die = 'd' + int(''.join([c for c in str(value) if c.isdigit()]))
+        digits = [c for c in str(value).strip() if c.isdigit()]
+        self._hit_die = 'd' + ''.join(digits)
 
     @property
     def primary_abilities(self):
@@ -100,6 +104,10 @@ class CharacterClass(object):
     def saving_throws(self):
         """Method docstring."""
         return self._saving_throws
+
+    def info_string(self):
+        """Method docstring."""
+        return str(self)
 
 
 class Barbarian(CharacterClass):

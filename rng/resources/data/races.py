@@ -26,24 +26,36 @@ class Races(object):
     TIEFLING = 'Tiefling'
 
     @classmethod
-    def as_list(cls):
+    def as_list(cls, subraces=None):
         """Method docstring."""
-        return [
-            cls.DRAGONBORN,
-            cls.HILL_DWARF,
-            cls.MOUNTAIN_DWARF,
-            cls.HIGH_ELF,
-            cls.WOOD_ELF,
-            cls.DARK_ELF,
-            cls.ROCK_GNOME,
-            cls.FOREST_GNOME,
-            cls.HALF_ELF,
-            cls.HALF_ORC,
-            cls.LIGHTFOOT_HALFLING,
-            cls.STOUT_HALFLING,
-            cls.HUMAN,
-            cls.TIEFLING,
-        ]
+        ret = []
+        ret.append(cls.DRAGONBORN)
+        if not subraces:
+            ret.append(cls.DWARF)
+        else:
+            ret.append(cls.HILL_DWARF)
+            ret.append(cls.MOUNTAIN_DWARF)
+        if not subraces:
+            ret.append(cls.ELF)
+        else:
+            ret.append(cls.HIGH_ELF)
+            ret.append(cls.WOOD_ELF)
+            ret.append(cls.DARK_ELF)
+        if not subraces:
+            ret.append(cls.GNOME)
+        else:
+            ret.append(cls.ROCK_GNOME)
+            ret.append(cls.FOREST_GNOME)
+        ret.append(cls.HALF_ELF)
+        ret.append(cls.HALF_ORC)
+        if not subraces:
+            ret.append(cls.HALFLING)
+        else:
+            ret.append(cls.LIGHTFOOT_HALFLING)
+            ret.append(cls.STOUT_HALFLING)
+        ret.append(cls.HUMAN)
+        ret.append(cls.TIEFLING)
+        return ret
 
     @classmethod
     def get_base_race(cls, race_name):

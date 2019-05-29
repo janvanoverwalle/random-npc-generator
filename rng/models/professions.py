@@ -1,9 +1,9 @@
 """
 Module docstring.
 """
-import json
 import random
 from pathlib import Path
+from rng.resources.data.professions import Professions
 from rng.models.classes import CharacterClasses
 from rng.resources.data.abilities import Abilities
 from rng.resources.data.skills import Skills
@@ -13,36 +13,19 @@ from rng.resources.data.strings import Strings
 class CharacterProfessions(object):
     """Class docstring."""
 
-    CATEGORIES = 'CATEGORIES'
-    PROFESSIONS = 'PROFESSIONS'
-    PROFESSION = 'PROFESSION'
-    DESCRIPTION = 'DESCRIPTION'
-    CLASSES = 'CLASSES'
-    SKILLS = 'SKILLS'
-    SAVING_THROWS = 'SAVING_THROWS'
-    LOCALES = 'LOCALES'
-    LOCALE = 'LOCALE'
-    WEIGHT = 'WEIGHT'
-
     _json_path = Path(__file__).parent.parent / 'resources' / 'json' / 'character_professions.json'
-    _profession_data = {}
     _categories = {}
-
     professions = []
 
     @classmethod
-    def _load_json_data(cls, force_update=False):
+    def _load_data(cls, force_update=False):
         if cls._categories and cls.professions and not force_update:
             return
 
-        cls._profession_data.clear()
         cls._categories.clear()
         cls.professions.clear()
 
-        with open(f'{cls._json_path}', encoding='utf8') as json_file:
-            cls._profession_data = json.load(json_file)
-
-        cls._parse_profession_data(cls._profession_data)
+        cls._parse_profession_data(Professions.data())
 
     @classmethod
     def _parse_profession_data(cls, data):
@@ -50,41 +33,41 @@ class CharacterProfessions(object):
             return
 
         for k, v in data.items():
-            if k == cls.CATEGORIES:
+            if k == Professions.CATEGORIES:
                 cls._categories = v
-            elif k == cls.PROFESSIONS:
+            elif k == Professions.PROFESSIONS:
                 cls._parse_category_data(v)
 
     @classmethod
     def _parse_category_data(cls, data):
         for k, v in data.items():
             category = cls._categories[k]
-            locales = v.get(cls.LOCALES)
-            professions = v.get(cls.PROFESSIONS)
+            locales = v.get(Professions.LOCALES)
+            professions = v.get(Professions.PROFESSIONS)
             cls._parse_profession_list(category, professions, locales)
 
     @classmethod
     def _parse_profession_list(cls, category, data, locale_data=None):
         for p_data in data:
-            profession = p_data.get(cls.PROFESSION)
-            description = p_data.get(cls.DESCRIPTION)
-            assoc_class = p_data.get(cls.CLASSES)
-            skills = p_data.get(cls.SKILLS)
-            saving_throws = p_data.get(cls.SAVING_THROWS)
-            locale_data = p_data.get(cls.LOCALES, locale_data)
+            profession = p_data.get(Professions.PROFESSION)
+            description = p_data.get(Professions.DESCRIPTION)
+            assoc_class = p_data.get(Professions.CLASSES)
+            skills = p_data.get(Professions.SKILLS)
+            saving_throws = p_data.get(Professions.SAVING_THROWS)
+            locale_data = p_data.get(Professions.LOCALES, locale_data)
 
             if cls.professions is None:
                 cls.professions = []
             
             kwargs = {}
             if assoc_class:
-                kwargs[cls.CLASSES] = assoc_class
+                kwargs[Professions.CLASSES] = assoc_class
             if skills:
-                kwargs[cls.SKILLS] = skills
+                kwargs[Professions.SKILLS] = skills
             if saving_throws:
-                kwargs[cls.SAVING_THROWS] = saving_throws
+                kwargs[Professions.SAVING_THROWS] = saving_throws
             if locale_data:
-                kwargs[cls.LOCALES] = locale_data
+                kwargs[Professions.LOCALES] = locale_data
 
             profession_obj = CharacterProfession(profession, description, category, **kwargs)
             cls.professions.append(profession_obj)
@@ -101,7 +84,7 @@ class CharacterProfessions(object):
         if not amount:
             return None
 
-        cls._load_json_data()
+        cls._load_data()
 
         possible_professions = [p for p in cls.professions if p.get_weight(locale) > 0]
         weights = [p.get_weight(locale) for p in possible_professions]
@@ -112,10 +95,10 @@ class CharacterProfessions(object):
 class CharacterProfession(object):
     """Class docstring."""
     def __init__(self, name, description=None, category=None, **kwargs):
-        assoc_class = kwargs.get(CharacterProfessions.CLASSES)
-        skills = kwargs.get(CharacterProfessions.SKILLS)
-        saving_throws = kwargs.get(CharacterProfessions.SAVING_THROWS)
-        locale_data = kwargs.get(CharacterProfessions.LOCALES)
+        assoc_class = kwargs.get(Professions.CLASSES)
+        skills = kwargs.get(Professions.SKILLS)
+        saving_throws = kwargs.get(Professions.SAVING_THROWS)
+        locale_data = kwargs.get(Professions.LOCALES)
 
         self._name = name
         self._description = description.capitalize() if isinstance(description, str) else description
@@ -158,6 +141,13 @@ class CharacterProfession(object):
         return self._saving_throws
 
     def __str__(self):
+        return f'{self._name}'
+
+    def __repr__(self):
+        return f'{self._name}'
+
+    def info_string(self):
+        """Method docstring."""
         # cat_str = f'[{self.category}] ' if self.category else ''
         string = f'Profession: {self._name}{Strings.LF}'
         string += f'  Description: {self._description}{Strings.LF}' if self._description else ''
@@ -171,21 +161,17 @@ class CharacterProfession(object):
                 string += f'    {elem}{Strings.LF}'
         return string.strip()
 
-    def __repr__(self):
-        return f'{self._name}'
-
     def get_weight(self, locale=None):
         """Method docstring."""
-
         if not locale:
             return 1
         for data in self._locale_data:
-            loc = data.get(CharacterProfessions.LOCALE)
+            loc = data.get(Professions.LOCALE)
             if not loc:
                 continue
             if locale.lower() == loc.lower():
                 try:
-                    return float(data.get(CharacterProfessions.WEIGHT, 0))
+                    return float(data.get(Professions.WEIGHT, 0))
                 except (TypeError, ValueError):
                     continue
         return 1

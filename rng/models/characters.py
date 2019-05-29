@@ -77,6 +77,7 @@ class Character(object):
     GENDER = 'gender'
     RACE = 'race'
     CLASS = 'class'
+    LOCALE = 'locale'
     PROFESSION = 'profession'
     JOB = 'job'
     QUIRKS = 'quirks'
@@ -99,66 +100,6 @@ class Character(object):
         string += f'a {self._gender} {self._race.name} '
         string += Strings.LF
         return string
-
-    def description(self):
-        """Method docstring."""
-        return str(self)
-
-    def detailed_description(self, full_details=True):
-        """Method docstring."""
-        string = str(self)
-        string += self._age_description(full_details, standalone=False)
-        string += self._class_description(full_details, standalone=False)
-        string += self._character_descriptions(full_details, standalone=False)
-        string += self._quirk_descriptions(full_details, standalone=False)
-        return string
-
-    def shave(self):
-        """Method docstring."""
-        self._description.remove_facial_hair()
-
-    @property
-    def age(self):
-        """Method docstring."""
-        return self._race.age
-
-    @property
-    def languages(self):
-        """Method docstring."""
-        ret = set()
-        if self._class:
-            ret = ret.union(set(self._class.languages))
-        if self._race:
-            ret = ret.union(set(self._race.languages))
-        return list(ret)
-
-    @property
-    def saving_throws(self):
-        """Method docstring."""
-        ret = set()
-        if self._class:
-            ret = ret.union(set(self._class.saving_throws))
-        if self._profession:
-            ret = ret.union(set(self._profession.saving_throws))
-        return list(ret)
-
-    @property
-    def senses(self):
-        """Method docstring."""
-        ret = set()
-        if self._race:
-            ret = ret.union(set(self._race.senses))
-        return list(ret)
-
-    @property
-    def skills(self):
-        """Method docstring."""
-        ret = set()
-        if self._profession:
-            ret = ret.union(set(self._profession.saving_throws))
-        if self._race:
-            ret = ret.union(set(self._race.saving_throws))
-        return list(ret)
 
     def _age_description(self, full_details=True, standalone=True):
         if standalone:
@@ -248,6 +189,109 @@ class Character(object):
                 string += Strings.LF
         return string
 
+    @property
+    def name(self):
+        """Method docstring."""
+        return self._name
+
+    @property
+    def gender(self):
+        """Method docstring."""
+        return self._gender
+
+    @property
+    def race(self):
+        """Method docstring."""
+        return self._race
+
+    @property
+    def cclass(self):
+        """Method docstring."""
+        return self._class
+
+    @property
+    def profession(self):
+        """Method docstring."""
+        return self._profession
+
+    @property
+    def class_or_profession(self):
+        """Method docstring."""
+        return self._class if self._class else self._profession
+
+    @property
+    def quirks(self):
+        """Method docstring."""
+        return self._quirks
+
+    @property
+    def age(self):
+        """Method docstring."""
+        return self._race.age
+
+    @property
+    def languages(self):
+        """Method docstring."""
+        ret = set()
+        if self._class:
+            ret = ret.union(set(self._class.languages))
+        if self._race:
+            ret = ret.union(set(self._race.languages))
+        return list(ret)
+
+    @property
+    def saving_throws(self):
+        """Method docstring."""
+        ret = set()
+        if self._class:
+            ret = ret.union(set(self._class.saving_throws))
+        if self._profession:
+            ret = ret.union(set(self._profession.saving_throws))
+        return list(ret)
+
+    @property
+    def senses(self):
+        """Method docstring."""
+        ret = set()
+        if self._race:
+            ret = ret.union(set(self._race.senses))
+        return list(ret)
+
+    @property
+    def skills(self):
+        """Method docstring."""
+        ret = set()
+        if self._profession:
+            ret = ret.union(set(self._profession.saving_throws))
+        if self._race:
+            ret = ret.union(set(self._race.saving_throws))
+        return list(ret)
+
+    def has_class(self):
+        """Method docstring."""
+        return self._class is not None
+
+    def has_profession(self):
+        """Method docstring."""
+        return self._profession is not None
+
+    def description(self):
+        """Method docstring."""
+        return str(self)
+
+    def detailed_description(self, full_details=True):
+        """Method docstring."""
+        string = str(self)
+        string += self._age_description(full_details, standalone=False)
+        string += self._class_description(full_details, standalone=False)
+        string += self._character_descriptions(full_details, standalone=False)
+        string += self._quirk_descriptions(full_details, standalone=False)
+        return string
+
+    def shave(self):
+        """Method docstring."""
+        self._description.remove_facial_hair()
+
 
 class RandomNPC(Character):
     """Class docstring."""
@@ -255,8 +299,11 @@ class RandomNPC(Character):
     def __init__(self, **kwargs):
         gender = kwargs.get(self.GENDER, CharacterGenders.roll_random())
         race = kwargs.get(self.RACE, CharacterRaces.roll_random())
-        locales = ['City', 'Village', 'Outskirts']
-        profession = kwargs.get(self.PROFESSION, CharacterProfessions.roll_random(random.choice(locales)))
+        locales = kwargs.get(self.LOCALE)
+        if not locales:
+            locales = ['City', 'Village', 'Outskirts']
+        rand_locale = random.choice(locales)
+        profession = kwargs.get(self.PROFESSION, CharacterProfessions.roll_random(rand_locale))
         name = kwargs.get(self.NAME, CharacterNames.roll_random(race, gender))
         quirks = kwargs.get(self.QUIRKS, CharacterQuirks.roll_random())
         description = kwargs.get(self.DESCRIPTION, CharacterDescriptions.roll_random())
@@ -277,13 +324,13 @@ class RandomNPC(Character):
 class RandomPC(Character):
     """Class docstring."""
 
-    def __init__(self):
-        gender = CharacterGenders.roll_random()
-        race = CharacterRaces.roll_random()
-        char_class = CharacterClasses.roll_random()
-        name = CharacterNames.roll_random(race, gender)
-        quirks = CharacterQuirks.roll_random()
-        description = CharacterDescriptions.roll_random()
+    def __init__(self, **kwargs):
+        gender = kwargs.get(self.GENDER, CharacterGenders.roll_random())
+        race = kwargs.get(self.RACE, CharacterRaces.roll_random())
+        char_class = kwargs.get(self.CLASS, CharacterClasses.roll_random())
+        name = kwargs.get(self.NAME, CharacterNames.roll_random(race, gender))
+        quirks = kwargs.get(self.QUIRKS, CharacterQuirks.roll_random())
+        description = kwargs.get(self.DESCRIPTION, CharacterDescriptions.roll_random())
         kwargs = {
             self.NAME: name,
             self.GENDER: gender,

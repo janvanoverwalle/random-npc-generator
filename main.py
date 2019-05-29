@@ -1,14 +1,21 @@
 """
 Module docstring.
 """
+import wx
+
+from rng.helpers.dice_roller import Dice
+
 from rng.models.characters import Characters
 from rng.models.names import CharacterNames
 from rng.models.professions import CharacterProfessions
 from rng.models.races import CharacterRaces
 from rng.models.genders import CharacterGenders
 from rng.models.descriptions import CharacterDescriptions
+
 from rng.resources.data.strings import Strings
 from rng.resources.data.races import Races
+
+from rng.views.frames.main import MainFrame
 
 
 def roll_independently():
@@ -32,20 +39,24 @@ def roll_independently():
     print(f'{rolled_race}')
     print(f'{rolled_profession}')
 
-
+#
 def roll_character():
     """Function docstring."""
     npc = Characters.roll_npc(**{'race': Races.HALF_ELF})
 
     print(f'{npc.detailed_description(full_details=False)}')
 
-
+#
 def main():
     """Function docstring."""
     # roll_independently()
-    roll_character()
+    # roll_character()
+    app = wx.App()
+    frame = MainFrame()
+    app.MainLoop()
 
 
+#
 def create_description_data():
     """Function docstring."""
     import json

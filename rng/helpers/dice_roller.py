@@ -13,10 +13,24 @@ class Dice(object):
         if isinstance(dice_to_roll, str):
             dice_to_roll_list = dice_to_roll.lower().strip().replace(' ', '').split(',')
         else:
+            try:
+                int(dice_to_roll)
+                dice_to_roll = str(dice_to_roll)
+            except ValueError:
+                pass
+            try:
+                _ = dice_to_roll[0]
+            except TypeError:
+                dice_to_roll = [dice_to_roll]
             dice_to_roll_list = dice_to_roll
 
         outcome = 0
         for dice in dice_to_roll_list:
+            try:
+                int(dice)
+                dice = f'd{dice}'
+            except ValueError:
+                pass
             dice_data = dice.split('d')
             amount = int(dice_data[0]) if dice_data[0] else 1
             if '+' in dice_data[1]:

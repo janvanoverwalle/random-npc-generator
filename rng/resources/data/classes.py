@@ -193,9 +193,9 @@ class Classes(object):
     ]
 
     @classmethod
-    def as_list(cls):
+    def as_list(cls, subclasses=None):
         """Method docstring."""
-        return cls.classes_as_list()
+        return cls.classes_as_list(subclasses)
 
     @classmethod
     def classes_as_list(cls, subclasses=None):
