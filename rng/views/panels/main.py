@@ -15,15 +15,22 @@ class MainPanel(wx.Panel):
     LBL_HDR_TITLE = 'Click a button to generate a random character.'
     LBL_BTN_ROLL_NPC = 'Roll a random NPC'
     LBL_BTN_ROLL_PC = 'Roll a random PC'
+    LBL_CHKBX_ENABLE = 'Enable'
+    LBL_CHKBX_DISABLE = 'Disable'
 
     def __init__(self, parent):
         super().__init__(parent)
         self._parent = parent
 
+        self.visible_options = set()
+        self.state_checkboxes = {}
+        self.option_containers = {}
+        self.options_sizer = None
+
         self.main_sizer = wx.BoxSizer(wx.VERTICAL)
         self.main_sizer.Add(self.create_header(), 0, wx.ALL | wx.CENTER, 5)
         self.main_sizer.Add(self.create_buttons(), 0, wx.ALL | wx.CENTER, 5)
-        self.main_sizer.Add(self.create_options(), 0, wx.ALL | wx.EXPAND, 5)
+        self.main_sizer.Add(self.create_options(), 0, wx.ALL | wx.CENTER, 5)
         self.main_sizer.SetMinSize(parent.GetSize())
         self.SetSizer(self.main_sizer)
         self.Fit()
@@ -62,52 +69,72 @@ class MainPanel(wx.Panel):
 
     def create_options(self):
         """Method docstring."""
-        options_sizer = wx.BoxSizer(wx.VERTICAL)
+        if not self.options_sizer:
+            self.options_sizer = wx.BoxSizer(wx.HORIZONTAL)
 
         # Genders
-        self.gender_group = self.create_checkbox_group(f'{Character.GENDER}s', Genders.as_list())
-        options_sizer.Add(self.gender_group, 0, wx.RIGHT | wx.LEFT | wx.EXPAND, 25)
+        gender_options = Genders.as_list() if Character.GENDER in self.visible_options else None
+        self.gender_group = self.create_checkbox_group(Character.GENDER, gender_options)
+        self.options_sizer.Add(self.gender_group, 0, wx.RIGHT | wx.LEFT, 25)
+
         # Races
-        self.race_group = self.create_checkbox_group(f'{Character.RACE}s', Races.as_list())
-        options_sizer.Add(self.race_group, 0, wx.RIGHT | wx.LEFT | wx.EXPAND, 25)
+        race_options = Races.as_list() if Character.RACE in self.visible_options else None
+        self.race_group = self.create_checkbox_group(Character.RACE, race_options)
+        self.options_sizer.Add(self.race_group, 0, wx.RIGHT | wx.LEFT, 25)
+
         # Class
-        self.class_group = self.create_checkbox_group(f'{Character.CLASS}es', Classes.as_list())
-        options_sizer.Add(self.class_group, 0, wx.RIGHT | wx.LEFT | wx.EXPAND, 25)
+        class_options = Classes.as_list() if Character.CLASS in self.visible_options else None
+        self.class_group = self.create_checkbox_group(Character.CLASS, class_options)
+        self.options_sizer.Add(self.class_group, 0, wx.RIGHT | wx.LEFT, 25)
+
         # Professions
-        prof_group_title = f'{Character.PROFESSION} Categories'
-        self.prof_group = self.create_checkbox_group(prof_group_title, Professions.categories(), columns=4)
-        options_sizer.Add(self.prof_group, 0, wx.RIGHT | wx.LEFT | wx.EXPAND, 25)
+        prof_options = Professions.categories() if Character.PROFESSION in self.visible_options else None
+        self.prof_group = self.create_checkbox_group(Character.PROFESSION, prof_options)
+        self.options_sizer.Add(self.prof_group, 0, wx.RIGHT | wx.LEFT, 25)
 
-        return options_sizer
+        return self.options_sizer
 
-    def create_checkbox_group(self, title, options, columns=12):
+    def create_checkbox_group(self, title, options=None):
         """Method docstring."""
-        style_flags = wx.CP_DEFAULT_STYLE | wx.CP_NO_TLW_RESIZE
-        pane_obj = wx.CollapsiblePane(self, label=title.title(), style=style_flags)
-        pane_obj.Bind(wx.EVT_COLLAPSIBLEPANE_CHANGED, self.on_pane_state_change)
-        pane = pane_obj.GetPane()
+        root_container = self.option_containers.get(title, wx.BoxSizer(wx.VERTICAL))
 
-        checkbox_width = 0
-        for option in options:
-            checkbox_width = max(checkbox_width, len(option))
-        print(checkbox_width)
+        static_box = wx.StaticBox(self, -1, title.title())
+        static_box_sizer = wx.StaticBoxSizer(static_box, orient=wx.VERTICAL)
 
-        checkbox_sizer = wx.FlexGridSizer(cols=columns)
-        checkbox_sizer.AddGrowableCol(columns-1)
-        max_width = 0
-        for option in options:
-            checkbox = wx.CheckBox(pane, label=option)
-            checkbox_sizer.Add(checkbox, 0, wx.EXPAND)
-            max_width = max(max_width, checkbox.GetSize()[0])
-        print(f'{title}: {max_width} ({max_width/checkbox_width})')
+        state_checkbox = self.state_checkboxes.get(title)
+        if not state_checkbox:
+            if not options:
+                state_checkbox = wx.CheckBox(self, label=self.LBL_CHKBX_ENABLE)
+            else:
+                state_checkbox = wx.CheckBox(self, label=self.LBL_CHKBX_DISABLE)
+            self.state_checkboxes[title] = state_checkbox
+            state_checkbox.Bind(wx.EVT_CHECKBOX, lambda e: self.on_option_group_change(e, title))
 
-        border = wx.BoxSizer()
-        border.Add(checkbox_sizer, 1, wx.EXPAND | wx.ALL, 5)
+        root_container.Add(state_checkbox, 0, wx.ALL | wx.EXPAND, 5)
 
-        pane.SetSizer(border)
+        options_container = wx.BoxSizer(wx.VERTICAL)
 
-        return pane_obj
+        if options:
+            for option in options:
+                checkbox = wx.CheckBox(self, label=option.replace('&', '&&'))
+                options_container.Add(checkbox, 0, wx.EXPAND | wx.TOP | wx.BOTTOM, 2)
 
-    def on_pane_state_change(self, event=None):
+        static_box_sizer.Add(options_container, 0, wx.ALL, 5)
+        root_container.Add(static_box_sizer)
+        self.option_containers[title] = root_container
+        return root_container
+
+    def on_option_group_change(self, event, data=None):
         """Method docstring."""
+        if event.IsChecked():
+            self.state_checkboxes[data].SetLabel(self.LBL_CHKBX_DISABLE)
+            if data not in self.visible_options:
+                self.visible_options.add(data)
+        else:
+            self.state_checkboxes[data].SetLabel(self.LBL_CHKBX_ENABLE)
+            if data in self.visible_options:
+                self.visible_options.remove(data)
+        if data in self.option_containers:
+            self.option_containers[data].Clear(True)
+        self.create_options()
         self.Layout()
