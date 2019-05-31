@@ -26,6 +26,13 @@ class Sense(object):
     def __repr__(self):
         return str(self)
 
+    def to_json(self):
+        return {
+            'name': self.name,
+            'range': self.range,
+            'description': self.description
+        }
+
 
 class Blindsight(Sense):
     """Class docstring."""

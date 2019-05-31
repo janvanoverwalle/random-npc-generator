@@ -26,6 +26,7 @@ class MainPanel(wx.Panel):
         self.state_checkboxes = {}
         self.option_containers = {}
         self.options_sizer = None
+        self.options_created = set()
 
         self.main_sizer = wx.BoxSizer(wx.VERTICAL)
         self.main_sizer.Add(self.create_header(), 0, wx.ALL | wx.CENTER, 5)
@@ -75,38 +76,38 @@ class MainPanel(wx.Panel):
         # Genders
         gender_options = Genders.as_list() if Character.GENDER in self.visible_options else None
         self.gender_group = self.create_checkbox_group(Character.GENDER, gender_options)
-        self.options_sizer.Add(self.gender_group, 0, wx.RIGHT | wx.LEFT, 25)
+        if 'gender' not in self.options_created:
+            self.options_created.add('gender')
+            self.options_sizer.Add(self.gender_group, 0, wx.RIGHT | wx.LEFT, 25)
 
         # Races
-        race_options = Races.as_list() if Character.RACE in self.visible_options else None
-        self.race_group = self.create_checkbox_group(Character.RACE, race_options)
-        self.options_sizer.Add(self.race_group, 0, wx.RIGHT | wx.LEFT, 25)
+        # race_options = Races.as_list() if Character.RACE in self.visible_options else None
+        # self.race_group = self.create_checkbox_group(Character.RACE, race_options)
+        # self.options_sizer.Add(self.race_group, 0, wx.RIGHT | wx.LEFT, 25)
 
         # Class
-        class_options = Classes.as_list() if Character.CLASS in self.visible_options else None
-        self.class_group = self.create_checkbox_group(Character.CLASS, class_options)
-        self.options_sizer.Add(self.class_group, 0, wx.RIGHT | wx.LEFT, 25)
+        # class_options = Classes.as_list() if Character.CLASS in self.visible_options else None
+        # self.class_group = self.create_checkbox_group(Character.CLASS, class_options)
+        # self.options_sizer.Add(self.class_group, 0, wx.RIGHT | wx.LEFT, 25)
 
         # Professions
-        prof_options = Professions.categories() if Character.PROFESSION in self.visible_options else None
-        self.prof_group = self.create_checkbox_group(Character.PROFESSION, prof_options)
-        self.options_sizer.Add(self.prof_group, 0, wx.RIGHT | wx.LEFT, 25)
+        # prof_options = Professions.categories() if Character.PROFESSION in self.visible_options else None
+        # self.prof_group = self.create_checkbox_group(Character.PROFESSION, prof_options)
+        # self.options_sizer.Add(self.prof_group, 0, wx.RIGHT | wx.LEFT, 25)
 
         return self.options_sizer
 
     def create_checkbox_group(self, title, options=None):
         """Method docstring."""
         root_container = self.option_containers.get(title, wx.BoxSizer(wx.VERTICAL))
+        root_container.Clear()
 
         static_box = wx.StaticBox(self, -1, title.title())
         static_box_sizer = wx.StaticBoxSizer(static_box, orient=wx.VERTICAL)
 
         state_checkbox = self.state_checkboxes.get(title)
         if not state_checkbox:
-            if not options:
-                state_checkbox = wx.CheckBox(self, label=self.LBL_CHKBX_ENABLE)
-            else:
-                state_checkbox = wx.CheckBox(self, label=self.LBL_CHKBX_DISABLE)
+            state_checkbox = wx.CheckBox(self, label=self.LBL_CHKBX_ENABLE)
             self.state_checkboxes[title] = state_checkbox
             state_checkbox.Bind(wx.EVT_CHECKBOX, lambda e: self.on_option_group_change(e, title))
 
@@ -127,11 +128,9 @@ class MainPanel(wx.Panel):
     def on_option_group_change(self, event, data=None):
         """Method docstring."""
         if event.IsChecked():
-            self.state_checkboxes[data].SetLabel(self.LBL_CHKBX_DISABLE)
             if data not in self.visible_options:
                 self.visible_options.add(data)
         else:
-            self.state_checkboxes[data].SetLabel(self.LBL_CHKBX_ENABLE)
             if data in self.visible_options:
                 self.visible_options.remove(data)
         if data in self.option_containers:

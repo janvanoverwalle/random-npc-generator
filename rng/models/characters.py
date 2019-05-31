@@ -1,6 +1,7 @@
 """
 Module docstring.
 """
+import json
 import random
 from rng.helpers.utils import Utils
 from rng.models.names import CharacterNames
@@ -89,7 +90,8 @@ class Character(object):
         self._race = kwargs.get(self.RACE)
         self._class = kwargs.get(self.CLASS)
         self._profession = kwargs.get(self.PROFESSION, kwargs.get(self.JOB))
-        self._quirks = kwargs.get(self.QUIRKS)
+        quirks = kwargs.get(self.QUIRKS)
+        self._quirks = quirks if isinstance(quirks, (list, tuple)) else [quirks]
         self._description = kwargs.get(self.DESCRIPTION)
 
         self._race.roll_random_abilities()
@@ -262,10 +264,27 @@ class Character(object):
         """Method docstring."""
         ret = set()
         if self._profession:
-            ret = ret.union(set(self._profession.saving_throws))
+            ret = ret.union(set(self._profession.skills))
         if self._race:
-            ret = ret.union(set(self._race.saving_throws))
+            ret = ret.union(set(self._race.skills))
         return list(ret)
+
+    def to_json(self):
+        """Method docstring."""
+        data = {
+            'name': self.name.name,
+            'gender': self.gender.gender,
+            'race': self.race.name,
+            'class': self.cclass.name if self.cclass else None,
+            'profession': self.profession.name if self.profession else None,
+            'quirks': [q.quirk for q in self.quirks],
+            'age': self.age.current,
+            'languages': self.languages,
+            'saving_throws': self.saving_throws,
+            'senses': [s.name for s in self.senses],
+            'skills': self.skills
+        }
+        return data
 
     def has_class(self):
         """Method docstring."""

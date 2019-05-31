@@ -17,6 +17,8 @@ from rng.resources.data.races import Races
 
 from rng.views.frames.main import MainFrame
 
+from rng.web.app import app
+
 
 def roll_independently():
     """Function docstring."""
@@ -107,5 +109,6 @@ def create_description_data():
 
 
 if __name__ == '__main__':
-    main()
+    # main()
     # create_description_data()
+    app.run(host='0.0.0.0', debug=True)  # Run locally in debug

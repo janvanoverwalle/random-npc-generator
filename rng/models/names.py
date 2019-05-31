@@ -186,3 +186,7 @@ class CharacterName(object):
 
     def __repr__(self):
         return str(self)
+
+    @property
+    def name(self):
+        return str(self)
