@@ -66,7 +66,6 @@ class CharacterDescriptions(object):
             population = range(0, descr_key_count-1)
             weights = cls._calculate_distribution(descr_key_count-1)
             amount_of_traits = random.choices(population, weights, k=1)[0] + 1
-            amount_of_traits = descr_key_count  # Temp
             all_descr_keys = [k for k, v in cls._description_data.items()]
             trait_keys = random.sample(all_descr_keys, k=amount_of_traits)
             traits = {}

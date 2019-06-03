@@ -1,0 +1,29 @@
+<table id="{{data_str}}" class="table table-hover table-sm">
+    <thead>
+        <tr>
+            <th class="text-center" colspan="2">
+                {{header}}
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="table-primary">
+            <th class="align-middle">
+                <input type="checkbox" name="{{data_str}}_all" value="all" checked>
+            </th>
+            <th class="align-middle">
+                <label for="{{data_str}}_all">All</label>
+            </th>
+        </tr>
+        {% for elem in data %}
+        <tr>
+            <td class="align-middle">
+                <input type="checkbox" name="{{data_str}}_{{elem.lower()}}" value="{{elem.lower()}}">
+            </td>
+            <td class="align-middle">
+                <label for="{{data_str}}_{{elem.lower()}}">{{elem}}</label>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>

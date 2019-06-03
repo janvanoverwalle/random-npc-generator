@@ -89,5 +89,5 @@ class Age(object):
         age = int((self.adulthood + Dice.roll(die, max=True)) * numpy.random.normal(2.2, 0.75))
         if age > (self.expected_lifespan * 1.1):
             age = int(self.expected_lifespan * random.uniform(1, 1.1))
-        self.current = age
+        self.current = max(self.adulthood, age)
         return self.current
