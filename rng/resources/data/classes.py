@@ -6,6 +6,8 @@ Module docstring.
 class Classes(object):
     """Class docstring."""
 
+    KEY = 'class'
+
     BARBARIAN = 'Barbarian'
     PATH_OF_THE_BERSERKER = 'Path of the Berserker'  # PHB p.49
     PATH_OF_THE_TOTEM_WARRIOR = 'Path of the Totem Warrior'  # PHB p.50
@@ -347,3 +349,21 @@ class Classes(object):
                 cls.WAR_MAGIC
             ]
         return ret
+
+    @classmethod
+    def is_valid(cls, obj):
+        """Method docstring."""
+        try:
+            return obj.strip().lower() in cls.as_list()
+        except Exception:
+            return False
+
+    @classmethod
+    def to(cls, obj):
+        """Method docstring."""
+        try:
+            for c in cls.as_list():
+                if c.lower() == obj.lower():
+                    return c
+        except Exception:
+            return obj

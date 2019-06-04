@@ -1,15 +1,42 @@
 function roll_npc() {
     console.log("Rolling NPC...")
-    __collect_checked_items()
+    __collect_all_checked_items()
 
 }
 
 function roll_pc() {
     console.log("Rolling PC...")
-    __collect_checked_items()
+    __collect_all_checked_items()
 }
 
-function __collect_checked_items() {
+function click_row(obj) {
+    $checkboxes = $(obj).find("input")
+    if ($checkboxes.length <= 0) {
+        return
+    }
+    $checkboxes[0].checked = !$checkboxes[0].checked
+    $(obj).toggleClass("table-primary")
+
+    $val = $checkboxes[0].value
+
+    if ($val == "all") {
+        if ($checkboxes[0].checked) {
+            $(obj).parent().find("input").each(function() {
+                $box = $(this)[0]
+                $box.checked = true
+                $row = $($box).closest("tr")
+                $row.removeClass("table-primary") // To avoid duplicate classes
+                $row.addClass("table-primary")
+            })
+        }
+    } else {
+        $box = $(obj).parent().find("input")
+        $box[0].checked = false
+        $($box[0]).closest("tr").removeClass("table-primary")
+    }
+}
+
+function __collect_all_checked_items() {
     selected = {
         gender: __collect_checked_items_for("gender"),
         race: __collect_checked_items_for("race"),

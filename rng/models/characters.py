@@ -103,57 +103,66 @@ class Character(object):
         string += Strings.LF
         return string
 
-    def _age_description(self, full_details=True, standalone=True):
+    def age_description(self, full_details=False, standalone=True):
+        """Method docstring."""
         if standalone:
             subject = f'{self._name.first_name} is'
         else:
-            subject = f'  {self._gender.subject_pronoun.capitalize()}\'s'
+            subject = ''
         s = 's' if full_details else ''
         age_article = ('an' if str(self.age.current).startswith('8') else 'a')
         string = (
-            f'{subject} {age_article}'
+            f'{subject}{age_article}'
             f' {self.age.current} year{s} old'
         )
         if full_details:
             string += f' {self.age.age_description()}'
-        return string
+        return [string.capitalize()]
 
-    def _class_description(self, full_details=True, standalone=True):
+    def class_description(self, full_details=False, standalone=True):
+        """Method docstring."""
         if standalone:
             subject = self._name.first_name
         else:
-            subject = f'  {self._gender.subject_pronoun.capitalize()}\'s'
-        string = f'{subject} '
+            subject = self._gender.subject_pronoun.capitalize()
+        string = subject
+        string += random.choices([' is', '\'s'], [7, 3], k=1)[0]
+        if subject.endswith('s'):
+            string = string[:-1]
+        string += ' '
         if self._class:
             job_name = f'{self._class.name}'
         if self._profession:
             job_name = f'{self._profession.name}'
-        string += Utils.article_for(job_name)
+        adj_set = [(' famous', 1), (' infamous', 1), (' renowned', 2), (' terrible', 5), (' skilled', 6), (' capable', 10), ('', 25)]
+        adjective = random.choices([a[0] for a in adj_set], [a[1] for a in adj_set], k=1)[0]
+        string += Utils.article_for(adjective if adjective else job_name)
+        string += adjective
         string += f' {job_name}'
-        string += random.choice([' by trade', ''])
+        if not adjective:
+            late_adj_set = [(' of legendary skill', 1), (' of some renown', 4), (' of terrible skill', 5), (' of some skill', 5), (' by trade', 10), ('', 25)]
+            string += random.choices([a[0] for a in late_adj_set], [a[1] for a in late_adj_set])[0]
         string += Strings.LF
         if full_details:
             if self._class:
                 job_descr = f'{self._class.description}'
             if self._profession:
                 job_descr = f'{self._profession.description}'
-            string += f'    <{job_name}: {job_descr}>'
-            string += Strings.LF
-        return string
+            string += f'    <{job_name}: {job_descr}>{Strings.LF}'
+        return [s.strip().capitalize() for s in string.split(Strings.LF)]
 
-    def _character_descriptions(self, full_details, standalone=True):
+    def character_description(self, full_details=False, standalone=True):
+        """Method docstring."""
         if standalone:
             subject_str = self._name.first_name
             object_str = self._name.first_name
             possessive_str = self._name.first_name + '\''
             if possessive_str[0].lower() not in 's':
                 possessive_str += 's'
-            spacer = ''
         else:
             subject_str = self._gender.subject_pronoun.capitalize()
             object_str = self._gender.object_pronoun.capitalize()
             possessive_str = self._gender.possessive_pronoun.capitalize()
-            spacer = '  '
         noun_str = self._gender.noun
         kwargs = {
             'subject': subject_str,
@@ -162,11 +171,10 @@ class Character(object):
             'noun': noun_str,
             'full_details': full_details
         }
-        readable_descriptions = self._description.readable_description(**kwargs)
-        readable_str = f'{Strings.LF}{spacer}'.join(readable_descriptions)
-        return (spacer + readable_str + Strings.LF) if readable_descriptions else Strings.EMPTY
+        return self._description.readable_description(**kwargs)
 
-    def _quirk_descriptions(self, full_details, standalone=True):
+    def quirk_descriptions(self, full_details=False, standalone=True):
+        """Method docstring."""
         if standalone:
             subject = self._name.first_name
         else:
@@ -189,7 +197,7 @@ class Character(object):
             if full_details:
                 string += f'    <{quirk.quirk.capitalize()}: {quirk.definition}>'
                 string += Strings.LF
-        return string
+        return [s.strip().capitalize() for s in string.split(Strings.LF)]
 
     @property
     def name(self):
@@ -299,15 +307,20 @@ class Character(object):
         """Method docstring."""
         return str(self)
 
-    def detailed_description(self, full_details=True):
+    def short_description(self, full_details=False, standalone=False):
         """Method docstring."""
-        string = ''
-        string += self._age_description(full_details, standalone=False)
-        string += f' {self.gender.gender} {self.race.name}{Strings.LF}'
-        string += self._class_description(full_details, standalone=False)
-        string += self._character_descriptions(full_details, standalone=False)
-        string += self._quirk_descriptions(full_details, standalone=False)
-        return string
+        string = self.age_description(full_details, standalone=standalone)[0]
+        string += f' {self.gender.gender} {self.race.name}'
+        return [string.capitalize()]
+
+    def detailed_description(self, full_details=False):
+        """Method docstring."""
+        ret = []
+        ret += self.short_description(full_details, standalone=False)
+        ret += self.class_description(full_details, standalone=False)
+        ret += self.character_description(full_details, standalone=False)
+        ret += self.quirk_descriptions(full_details, standalone=False)
+        return ret
 
     def shave(self):
         """Method docstring."""
@@ -318,14 +331,13 @@ class RandomNPC(Character):
     """Class docstring."""
 
     def __init__(self, **kwargs):
-        # TODO: Make it so that the random roll functions take in a set of possible options
-        gender = CharacterGenders.roll_random(kwargs.get(self.GENDER))
-        race = CharacterRaces.roll_random()(kwargs.get(self.RACE))
+        gender = CharacterGenders.roll(kwargs.get(self.GENDER))
+        race = CharacterRaces.roll(kwargs.get(self.RACE))
         locales = kwargs.get(self.LOCALE)
         if not locales:
             locales = ['City', 'Village', 'Outskirts']
         rand_locale = random.choice(locales)
-        profession = CharacterProfessions.roll_random(rand_locale, kwargs.get(self.PROFESSION))
+        profession = CharacterProfessions.roll(kwargs.get(self.PROFESSION), locale=rand_locale)
         name = kwargs.get(self.NAME, CharacterNames.roll_random(race, gender))
         quirks = kwargs.get(self.QUIRKS, CharacterQuirks.roll_random())
         description = kwargs.get(self.DESCRIPTION, CharacterDescriptions.roll_random())
@@ -347,9 +359,9 @@ class RandomPC(Character):
     """Class docstring."""
 
     def __init__(self, **kwargs):
-        gender = CharacterGenders.roll_random(kwargs.get(self.GENDER))
-        race = CharacterRaces.roll_random(kwargs.get(self.RACE))
-        char_class = CharacterClasses.roll_random(kwargs.get(self.CLASS))
+        gender = CharacterGenders.roll(kwargs.get(self.GENDER))
+        race = CharacterRaces.roll(kwargs.get(self.RACE))
+        char_class = CharacterClasses.roll(kwargs.get(self.CLASS))
         name = kwargs.get(self.NAME, CharacterNames.roll_random(race, gender))
         quirks = kwargs.get(self.QUIRKS, CharacterQuirks.roll_random())
         description = kwargs.get(self.DESCRIPTION, CharacterDescriptions.roll_random())

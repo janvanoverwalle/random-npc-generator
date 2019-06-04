@@ -1,8 +1,24 @@
 {% extends "base.html" %} {% block content %}
 <div class="container py-5">
-    <h3>{{html_data.character.name}}</h3>
-    {% for line in html_data.character.description %}
-    <p>{{line}}</p>
+    <h2>{{html_data.character.name}}</h2>
+    <!-- Short -->
+    {% for elem in html_data.character.short_description() %}
+    <p><i>{{elem}}</i></p>
+    {% endfor %}
+    <!-- Class/Profession -->
+    <h4>{{ "Class" if html_data.character.has_class() else "Profession" }} Description</h4>
+    {% for elem in html_data.character.class_description() %}
+    <p>{{elem}}</p>
+    {% endfor %}
+    <!-- Character -->
+    <h4>Character Description</h4>
+    {% for elem in html_data.character.character_description() %}
+    <p>{{elem}}</p>
+    {% endfor %}
+    <!-- Quirks -->
+    <h4>Quirks</h4>
+    {% for elem in html_data.character.quirk_descriptions() %}
+    <p>{{elem}}</p>
     {% endfor %}
 </div>
 <!-- /container -->

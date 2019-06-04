@@ -73,23 +73,50 @@ class CharacterProfessions(object):
             cls.professions.append(profession_obj)
 
     @classmethod
+    def get(cls, category_name, profession_name, locale):
+        """Method docstring."""
+        cls._load_data()
+
+        if not isinstance(category_name, (list, tuple)):
+            category_name = [category_name]
+
+        categories = cls.categories() if not category_name else [c for c in cls.categories() if c.lower() in [n.lower() for n in category_name]]
+
+        if not isinstance(profession_name, (list, tuple)):
+            profession_name = [profession_name]
+
+        professions = []
+        for p_name in profession_name:
+            if not p_name or Strings.equals_ignore_case(p_name, Strings.RANDOM):
+                professions += [p for p in cls.professions if p.get_weight(locale) > 0]
+            else:
+                profs = [p for p in cls.professions if p.get_weight(locale) > 0 and p.name.lower() == p_name.lower() and p.category in categories]
+                for p in profs:
+                    if p not in professions:
+                        professions.append(p)
+        return professions
+
+    @classmethod
     def categories(cls):
         """Method docstring."""
         return [v for k, v in cls._categories.items()]
 
     @classmethod
-    def roll_random(cls, locale=None, amount=1):
+    def roll(cls, category_name=None, profession_name=None, locale=None, amount=1):
         """Method docstring."""
-
         if not amount:
             return None
 
-        cls._load_data()
+        available_professions = cls.get(category_name, profession_name, locale)
 
-        possible_professions = [p for p in cls.professions if p.get_weight(locale) > 0]
-        weights = [p.get_weight(locale) for p in possible_professions]
-        results = random.choices(possible_professions, weights, k=amount)
+        weights = [p.get_weight(locale) for p in available_professions]
+        results = random.choices(available_professions, weights, k=amount)
         return results[0] if amount == 1 else results
+
+    @classmethod
+    def roll_random(cls, locale=None, amount=1):
+        """Method docstring."""
+        return cls.roll(Strings.RANDOM, locale, amount)
 
 
 class CharacterProfession(object):

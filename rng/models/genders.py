@@ -17,6 +17,8 @@ class CharacterGenders(object):
 
         if not gender or Strings.equals_ignore_case(gender, Strings.RANDOM):
             results = [CharacterGender(s) for s in random.choices(Genders.as_list(), k=amount)]
+        elif isinstance(gender, (list, tuple)):
+            results = [CharacterGender(s) for s in random.choices(gender, k=amount)]
         else:
             results = [CharacterGender(gender)] * amount
         return results[0] if amount == 1 else results
@@ -31,7 +33,7 @@ class CharacterGender(object):
     """Class docstring."""
 
     def __init__(self, gender):
-        self.gender = gender
+        self.gender = Genders.to(gender)
 
     def __str__(self):
         return f'{self.gender}'

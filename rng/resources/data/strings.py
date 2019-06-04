@@ -15,7 +15,10 @@ class Strings(object):
     @classmethod
     def equals_ignore_case(cls, s1, s2):
         """Method docstring."""
-        return s1.lower() == s2.lower()
+        try:
+            return s1.lower() == s2.lower()
+        except AttributeError:
+            return False
 
     @classmethod
     def is_vowel(cls, string):

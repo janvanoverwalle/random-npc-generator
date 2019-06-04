@@ -50,7 +50,7 @@ class CharacterRaces(object):
             if not name or Strings.equals_ignore_case(name, Strings.RANDOM):
                 races += [v for k, v in cls._name_to_race_map.items() if v not in races]
             else:
-                name = cls._name_to_race_map.get(name)
+                name = cls._name_to_race_map.get(Races.to(name))
                 if name not in races:
                     races.append(name)
         return races

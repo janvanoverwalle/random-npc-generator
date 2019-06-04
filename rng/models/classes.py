@@ -39,7 +39,7 @@ class CharacterClasses(object):
             if not name or Strings.equals_ignore_case(name, Strings.RANDOM):
                 classes += [v for k, v in cls._name_to_class_map.items() if v not in classes]
             else:
-                name = cls._name_to_class_map.get(name)
+                name = cls._name_to_class_map.get(Classes.to(name))
                 if name not in classes:
                     classes.append(name)
         return classes

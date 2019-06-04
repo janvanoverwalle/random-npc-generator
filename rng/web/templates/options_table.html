@@ -7,7 +7,7 @@
         </tr>
     </thead>
     <tbody>
-        <tr class="table-primary">
+        <tr class="table-primary" onclick="click_row(this)">
             <th class="align-middle">
                 <input type="checkbox" name="{{data_str}}_all" value="all" checked>
             </th>
@@ -16,7 +16,7 @@
             </th>
         </tr>
         {% for elem in data %}
-        <tr>
+        <tr onclick="click_row(this)">
             <td class="align-middle">
                 <input type="checkbox" name="{{data_str}}_{{elem.lower()}}" value="{{elem.lower()}}">
             </td>

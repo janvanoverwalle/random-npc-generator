@@ -6,6 +6,8 @@ Module docstring.
 class Races(object):
     """Class docstring."""
 
+    KEY = 'race'
+
     DRAGONBORN = 'Dragonborn'
     DWARF = 'Dwarf'
     HILL_DWARF = f'Hill {DWARF}'
@@ -61,3 +63,21 @@ class Races(object):
     def get_base_race(cls, race_name):
         """Method docstring."""
         return race_name.split(' ')[-1]
+
+    @classmethod
+    def is_valid(cls, obj):
+        """Method docstring."""
+        try:
+            return obj.strip().lower() in cls.as_list()
+        except Exception:
+            return False
+
+    @classmethod
+    def to(cls, obj):
+        """Method docstring."""
+        try:
+            for r in cls.as_list():
+                if r.lower() == obj.lower():
+                    return r
+        except Exception:
+            return obj

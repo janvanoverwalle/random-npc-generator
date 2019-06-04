@@ -4,7 +4,7 @@ import sys
 from flask import Flask, render_template, request, jsonify, redirect, url_for, send_file
 from json import dumps
 
-from rng.models.characters import Characters
+from rng.models.characters import Characters, RandomNPC, RandomPC
 from rng.resources.data.genders import Genders
 from rng.resources.data.races import Races
 from rng.resources.data.classes import Classes
@@ -41,15 +41,31 @@ def random():
         return error()
 
     data = get_request_body(request)
+
+    keys = [Genders.KEY, Races.KEY, Classes.KEY, Professions.KEY]
+    sets = {
+        Genders.KEY: Genders.as_list(),
+        Races.KEY: Races.as_list(),
+        Classes.KEY: Classes.as_list(),
+        Professions.KEY: Professions.categories()
+    }
     character_options = {}
-    for k, v in data.items():
+    for key in keys:
+        subset = [v for k, v in data.items() if key in k]
+        if not subset:
+            continue
+        if 'all' in subset:
+            subset = sets[key]
+        character_options[key] = subset
+
+    for k, v in character_options.items():
         print(f'{k}: {v}')
 
     character_type = data.get('type')
     if character_type == 'npc':
-        character = Characters.roll_npc()
+        character = RandomNPC(**character_options)
     elif character_type == 'pc':
-        character = Characters.roll_pc()
+        character = RandomPC(**character_options)
     else:
         character = None
 

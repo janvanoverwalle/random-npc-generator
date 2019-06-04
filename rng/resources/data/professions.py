@@ -9,6 +9,8 @@ from rng.helpers.utils import Utils
 class Professions(object):
     """Class docstring."""
 
+    KEY = 'profession'
+
     CATEGORIES = 'CATEGORIES'
     PROFESSIONS = 'PROFESSIONS'
     PROFESSION = 'PROFESSION'
@@ -79,3 +81,31 @@ class Professions(object):
         cls._professions = Utils.scan_for_values_with_key(prof_dict, cls.PROFESSION)
 
         return cls._professions
+
+    @classmethod
+    def is_valid(cls, obj):
+        """Method docstring."""
+        try:
+            return obj.strip().lower() in cls.as_list()
+        except Exception:
+            return False
+
+    @classmethod
+    def to_category(cls, obj):
+        """Method docstring."""
+        try:
+            for c in cls.categories():
+                if c.lower() == obj.lower():
+                    return c
+        except Exception:
+            return obj
+
+    @classmethod
+    def to_profession(cls, obj):
+        """Method docstring."""
+        try:
+            for p in cls.professions():
+                if p.lower() == obj.lower():
+                    return p
+        except Exception:
+            return obj
