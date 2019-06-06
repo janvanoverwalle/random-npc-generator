@@ -116,7 +116,7 @@ class Character(object):
             f' {self.age.current} year{s} old'
         )
         if full_details:
-            string += f' {self.age.age_description()}'
+            string += f' ({self.age.age_description()})'
         return [string.capitalize()]
 
     def class_description(self, full_details=False, standalone=True):
@@ -127,7 +127,7 @@ class Character(object):
             subject = self._gender.subject_pronoun.capitalize()
         string = subject
         string += random.choices([' is', '\'s'], [7, 3], k=1)[0]
-        if subject.endswith('s'):
+        if subject.endswith('s') and string[-2] == '\'':
             string = string[:-1]
         string += ' '
         if self._class:

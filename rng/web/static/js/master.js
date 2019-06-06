@@ -1,3 +1,14 @@
+window.onload = function () {
+    $buttons = $("#roll_again_btn")
+    if ($buttons.length > 0) {
+        $buttons[0].disabled = false
+    }
+}
+
+function roll_again() {
+    location.reload();
+}
+
 function roll_npc() {
     console.log("Rolling NPC...")
     __collect_all_checked_items()

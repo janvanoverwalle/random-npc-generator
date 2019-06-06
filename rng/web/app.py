@@ -58,8 +58,8 @@ def random():
             subset = sets[key]
         character_options[key] = subset
 
-    for k, v in character_options.items():
-        print(f'{k}: {v}')
+    # for k, v in character_options.items():
+    #     print(f'{k}: {v}')
 
     character_type = data.get('type')
     if character_type == 'npc':
@@ -71,7 +71,8 @@ def random():
 
     html_data = {
         'page_title': TITLE,
-        'character': character
+        'character': character,
+        'character_type': character_type
     }
     return render_template('character.html', html_data=html_data)
 

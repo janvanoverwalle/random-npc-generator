@@ -78,6 +78,15 @@ class CharacterDescriptions(object):
 
         return results[0] if amount == 1 else results
 
+    @classmethod
+    def add_or_update_json_data(cls, description):
+        # TODO: Finish
+        for k, v in description.traits.items():
+            print(f'{k}: {v}')
+
+        for k, v in description.definitions.items():
+            print(f'{k}: {v}')
+
 
 class CharacterDescription(object):
     """Class docstring."""
@@ -378,6 +387,7 @@ class CharacterDescription(object):
             self._definitions[key] = DefinitionLookup.look_up_definition(trait)
 
         # Write these to the JSON
+        CharacterDescriptions.add_or_update_json_data(self)
         return self._definitions[key]
 
     def readable_description(self, **kwargs):

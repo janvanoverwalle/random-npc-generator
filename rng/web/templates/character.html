@@ -1,25 +1,32 @@
 {% extends "base.html" %} {% block content %}
 <div class="container py-5">
-    <h2>{{html_data.character.name}}</h2>
-    <!-- Short -->
-    {% for elem in html_data.character.short_description() %}
-    <p><i>{{elem}}</i></p>
-    {% endfor %}
-    <!-- Class/Profession -->
-    <h4>{{ "Class" if html_data.character.has_class() else "Profession" }} Description</h4>
-    {% for elem in html_data.character.class_description() %}
-    <p>{{elem}}</p>
-    {% endfor %}
-    <!-- Character -->
-    <h4>Character Description</h4>
-    {% for elem in html_data.character.character_description() %}
-    <p>{{elem}}</p>
-    {% endfor %}
-    <!-- Quirks -->
-    <h4>Quirks</h4>
-    {% for elem in html_data.character.quirk_descriptions() %}
-    <p>{{elem}}</p>
-    {% endfor %}
+    <div class="row">
+        <div class="col-10">
+            <h2>{{html_data.character.name}}</h2>
+            <!-- Short -->
+            {% for elem in html_data.character.short_description(True) %}
+            <p><i>{{elem}}</i></p>
+            {% endfor %}
+            <!-- Class/Profession -->
+            <h4>{{ "Class" if html_data.character.has_class() else "Profession" }} Description</h4>
+            {% for elem in html_data.character.class_description(True) %}
+            <p>{{elem}}</p>
+            {% endfor %}
+            <!-- Character -->
+            <h4>Character Description</h4>
+            {% for elem in html_data.character.character_description(True) %}
+            <p>{{elem}}</p>
+            {% endfor %}
+            <!-- Quirks -->
+            <h4>Quirks</h4>
+            {% for elem in html_data.character.quirk_descriptions(True) %}
+            <p>{{elem}}</p>
+            {% endfor %}
+        </div>
+        <div class="col-2 text-right">
+            <button id="roll_again_btn" class="btn btn-primary" onclick="roll_again()" disabled>Roll again!</button>
+        </div>
+    </div>
 </div>
 <!-- /container -->
 {% endblock %}

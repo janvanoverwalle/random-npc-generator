@@ -15,7 +15,8 @@ class Utils(object):
             return Strings.EMPTY
         if not isinstance(string, str):
             string = str(string)
-        if string.lower().startswith(('a ', 'an ')):
+        string = string.strip().lower()
+        if string.startswith(('a ', 'an ')):
             return Strings.EMPTY
         if Strings.is_vowel(string[0]):
             return 'an'
